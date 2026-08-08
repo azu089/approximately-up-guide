@@ -1760,7 +1760,7 @@ TR_JA = {
     },
     "blueprints-guide": {
         "title": "Approximately Up 設計図ガイド",
-        "metaTitle": "Approximately Up 設計図：ダウンロード・共有・活用",
+        "metaTitle": "Approximately Up 設計図の使い方：DL・共有・活用",
         "metaDescription": "Approximately Up の設計図：見つけ方・使い方で分かっていること、Steam ワークショップ対応、そして未検証の内容。",
         "intro": "設計図は Approximately Up で最も検索される話題の一つ。公式の設計図機構（インポート・エクスポート・共有）は未検証なので、本ページは確認済みの内容と「未検証」を示します。",
         "sections": [
@@ -2072,7 +2072,7 @@ TR_JA = {
     },
     "blueprints": {
         "title": "Approximately Up 設計図",
-        "metaTitle": "Approximately Up 設計図：ダウンロードとライブラリ",
+        "metaTitle": "Approximately Up 設計図一覧：DL とライブラリ",
         "metaDescription": "Approximately Up の設計図コンテンツ索引：設計図の使い方、船の設計の探し方、Steam ワークショップ。",
         "intro": "設計図ライブラリの索引——船の設計を見つけ、（未検証の）設計図ワークフローを学び、ワークショップを閲覧。",
         "sections": [
@@ -2200,7 +2200,7 @@ TR_KO = {
     },
     "blueprints-guide": {
         "title": "Approximately Up 설계도 가이드",
-        "metaTitle": "Approximately Up 설계도: 다운로드, 공유 & 사용",
+        "metaTitle": "Approximately Up 설계도 사용법: 다운로드, 공유",
         "metaDescription": "Approximately Up 설계도: 설계도 찾기와 사용에 대해 아는 것, Steam 창작마당 지원, 그리고 아직 미확인인 내용.",
         "intro": "설계도는 Approximately Up에서 가장 많이 검색되는 주제 중 하나입니다. 공식 설계도 메커니즘(가져오기, 내보내기, 공유)은 아직 확인되지 않았으므로, 이 페이지는 확인된 내용과 '미확인'을 다룹니다.",
         "sections": [
@@ -2512,7 +2512,7 @@ TR_KO = {
     },
     "blueprints": {
         "title": "Approximately Up 설계도",
-        "metaTitle": "Approximately Up 설계도: 다운로드 & 라이브러리",
+        "metaTitle": "Approximately Up 설계도 모음: 다운로드, 라이브러리",
         "metaDescription": "Approximately Up 설계도 콘텐츠 색인: 설계도 사용법, 우주선 설계를 찾는 곳, Steam 창작마당.",
         "intro": "설계도 라이브러리 색인 — 우주선 설계를 찾고, (미확인인) 설계도 절차를 배우고, 창작마당을 둘러보세요.",
         "sections": [
@@ -6631,6 +6631,16 @@ def _trunc(t, lim):
                 return cut[:i].rstrip(" ,;:/-") + "…"
             break
     return cut.rstrip() + "…"
+
+def _trunc_w(t, lim):
+    # 按显示宽度截断（CJK 宽字符算 2，拉丁算 1）——修复 _trunc 用字符数导致 CJK 永不截断的 bug
+    w = 0; cut = ""
+    for ch in t:
+        cw = 2 if _ud.east_asian_width(ch) in ("W", "F") else 1
+        if w + cw > lim: break
+        w += cw; cut += ch
+    if cut == t: return t
+    return cut.rstrip() + "…"
 def _fix_len(v, is_desc):
     # 拉丁语系留转义余量（&amp; 等实体在 HTML 里算 5 字符，audit 按原始 HTML 数）
     lim = 148 if is_desc else 55
@@ -6639,7 +6649,7 @@ def _fix_len(v, is_desc):
     return _trunc(v, lim)
 def _fix_cjk(v, is_desc):
     lim = 74 if is_desc else 34   # 留 &amp; 等实体余量（audit 按原始 HTML 数）
-    return _trunc(v, lim)
+    return _trunc_w(v, lim)
 def _apply_seo(node, lang="en"):
     cjk = lang in ("zh-CN","zh-TW","ja","ko")
     for f in ("title","metaTitle"):
@@ -6657,6 +6667,21 @@ for _p in PAGES:
     _apply_seo(_p, "en")
     for _lang, _tr in (_p.get("i18n") or {}).items():
         _apply_seo(_tr, _lang)
+
+# zh-TW achievements-list metaTitle 手动覆盖：OpenCC 后与 zh-CN 截断结果相同（简繁同文）
+# → 用繁体特有词区分，避免 audit dup-title（"列表" vs "清單"）
+for _p in PAGES:
+    if _p["slug"] == "achievements-list" and "zh-TW" in _p.get("i18n", {}):
+        _p["i18n"]["zh-TW"]["metaTitle"] = "Approximately Up 成就完整清單：22 項收錄"
+
+# ---------- heroImage 自动填充（assets/images/<slug>.jpg → 页面 heroImage）----------
+# 修复：fill_images.py 填充后被 build 覆盖丢失的 bug——并入构建，每次自动带图
+_ASSET_IMG = ROOT.parent / "assets" / "images"
+if _ASSET_IMG.exists():
+    for _p in PAGES:
+        _img = _ASSET_IMG / f"{_p['slug']}.jpg"
+        if _img.exists() and _img.stat().st_size > 20000:
+            _p["heroImage"] = f"/images/{_p['slug']}.jpg"
 
 d = {"site": site, "game": game, "pages": PAGES}
 

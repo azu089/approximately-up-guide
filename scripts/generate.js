@@ -203,7 +203,10 @@ function header(lang, active){
   const drop = (title, slugs) => `<div class="dd-group"><b class="dd-title">${esc(title)}</b>${slugs.map(slug=>{
     const p=DATA.pages.find(x=>x.slug===slug); if(!p) return "";
     const m=metaOf(slug);
-    return `<a href="${prefix}/${slug}" class="${slug===active?"active":""}"><span class="nav-ic">${SVG[m.icon]}</span><span>${esc(pageOf(p,lang).title)}</span></a>`;
+    // 下拉目录显示时去掉游戏名前缀（页面 title/SEO 不动，仅目录清爽）
+    const _t = pageOf(p,lang).title;
+    const _disp = _t.replace(/\s*Approximately Up\s*/g," ").replace(/\s+/g," ").trim() || _t;
+    return `<a href="${prefix}/${slug}" class="${slug===active?"active":""}"><span class="nav-ic">${SVG[m.icon]}</span><span>${esc(_disp)}</span></a>`;
   }).join("")}</div>`;
   const guides = `<div class="dd-menu dd-manual">${drop(gTitle, P0)}${drop(gTitle2, P1)}${drop(gTitle3, P2)}</div>`;
   const searchPh = s.searchPh || "Search guides…";

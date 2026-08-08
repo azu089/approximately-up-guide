@@ -74,7 +74,7 @@
    "zh-CN": {
     "name": "Approximately Up 攻略站",
     "tagline": "建造、坠毁、重建——飞船、蓝图与多人联机攻略",
-    "description": "最好的 Approximately Up 攻略：怎么玩、飞船建造、控制、多人联机、主机版状态、模组、更新日志与成就——14 种语言。",
+    "description": "最好的 Approximately Up 攻略：怎么玩、飞船建造、控制、多人联机、主机版状态…",
     "navHome": "首页",
     "navGuides": "攻略",
     "navAbout": "关于",
@@ -113,7 +113,7 @@
    "ja": {
     "name": "Approximately Up 攻略ガイド",
     "tagline": "作って、墜ちて、作り直す——宇宙船・設計図・マルチプレイ攻略",
-    "description": "Approximately Up の攻略まとめ：遊び方、宇宙船の建造、操作、マルチプレイ、コンソール版、Mod、パッチノート、実績——14言語対応。",
+    "description": "Approximately Up の攻略まとめ：遊び方、宇宙船の建造、操作、マルチプレイ、…",
     "navHome": "ホーム",
     "navGuides": "攻略",
     "navAbout": "このサイト",
@@ -152,7 +152,7 @@
    "ko": {
     "name": "Approximately Up 가이드",
     "tagline": "만들고, 추락하고, 다시 만든다 — 우주선·설계도·멀티플레이 가이드",
-    "description": "Approximately Up 최고의 가이드: 플레이 방법, 우주선 제작, 조작, 멀티플레이, 콘솔 출시 현황, 모드, 패치 노트…",
+    "description": "Approximately Up 최고의 가이드: 플레이 방법, 우주선 제작, 조작, 멀티플레이…",
     "navHome": "홈",
     "navGuides": "가이드",
     "navAbout": "소개",
@@ -542,7 +542,7 @@
    "zh-TW": {
     "name": "Approximately Up 攻略網站",
     "tagline": "建造、墜毀、重建——飛船、藍圖與多人聯機攻略",
-    "description": "最好的 Approximately Up 攻略：怎麼玩、飛船建造、控制、多人聯機、主機版狀態、模組、更新日誌與成就——14 種語言。",
+    "description": "最好的 Approximately Up 攻略：怎麼玩、飛船建造、控制、多人聯機、主機版狀態…",
     "navHome": "首頁",
     "navGuides": "攻略",
     "navAbout": "關於",
@@ -1352,8 +1352,8 @@
    "i18n": {
     "zh-CN": {
      "title": "Approximately Up 怎么玩：新手指南",
-     "metaTitle": "Approximately Up 怎么玩：完整新手入门指南",
-     "metaDescription": "刚接触 Approximately Up？这篇新手指南讲清「建造—坠毁—重建」循环、模块化飞船、多人合作与星球探索。",
+     "metaTitle": "Approximately Up 怎么玩：完整新手…",
+     "metaDescription": "刚接触 Approximately Up？这篇新手指南讲清「建造—坠毁—重建」循环、模块化飞…",
      "intro": "《Approximately Up》是一款太空沙盒建造游戏，核心是把零件拼起来、起飞、坠毁、再重建得更好。这是你第一次起飞前需要知道的完整循环。",
      "sections": [
       {
@@ -1424,9 +1424,9 @@
      ]
     },
     "ja": {
-     "title": "Approximately Up の遊び方：初心者ガイド",
-     "metaTitle": "Approximately Up の遊び方：完全初心者ガイド",
-     "metaDescription": "Approximately Up を始めたばかりの方へ。「作って、墜ちて、作り直す」ループ、モジュラー宇宙船、協力マルチ…",
+     "title": "Approximately Up の遊び方：初心者…",
+     "metaTitle": "Approximately Up の遊び方：完全初…",
+     "metaDescription": "Approximately Up を始めたばかりの方へ。「作って、墜ちて、作り直す」ループ…",
      "intro": "『Approximately Up』は、部品を組み合わせ、飛ばし、墜ちて、より良く作り直す宇宙サンドボックス建造ゲーム。初めて飛ばす前に知っておきたいコアループを解説します。",
      "sections": [
       {
@@ -1497,9 +1497,9 @@
      ]
     },
     "ko": {
-     "title": "Approximately Up 플레이 방법: 초보자 가이드",
-     "metaTitle": "Approximately Up 플레이 방법: 완전 초보자…",
-     "metaDescription": "Approximately Up이 처음인가요? 만들고-추락하고-다시 만들기 루프, 모듈식 우주선, 협동 멀티플레이, 행성 탐험을…",
+     "title": "Approximately Up 플레이 방법: 초보…",
+     "metaTitle": "Approximately Up 플레이 방법: 완전…",
+     "metaDescription": "Approximately Up이 처음인가요? 만들고-추락하고-다시 만들기 루프, 모듈식 우…",
      "intro": "Approximately Up은 부품을 조립하고, 날리고, 추락하고, 더 잘 다시 만드는 우주 샌드박스 건설 게임입니다. 첫 비행 전에 알아야 할 핵심 루프를 소개합니다.",
      "sections": [
       {
@@ -2228,8 +2228,8 @@
     },
     "zh-TW": {
      "title": "Approximately Up 怎麼玩：新手指南",
-     "metaTitle": "Approximately Up 怎麼玩：完整新手入門指南",
-     "metaDescription": "剛接觸 Approximately Up？這篇新手指南講清「建造—墜毀—重建」循環、模塊化飛船、多人合作與星球探索。",
+     "metaTitle": "Approximately Up 怎麼玩：完整新手…",
+     "metaDescription": "剛接觸 Approximately Up？這篇新手指南講清「建造—墜毀—重建」循環、模塊化飛…",
      "intro": "《Approximately Up》是一款太空沙盒建造遊戲，核心是把零件拼起來、起飛、墜毀、再重建得更好。這是你第一次起飛前需要知道的完整循環。",
      "sections": [
       {
@@ -2299,7 +2299,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/how-to-play.jpg"
   },
   {
    "slug": "ship-building-guide",
@@ -2413,8 +2414,8 @@
    "i18n": {
     "zh-CN": {
      "title": "Approximately Up 飞船建造指南",
-     "metaTitle": "Approximately Up 飞船建造指南：从第一艘船到大型建造",
-     "metaDescription": "学会在 Approximately Up 中建造飞船：模块化的建造—坠毁—重建流程、推进器与缆线，以及登月、雷达等社区需求。",
+     "metaTitle": "Approximately Up 飞船建造指南：从…",
+     "metaDescription": "学会在 Approximately Up 中建造飞船：模块化的建造—坠毁—重建流程、推进器与缆…",
      "intro": "飞船建造是《Approximately Up》的核心。官方定位很简单：把零件拼到能飞，然后重建得更聪明。本指南讲解流程，但不会编造尚未核实的零件数值。",
      "sections": [
       {
@@ -2478,7 +2479,7 @@
     "ja": {
      "title": "Approximately Up 宇宙船建造ガイド",
      "metaTitle": "Approximately Up 宇宙船建造ガイド…",
-     "metaDescription": "Approximately Up での宇宙船の作り方：モジュール式の「作る→墜ちる→作り直す」流れ、スラスターとケーブル…",
+     "metaDescription": "Approximately Up での宇宙船の作り方：モジュール式の「作る→墜ちる→作り直す…",
      "intro": "宇宙船建造は『Approximately Up』の核心。公式の売り文句はシンプルです：部品を飛ぶまで繋ぎ、賢く作り直す。本ガイドは未検証の部品性能を捏造せずに手順を解説します。",
      "sections": [
       {
@@ -2540,9 +2541,9 @@
      ]
     },
     "ko": {
-     "title": "Approximately Up 우주선 제작 가이드",
-     "metaTitle": "Approximately Up 우주선 제작 가이드: 첫…",
-     "metaDescription": "Approximately Up에서 우주선 만드는 법: 모듈식 만들고-추락하고-다시 만들기 과정, 추진기와 케이블, 달 여행·레이더…",
+     "title": "Approximately Up 우주선 제작 가이…",
+     "metaTitle": "Approximately Up 우주선 제작 가이…",
+     "metaDescription": "Approximately Up에서 우주선 만드는 법: 모듈식 만들고-추락하고-다시 만들기…",
      "intro": "우주선 제작은 Approximately Up의 핵심입니다. 공식 소개는 단순합니다: 부품을 날 수 있을 만큼 조립하고, 더 똑똑하게 다시 만들기. 이 가이드는 아직 확인되지 않은 부품 수치를 지어내지 않고 과정을 안내합니다.",
      "sections": [
       {
@@ -3181,8 +3182,8 @@
     },
     "zh-TW": {
      "title": "Approximately Up 飛船建造指南",
-     "metaTitle": "Approximately Up 飛船建造指南：從第一艘船到大型建造",
-     "metaDescription": "學會在 Approximately Up 中建造飛船：模塊化的建造—墜毀—重建流程、推進器與纜線，以及登月、雷達等社區需求。",
+     "metaTitle": "Approximately Up 飛船建造指南：從…",
+     "metaDescription": "學會在 Approximately Up 中建造飛船：模塊化的建造—墜毀—重建流程、推進器與纜…",
      "intro": "飛船建造是《Approximately Up》的核心。官方定位很簡單：把零件拼到能飛，然後重建得更聰明。本指南講解流程，但不會編造尚未核實的零件數值。",
      "sections": [
       {
@@ -3243,7 +3244,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/ship-building-guide.jpg"
   },
   {
    "slug": "blueprints-guide",
@@ -3352,8 +3354,8 @@
    "i18n": {
     "zh-CN": {
      "title": "Approximately Up 蓝图指南",
-     "metaTitle": "Approximately Up 蓝图：下载、分享与使用",
-     "metaDescription": "Approximately Up 蓝图：我们已知的查找与使用蓝图的信息、Steam 创意工坊支持，以及仍待核实的内容。",
+     "metaTitle": "Approximately Up 蓝图：下载、分享…",
+     "metaDescription": "Approximately Up 蓝图：我们已知的查找与使用蓝图的信息、Steam 创意工坊支持…",
      "intro": "蓝图是 Approximately Up 搜索量最高的话题之一。官方蓝图机制（导入、导出、分享）尚未核实，因此本页只写已确认内容并标注「待补」。",
      "sections": [
       {
@@ -3411,8 +3413,8 @@
     },
     "ja": {
      "title": "Approximately Up 設計図ガイド",
-     "metaTitle": "Approximately Up 設計図：ダウンロード・共有・活用",
-     "metaDescription": "Approximately Up の設計図：見つけ方・使い方で分かっていること、Steam ワークショップ対応、そして未検証の内容。",
+     "metaTitle": "Approximately Up 設計図の使い方：D…",
+     "metaDescription": "Approximately Up の設計図：見つけ方・使い方で分かっていること、Steam ワー…",
      "intro": "設計図は Approximately Up で最も検索される話題の一つ。公式の設計図機構（インポート・エクスポート・共有）は未検証なので、本ページは確認済みの内容と「未検証」を示します。",
      "sections": [
       {
@@ -3470,8 +3472,8 @@
     },
     "ko": {
      "title": "Approximately Up 설계도 가이드",
-     "metaTitle": "Approximately Up 설계도: 다운로드, 공유 &…",
-     "metaDescription": "Approximately Up 설계도: 설계도 찾기와 사용에 대해 아는 것, Steam 창작마당 지원, 그리고 아직 미확인인 내용.",
+     "metaTitle": "Approximately Up 설계도 사용법: 다…",
+     "metaDescription": "Approximately Up 설계도: 설계도 찾기와 사용에 대해 아는 것, Steam 창작마당…",
      "intro": "설계도는 Approximately Up에서 가장 많이 검색되는 주제 중 하나입니다. 공식 설계도 메커니즘(가져오기, 내보내기, 공유)은 아직 확인되지 않았으므로, 이 페이지는 확인된 내용과 '미확인'을 다룹니다.",
      "sections": [
       {
@@ -4060,8 +4062,8 @@
     },
     "zh-TW": {
      "title": "Approximately Up 藍圖指南",
-     "metaTitle": "Approximately Up 藍圖：下載、分享與使用",
-     "metaDescription": "Approximately Up 藍圖：我們已知的查找與使用藍圖的信息、Steam 創意工坊支持，以及仍待核實的內容。",
+     "metaTitle": "Approximately Up 藍圖：下載、分享…",
+     "metaDescription": "Approximately Up 藍圖：我們已知的查找與使用藍圖的信息、Steam 創意工坊支持…",
      "intro": "藍圖是 Approximately Up 搜索量最高的話題之一。官方藍圖機制（導入、導出、分享）尚未核實，因此本頁只寫已確認內容並標註「待補」。",
      "sections": [
       {
@@ -4117,7 +4119,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/blueprints-guide.jpg"
   },
   {
    "slug": "wiring-electronics",
@@ -4221,8 +4224,8 @@
    "i18n": {
     "zh-CN": {
      "title": "Approximately Up 布线与电路指南",
-     "metaTitle": "Approximately Up 布线与电路：目前已知的信息",
-     "metaDescription": "Approximately Up 的布线与电路：建造中的缆线、社区关于电子管时代与 Remapper 的问题——未核实内容已标注。",
+     "metaTitle": "Approximately Up 布线与电路：目前…",
+     "metaDescription": "Approximately Up 的布线与电路：建造中的缆线、社区关于电子管时代与 Remapper…",
      "intro": "布线与电路是社区的热门话题——但官方信息很少。本页汇总已核实内容与玩家在问的问题，未核实的都明确标注。",
      "sections": [
       {
@@ -4274,8 +4277,8 @@
      ]
     },
     "ja": {
-     "title": "Approximately Up 配線・電子機器ガイド",
-     "metaTitle": "Approximately Up 配線・電子機器…",
+     "title": "Approximately Up 配線・電子機器ガ…",
+     "metaTitle": "Approximately Up 配線・電子機器：…",
      "metaDescription": "Approximately Up の配線と電子機器：建造のケーブル、真空管時代と Remapper…",
      "intro": "配線と電子機器はコミュニティの大きな話題ですが、公式情報は薄い。本ページは検証済みの内容とプレイヤーの質問をまとめ、未検証のものを明確に示します。",
      "sections": [
@@ -4328,9 +4331,9 @@
      ]
     },
     "ko": {
-     "title": "Approximately Up 배선 & 전자기기 가이드",
-     "metaTitle": "Approximately Up 배선 & 전자기기: 현재…",
-     "metaDescription": "Approximately Up의 배선과 전자기기: 제작의 케이블, 진공관 시대와 Remapper에 대한 커뮤니티 질문 — 미확인…",
+     "title": "Approximately Up 배선 & 전자기기…",
+     "metaTitle": "Approximately Up 배선 & 전자기기:…",
+     "metaDescription": "Approximately Up의 배선과 전자기기: 제작의 케이블, 진공관 시대와 Remapper…",
      "intro": "배선과 전자기기는 커뮤니티의 큰 주제이지만 공식 정보는 빈약합니다. 이 페이지는 확인된 내용과 플레이어들이 묻는 질문을 모으고, 미확인된 것은 모두 명확히 표시합니다.",
      "sections": [
       {
@@ -4869,8 +4872,8 @@
     },
     "zh-TW": {
      "title": "Approximately Up 佈線與電路指南",
-     "metaTitle": "Approximately Up 佈線與電路：目前已知的信息",
-     "metaDescription": "Approximately Up 的佈線與電路：建造中的纜線、社區關於電子管時代與 Remapper 的問題——未核實內容已標註。",
+     "metaTitle": "Approximately Up 佈線與電路：目前…",
+     "metaDescription": "Approximately Up 的佈線與電路：建造中的纜線、社區關於電子管時代與 Remapper…",
      "intro": "佈線與電路是社區的熱門話題——但官方信息很少。本頁彙總已核實內容與玩家在問的問題，未核實的都明確標註。",
      "sections": [
       {
@@ -4921,7 +4924,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/wiring-electronics.jpg"
   },
   {
    "slug": "controls",
@@ -5029,8 +5033,8 @@
    "i18n": {
     "zh-CN": {
      "title": "Approximately Up 操作说明",
-     "metaTitle": "Approximately Up 操作说明：键鼠与手柄支持状态",
-     "metaDescription": "Approximately Up 操作指南：我们已知的键鼠信息、手柄支持与游戏内重映射——以及仍待核实的内容。",
+     "metaTitle": "Approximately Up 操作说明：键鼠与…",
+     "metaDescription": "Approximately Up 操作指南：我们已知的键鼠信息、手柄支持与游戏内重映射——以…",
      "intro": "手柄支持是发售后 Steam 社区问得最多的问题之一。这里写我们能确认的、玩家在问的，以及仍待核实的内容。",
      "sections": [
       {
@@ -5087,8 +5091,8 @@
     },
     "ja": {
      "title": "Approximately Up 操作",
-     "metaTitle": "Approximately Up 操作…",
-     "metaDescription": "Approximately Up 操作ガイド：キーボード・マウスの既知情報、コントローラー対応、ゲーム内リマッパー——未検証の内容も含む。",
+     "metaTitle": "Approximately Up 操作：キーボード…",
+     "metaDescription": "Approximately Up 操作ガイド：キーボード・マウスの既知情報、コントローラー…",
      "intro": "コントローラー対応は発売直後、Steam コミュニティで最も質問が多い話題の一つ。確認できること、プレイヤーの質問、未検証の内容をまとめます。",
      "sections": [
       {
@@ -5145,8 +5149,8 @@
     },
     "ko": {
      "title": "Approximately Up 조작법",
-     "metaTitle": "Approximately Up 조작법: 키보드·마우스 &…",
-     "metaDescription": "Approximately Up 조작 가이드: 키보드·마우스에 대해 아는 것, 컨트롤러 지원, 게임 내 리매퍼 — 그리고 아직…",
+     "metaTitle": "Approximately Up 조작법: 키보드·마…",
+     "metaDescription": "Approximately Up 조작 가이드: 키보드·마우스에 대해 아는 것, 컨트롤러 지원,…",
      "intro": "컨트롤러 지원은 출시 직후 Steam 커뮤니티에서 가장 많이 묻는 질문 중 하나입니다. 여기서는 확인할 수 있는 것, 플레이어들이 묻는 것, 그리고 미확인인 것을 다룹니다.",
      "sections": [
       {
@@ -5725,8 +5729,8 @@
     },
     "zh-TW": {
      "title": "Approximately Up 操作說明",
-     "metaTitle": "Approximately Up 操作說明：鍵鼠與手柄支持狀態",
-     "metaDescription": "Approximately Up 操作指南：我們已知的鍵鼠信息、手柄支持與遊戲內重映射——以及仍待核實的內容。",
+     "metaTitle": "Approximately Up 操作說明：鍵鼠與…",
+     "metaDescription": "Approximately Up 操作指南：我們已知的鍵鼠信息、手柄支持與遊戲內重映射——以…",
      "intro": "手柄支持是發售後 Steam 社區問得最多的問題之一。這裡寫我們能確認的、玩家在問的，以及仍待核實的內容。",
      "sections": [
       {
@@ -5781,7 +5785,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/controls.jpg"
   },
   {
    "slug": "multiplayer",
@@ -5883,8 +5888,8 @@
    "i18n": {
     "zh-CN": {
      "title": "Approximately Up 多人联机指南",
-     "metaTitle": "Approximately Up 多人联机：合作、人数与跨平台",
-     "metaDescription": "Approximately Up 多人联机详解：在线合作、最多几人、有没有异步多人——以及仍待核实的内容。",
+     "metaTitle": "Approximately Up 多人联机：合作、…",
+     "metaDescription": "Approximately Up 多人联机详解：在线合作、最多几人、有没有异步多人——以及仍…",
      "intro": "《Approximately Up》官方定位是单人 + 在线合作游戏。本页回答玩家真正在问的联机问题，并标注尚未核实的内容。",
      "sections": [
       {
@@ -5934,9 +5939,9 @@
      ]
     },
     "ja": {
-     "title": "Approximately Up マルチプレイガイド",
-     "metaTitle": "Approximately Up マルチプレイ…",
-     "metaDescription": "Approximately Up のマルチプレイを解説：オンライン協力、人数、非同期マルチの有無、そして未検証の内容。",
+     "title": "Approximately Up マルチプレイガイ…",
+     "metaTitle": "Approximately Up マルチプレイ：協…",
+     "metaDescription": "Approximately Up のマルチプレイを解説：オンライン協力、人数、非同期マルチ…",
      "intro": "『Approximately Up』は公式にシングルプレイ＋オンライン協力のゲーム。本ページはプレイヤーが実際に尋ねるマルチプレイの質問に答え、検証できない部分を明記します。",
      "sections": [
       {
@@ -5987,8 +5992,8 @@
     },
     "ko": {
      "title": "Approximately Up 멀티플레이 가이드",
-     "metaTitle": "Approximately Up 멀티플레이: 협동, 인원수…",
-     "metaDescription": "Approximately Up 멀티플레이 설명: 온라인 협동, 몇 명까지, 비동기 멀티 여부 — 그리고 아직 미확인인 내용.",
+     "metaTitle": "Approximately Up 멀티플레이: 협동,…",
+     "metaDescription": "Approximately Up 멀티플레이 설명: 온라인 협동, 몇 명까지, 비동기 멀티 여부…",
      "intro": "Approximately Up은 공식적으로 싱글플레이 + 온라인 협동 게임입니다. 이 페이지는 플레이어들이 실제로 묻는 멀티플레이 질문에 답하고, 아직 확인할 수 없는 것을 표시합니다.",
      "sections": [
       {
@@ -6507,8 +6512,8 @@
     },
     "zh-TW": {
      "title": "Approximately Up 多人聯機指南",
-     "metaTitle": "Approximately Up 多人聯機：合作、人數與跨平臺",
-     "metaDescription": "Approximately Up 多人聯機詳解：在線合作、最多幾人、有沒有異步多人——以及仍待核實的內容。",
+     "metaTitle": "Approximately Up 多人聯機：合作、…",
+     "metaDescription": "Approximately Up 多人聯機詳解：在線合作、最多幾人、有沒有異步多人——以及仍…",
      "intro": "《Approximately Up》官方定位是單人 + 在線合作遊戲。本頁回答玩家真正在問的聯機問題，並標註尚未核實的內容。",
      "sections": [
       {
@@ -6557,7 +6562,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/multiplayer.jpg"
   },
   {
    "slug": "best-ship-designs",
@@ -6653,8 +6659,8 @@
    "i18n": {
     "zh-CN": {
      "title": "Approximately Up 最佳飞船设计",
-     "metaTitle": "Approximately Up 飞船创意与最佳设计",
-     "metaDescription": "Approximately Up 飞船设计灵感：你自己的建造起点、社区设计问题，以及去哪找更多设计。",
+     "metaTitle": "Approximately Up 飞船创意与最佳设…",
+     "metaDescription": "Approximately Up 飞船设计灵感：你自己的建造起点、社区设计问题，以及去哪找…",
      "intro": "找飞船创意？本页基于官方「建造—坠毁—重建」玩法整理设计起点，并汇总塑造玩家建造需求的社区问题。",
      "sections": [
       {
@@ -6698,9 +6704,9 @@
      ]
     },
     "ja": {
-     "title": "Approximately Up 最強の宇宙船デザイン",
-     "metaTitle": "Approximately Up 宇宙船のアイデアとベストデザイン",
-     "metaDescription": "Approximately Up の宇宙船デザインのアイデア：自作の出発点、コミュニティの設計質問、さらにデザインを探す場所。",
+     "title": "Approximately Up 最強の宇宙船デザ…",
+     "metaTitle": "Approximately Up 宇宙船のアイデア…",
+     "metaDescription": "Approximately Up の宇宙船デザインのアイデア：自作の出発点、コミュニティの…",
      "intro": "宇宙船のアイデアを探していますか？ 本ページは公式の「作る→墜ちる→作り直す」に基づく設計の出発点と、プレイヤーが作りたいものを形作るコミュニティ質問をまとめます。",
      "sections": [
       {
@@ -6744,9 +6750,9 @@
      ]
     },
     "ko": {
-     "title": "Approximately Up 최고의 우주선 설계",
-     "metaTitle": "Approximately Up 우주선 아이디어 & 최고의 설계",
-     "metaDescription": "Approximately Up 우주선 설계 아이디어: 직접 만들기 위한 출발점, 커뮤니티 설계 질문, 더 많은 설계를 찾는 곳.",
+     "title": "Approximately Up 최고의 우주선 설…",
+     "metaTitle": "Approximately Up 우주선 아이디어 &…",
+     "metaDescription": "Approximately Up 우주선 설계 아이디어: 직접 만들기 위한 출발점, 커뮤니티…",
      "intro": "우주선 아이디어를 찾고 있나요? 이 페이지는 공식 '만들고-추락하고-다시 만들기' 판타지에 기반한 설계 출발점과, 플레이어들이 만들고 싶어 하는 것을 형성하는 커뮤니티 질문을 모읍니다.",
      "sections": [
       {
@@ -7205,8 +7211,8 @@
     },
     "zh-TW": {
      "title": "Approximately Up 最佳飛船設計",
-     "metaTitle": "Approximately Up 飛船創意與最佳設計",
-     "metaDescription": "Approximately Up 飛船設計靈感：你自己的建造起點、社區設計問題，以及去哪找更多設計。",
+     "metaTitle": "Approximately Up 飛船創意與最佳設…",
+     "metaDescription": "Approximately Up 飛船設計靈感：你自己的建造起點、社區設計問題，以及去哪找…",
      "intro": "找飛船創意？本頁基於官方「建造—墜毀—重建」玩法整理設計起點，並彙總塑造玩家建造需求的社區問題。",
      "sections": [
       {
@@ -7249,7 +7255,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/best-ship-designs.jpg"
   },
   {
    "slug": "system-requirements",
@@ -7380,8 +7387,8 @@
    "i18n": {
     "zh-CN": {
      "title": "Approximately Up 系统配置要求",
-     "metaTitle": "Approximately Up 系统配置要求（PC）",
-     "metaDescription": "Approximately Up PC 配置要求：最低/推荐配置尚未核实——这里写我们已知的信息与自查方法。",
+     "metaTitle": "Approximately Up 系统配置要求（PC…",
+     "metaDescription": "Approximately Up PC 配置要求：最低/推荐配置尚未核实——这里写我们已知的信息…",
      "intro": "玩家想要一个直接答案：自己的电脑能不能跑《Approximately Up》。官方最低与推荐配置在我们知识库中仍未核实，因此本页写已知信息与「待补」项。",
      "sections": [
       {
@@ -7462,7 +7469,7 @@
     "ja": {
      "title": "Approximately Up 動作環境",
      "metaTitle": "Approximately Up 動作環境（PC）",
-     "metaDescription": "Approximately Up の PC 動作環境：最低／推奨スペックは未検証——わかっていることと互換性の確認方法。",
+     "metaDescription": "Approximately Up の PC 動作環境：最低／推奨スペックは未検証——わかっている…",
      "intro": "プレイヤーは自分の PC で動くかどうかの明確な答えを求めています。公式の最低・推奨スペックは未検証のため、本ページは判明していることと「未検証」を明記します。",
      "sections": [
       {
@@ -7542,8 +7549,8 @@
     },
     "ko": {
      "title": "Approximately Up 시스템 요구 사항",
-     "metaTitle": "Approximately Up 시스템 요구 사항 (PC)",
-     "metaDescription": "Approximately Up PC 시스템 요구 사항: 최소/권장 사양은 아직 미확인 — 아는 것과 호환성 확인 방법.",
+     "metaTitle": "Approximately Up 시스템 요구 사항…",
+     "metaDescription": "Approximately Up PC 시스템 요구 사항: 최소/권장 사양은 아직 미확인 — 아는…",
      "intro": "플레이어들은 자신의 PC로 실행 가능한지에 대한 명확한 답을 원합니다. 공식 최소·권장 사양은 아직 지식 베이스에서 확인되지 않았으므로, 이 페이지는 아는 것과 미확인 항목을 알려드립니다.",
      "sections": [
       {
@@ -8352,8 +8359,8 @@
     },
     "zh-TW": {
      "title": "Approximately Up 系統配置要求",
-     "metaTitle": "Approximately Up 系統配置要求（PC）",
-     "metaDescription": "Approximately Up PC 配置要求：最低/推薦配置尚未核實——這裡寫我們已知的信息與自查方法。",
+     "metaTitle": "Approximately Up 系統配置要求（PC…",
+     "metaDescription": "Approximately Up PC 配置要求：最低/推薦配置尚未核實——這裡寫我們已知的信息…",
      "intro": "玩家想要一個直接答案：自己的電腦能不能跑《Approximately Up》。官方最低與推薦配置在我們知識庫中仍未核實，因此本頁寫已知信息與「待補」項。",
      "sections": [
       {
@@ -8431,7 +8438,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/system-requirements.jpg"
   },
   {
    "slug": "console-release",
@@ -8550,9 +8558,9 @@
    },
    "i18n": {
     "zh-CN": {
-     "title": "Approximately Up 主机版：PS5、Xbox 与…",
-     "metaTitle": "Approximately Up 主机版发售日期（PS5…",
-     "metaDescription": "Approximately Up 会出 PS5、Xbox 或 Switch 版吗？目前没有官方公告——这里是主机版状态与官方新闻关注方式。",
+     "title": "Approximately Up 主机版：PS5、Xbox…",
+     "metaTitle": "Approximately Up 主机版发售日期（P…",
+     "metaDescription": "Approximately Up 会出 PS5、Xbox 或 Switch 版吗？目前没有官方公告——这里是主…",
      "intro": "「Approximately Up PS5 发售日期」「Xbox 版」「Switch 版」是游戏自己的 wiki 也没回答的搜索。今天诚实的答案是：没有核实的官方主机公告——这里是状态页。",
      "sections": [
       {
@@ -8620,9 +8628,9 @@
      ]
     },
     "ja": {
-     "title": "Approximately Up コンソール版…",
-     "metaTitle": "Approximately Up コンソール版発売日（PS5・Xb…",
-     "metaDescription": "Approximately Up は PS5・Xbox・Switch に出る？ まだ公式発表なし——コンソール版の状況と公式ニュースの追い方を紹介。",
+     "title": "Approximately Up コンソール版：PS5…",
+     "metaTitle": "Approximately Up コンソール版発売…",
+     "metaDescription": "Approximately Up は PS5・Xbox・Switch に出る？ まだ公式発表なし——コンソー…",
      "intro": "「Approximately Up PS5 発売日」「Xbox 版」「Switch 版」は、ゲーム自身の wiki も答えていない検索。今日の正直な答え：検証済みの公式コンソール発表はなし——ここがステータスページです。",
      "sections": [
       {
@@ -8690,9 +8698,9 @@
      ]
     },
     "ko": {
-     "title": "Approximately Up 콘솔 출시…",
-     "metaTitle": "Approximately Up 콘솔 출시일 (PS5…",
-     "metaDescription": "Approximately Up이 PS5, Xbox, Switch로 나오나요? 아직 공식 발표 없음 — 콘솔 출시 현황과 공식 뉴스…",
+     "title": "Approximately Up 콘솔 출시: PS5·Xb…",
+     "metaTitle": "Approximately Up 콘솔 출시일 (PS5,…",
+     "metaDescription": "Approximately Up이 PS5, Xbox, Switch로 나오나요? 아직 공식 발표 없음 — 콘…",
      "intro": "'Approximately Up PS5 출시일', 'Xbox 출시', 'Switch 출시'는 게임 자체 위키도 답하지 못하는 검색입니다. 오늘의 정직한 답: 검증된 공식 콘솔 발표는 없습니다 — 여기가 현황 페이지입니다.",
      "sections": [
       {
@@ -9390,9 +9398,9 @@
      ]
     },
     "zh-TW": {
-     "title": "Approximately Up 主機版：PS5、Xbox 與…",
-     "metaTitle": "Approximately Up 主機版發售日期（PS5…",
-     "metaDescription": "Approximately Up 會出 PS5、Xbox 或 Switch 版嗎？目前沒有官方公告——這裡是主機版狀態與官方新聞關注方式。",
+     "title": "Approximately Up 主機版：PS5、Xbox…",
+     "metaTitle": "Approximately Up 主機版發售日期（P…",
+     "metaDescription": "Approximately Up 會出 PS5、Xbox 或 Switch 版嗎？目前沒有官方公告——這裡是主…",
      "intro": "「Approximately Up PS5 發售日期」「Xbox 版」「Switch 版」是遊戲自己的 wiki 也沒回答的搜索。今天誠實的答案是：沒有核實的官方主機公告——這裡是狀態頁。",
      "sections": [
       {
@@ -9459,7 +9467,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/console-release.jpg"
   },
   {
    "slug": "mods",
@@ -9571,8 +9580,8 @@
    "i18n": {
     "zh-CN": {
      "title": "Approximately Up 模组指南",
-     "metaTitle": "Approximately Up 模组：Steam 创意工坊…",
-     "metaDescription": "Approximately Up 模组详解：Steam 创意工坊支持、如何订阅模组，以及多船等社区模组问题。",
+     "metaTitle": "Approximately Up 模组：Steam 创意…",
+     "metaDescription": "Approximately Up 模组详解：Steam 创意工坊支持、如何订阅模组，以及多船等社…",
      "intro": "《Approximately Up》支持 Steam 创意工坊，查找与安装模组都很直接。这里写已确认的内容与玩家在求的东西。",
      "sections": [
       {
@@ -9633,8 +9642,8 @@
     },
     "ja": {
      "title": "Approximately Up Mod ガイド",
-     "metaTitle": "Approximately Up Mod：Steam…",
-     "metaDescription": "Approximately Up の Mod を解説：Steam ワークショップ対応、Mod の購読方法、複数船などのコミュニティの Mod 質問。",
+     "metaTitle": "Approximately Up Mod：Steam ワーク…",
+     "metaDescription": "Approximately Up の Mod を解説：Steam ワークショップ対応、Mod の購読方法、…",
      "intro": "『Approximately Up』は Steam ワークショップに対応しており、Mod の検索と導入は簡単です。ここでは確認済みの内容とプレイヤーが求めているものを紹介します。",
      "sections": [
       {
@@ -9695,8 +9704,8 @@
     },
     "ko": {
      "title": "Approximately Up 모드 가이드",
-     "metaTitle": "Approximately Up 모드: Steam 창작마당…",
-     "metaDescription": "Approximately Up 모드 설명: Steam 창작마당 지원, 모드 구독 방법, 여러 우주선 같은 커뮤니티 모드 질문.",
+     "metaTitle": "Approximately Up 모드: Steam 창작…",
+     "metaDescription": "Approximately Up 모드 설명: Steam 창작마당 지원, 모드 구독 방법, 여러 우주…",
      "intro": "Approximately Up은 Steam 창작마당을 지원해서 모드 찾기와 설치가 간단합니다. 여기서는 확인된 내용과 플레이어들이 요구하는 것을 다룹니다.",
      "sections": [
       {
@@ -10315,8 +10324,8 @@
     },
     "zh-TW": {
      "title": "Approximately Up 模組指南",
-     "metaTitle": "Approximately Up 模組：Steam 創意工坊…",
-     "metaDescription": "Approximately Up 模組詳解：Steam 創意工坊支持、如何訂閱模組，以及多船等社區模組問題。",
+     "metaTitle": "Approximately Up 模組：Steam 創意…",
+     "metaDescription": "Approximately Up 模組詳解：Steam 創意工坊支持、如何訂閱模組，以及多船等社…",
      "intro": "《Approximately Up》支持 Steam 創意工坊，查找與安裝模組都很直接。這裡寫已確認的內容與玩家在求的東西。",
      "sections": [
       {
@@ -10375,7 +10384,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/mods.jpg"
   },
   {
    "slug": "patch-notes",
@@ -10480,8 +10490,8 @@
    "i18n": {
     "zh-CN": {
      "title": "Approximately Up 更新日志",
-     "metaTitle": "Approximately Up 更新日志与版本历史",
-     "metaDescription": "Approximately Up 更新日志与版本历史：发售信息、官方更新发布位置，以及我们跟踪的变更记录（未核实项已标注）。",
+     "metaTitle": "Approximately Up 更新日志与版本历…",
+     "metaDescription": "Approximately Up 更新日志与版本历史：发售信息、官方更新发布位置，以及我们…",
      "intro": "《Approximately Up》于 2026 年 8 月 6 日发售。本页跟踪官方补丁说明与更新——未核实内容都会明确标注。",
      "sections": [
       {
@@ -10535,8 +10545,8 @@
     },
     "ja": {
      "title": "Approximately Up パッチノート",
-     "metaTitle": "Approximately Up パッチノートとアップデート履歴",
-     "metaDescription": "Approximately Up のパッチノートと更新履歴：発売情報、公式アップデートの掲載場所、追跡中の変更履歴（未検証は明記）。",
+     "metaTitle": "Approximately Up パッチノートとア…",
+     "metaDescription": "Approximately Up のパッチノートと更新履歴：発売情報、公式アップデートの掲…",
      "intro": "『Approximately Up』は2026年8月6日にリリース。本ページは公式パッチノートとアップデートを追跡し、未検証のものは明確に示します。",
      "sections": [
       {
@@ -10590,8 +10600,8 @@
     },
     "ko": {
      "title": "Approximately Up 패치 노트",
-     "metaTitle": "Approximately Up 패치 노트 & 업데이트 기록",
-     "metaDescription": "Approximately Up 패치 노트와 업데이트 기록: 출시 정보, 공식 업데이트 게시 위치, 추적 중인 변경 기록(미확인…",
+     "metaTitle": "Approximately Up 패치 노트 & 업데…",
+     "metaDescription": "Approximately Up 패치 노트와 업데이트 기록: 출시 정보, 공식 업데이트 게시…",
      "intro": "Approximately Up은 2026년 8월 6일에 출시됐습니다. 이 페이지는 공식 패치 노트와 업데이트를 추적하며, 미확인된 것은 모두 명확히 표시합니다.",
      "sections": [
       {
@@ -11140,8 +11150,8 @@
     },
     "zh-TW": {
      "title": "Approximately Up 更新日誌",
-     "metaTitle": "Approximately Up 更新日誌與版本歷史",
-     "metaDescription": "Approximately Up 更新日誌與版本歷史：發售信息、官方更新發布位置，以及我們跟蹤的變更記錄（未核實項已標註）。",
+     "metaTitle": "Approximately Up 更新日誌與版本歷…",
+     "metaDescription": "Approximately Up 更新日誌與版本歷史：發售信息、官方更新發布位置，以及我們…",
      "intro": "《Approximately Up》於 2026 年 8 月 6 日發售。本頁跟蹤官方補丁說明與更新——未核實內容都會明確標註。",
      "sections": [
       {
@@ -11193,7 +11203,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/patch-notes.jpg"
   },
   {
    "slug": "demo-vs-full",
@@ -11314,8 +11325,8 @@
    "i18n": {
     "zh-CN": {
      "title": "Approximately Up Demo 与正式版对比",
-     "metaTitle": "Approximately Up Demo 与正式版：有什么区别？",
-     "metaDescription": "Approximately Up Demo 与正式版对比：发售日期、价格、创意工坊与成就——以及仍待核实的内容差异。",
+     "metaTitle": "Approximately Up Demo 与正式版：有…",
+     "metaDescription": "Approximately Up Demo 与正式版对比：发售日期、价格、创意工坊与成就——以及仍…",
      "intro": "《Approximately Up》的 Demo 先于 2026 年 8 月 6 日的正式版推出。这里给出已核实的对比，内容差异部分明确标注「待补」。",
      "sections": [
       {
@@ -11384,9 +11395,9 @@
      ]
     },
     "ja": {
-     "title": "Approximately Up デモと製品版の比較",
-     "metaTitle": "Approximately Up デモと製品版：違いは？",
-     "metaDescription": "Approximately Up のデモと製品版を比較：リリース日・価格・ワークショップ・実績——そして未検証の内容差。",
+     "title": "Approximately Up デモと製品版の比…",
+     "metaTitle": "Approximately Up デモと製品版：違…",
+     "metaDescription": "Approximately Up のデモと製品版を比較：リリース日・価格・ワークショップ・…",
      "intro": "『Approximately Up』のデモは2026年8月6日の製品版より先に公開されました。検証済みの比較を示し、内容差は明確に「未検証」とします。",
      "sections": [
       {
@@ -11456,8 +11467,8 @@
     },
     "ko": {
      "title": "Approximately Up 데모 vs 정식 게임",
-     "metaTitle": "Approximately Up 데모 vs 정식: 차이점은?",
-     "metaDescription": "Approximately Up 데모와 정식 버전 비교: 출시일, 가격, 창작마당과 업적 — 그리고 아직 미확인인 콘텐츠 차이.",
+     "metaTitle": "Approximately Up 데모 vs 정식: 차…",
+     "metaDescription": "Approximately Up 데모와 정식 버전 비교: 출시일, 가격, 창작마당과 업적 — 그…",
      "intro": "Approximately Up 데모는 2026년 8월 6일 정식 출시보다 먼저 나왔습니다. 검증된 비교를 제공하고, 콘텐츠 차이는 명확히 '미확인'으로 표시합니다.",
      "sections": [
       {
@@ -12166,8 +12177,8 @@
     },
     "zh-TW": {
      "title": "Approximately Up Demo 與正式版對比",
-     "metaTitle": "Approximately Up Demo 與正式版：有什麼區別？",
-     "metaDescription": "Approximately Up Demo 與正式版對比：發售日期、價格、創意工坊與成就——以及仍待核實的內容差異。",
+     "metaTitle": "Approximately Up Demo 與正式版：有…",
+     "metaDescription": "Approximately Up Demo 與正式版對比：發售日期、價格、創意工坊與成就——以及仍…",
      "intro": "《Approximately Up》的 Demo 先於 2026 年 8 月 6 日的正式版推出。這裡給出已核實的對比，內容差異部分明確標註「待補」。",
      "sections": [
       {
@@ -12235,7 +12246,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/demo-vs-full.jpg"
   },
   {
    "slug": "achievements-list",
@@ -12339,8 +12351,8 @@
    "i18n": {
     "zh-CN": {
      "title": "Approximately Up 成就列表",
-     "metaTitle": "Approximately Up 成就：完整列表（22 项）",
-     "metaDescription": "Approximately Up 有 22 项 Steam 成就。完整名称列表仍在核实中——这里写已确认的内容。",
+     "metaTitle": "Approximately Up 成就：完整列表（2…",
+     "metaDescription": "Approximately Up 有 22 项 Steam 成就。完整名称列表仍在核实中——这里写已确认…",
      "intro": "Steam 官方商店页确认有 22 项成就。确切名称与解锁条件尚未在我们知识库中核实，因此本页跟踪已确认数量，并把列表标为「待补」。",
      "sections": [
       {
@@ -12393,8 +12405,8 @@
     },
     "ja": {
      "title": "Approximately Up 実績リスト",
-     "metaTitle": "Approximately Up 実績：完全リスト（22個）",
-     "metaDescription": "Approximately Up には Steam 実績が22個。名称の完全リストは検証中——確認済みの内容をここに示します。",
+     "metaTitle": "Approximately Up 実績：完全リスト…",
+     "metaDescription": "Approximately Up には Steam 実績が22個。名称の完全リストは検証中——確認済み…",
      "intro": "Steam 公式ストアは実績22個を確認。正確な名称と解放条件は未検証のため、本ページは確認済みの数と「未検証」を示します。",
      "sections": [
       {
@@ -12447,8 +12459,8 @@
     },
     "ko": {
      "title": "Approximately Up 업적 목록",
-     "metaTitle": "Approximately Up 업적: 전체 목록 (22개)",
-     "metaDescription": "Approximately Up에는 Steam 업적 22개가 있습니다. 이름 전체 목록은 아직 확인 중 — 확인된 내용을 여기에…",
+     "metaTitle": "Approximately Up 업적: 전체 목록 (…",
+     "metaDescription": "Approximately Up에는 Steam 업적 22개가 있습니다. 이름 전체 목록은 아직 확…",
      "intro": "Steam 공식 스토어가 업적 22개를 확인했습니다. 정확한 이름과 해금 조건은 아직 지식 베이스에서 확인되지 않았으므로, 이 페이지는 확인된 수를 추적하고 목록을 '미확인'으로 표시합니다.",
      "sections": [
       {
@@ -12987,8 +12999,8 @@
     },
     "zh-TW": {
      "title": "Approximately Up 成就列表",
-     "metaTitle": "Approximately Up 成就：完整列表（22 項）",
-     "metaDescription": "Approximately Up 有 22 項 Steam 成就。完整名稱列表仍在核實中——這裡寫已確認的內容。",
+     "metaTitle": "Approximately Up 成就完整清單：22 項收錄",
+     "metaDescription": "Approximately Up 有 22 項 Steam 成就。完整名稱列表仍在核實中——這裡寫已確認…",
      "intro": "Steam 官方商店頁確認有 22 項成就。確切名稱與解鎖條件尚未在我們知識庫中核實，因此本頁跟蹤已確認數量，並把列表標為「待補」。",
      "sections": [
       {
@@ -13039,7 +13051,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/achievements-list.jpg"
   },
   {
    "slug": "ships",
@@ -13125,7 +13138,7 @@
    "i18n": {
     "zh-CN": {
      "title": "Approximately Up 飞船",
-     "metaTitle": "Approximately Up 飞船：建造、创意与设计",
+     "metaTitle": "Approximately Up 飞船：建造、创意…",
      "metaDescription": "Approximately Up 飞船内容索引：建造指南、飞船设计、蓝图与模块化建造基础。",
      "intro": "关于 Approximately Up 飞船的一切都在这——从你的第一艘船到社区设计创意。",
      "sections": [
@@ -13161,8 +13174,8 @@
     },
     "ja": {
      "title": "Approximately Up の宇宙船",
-     "metaTitle": "Approximately Up の宇宙船：建造・アイデア・デザイン",
-     "metaDescription": "Approximately Up の宇宙船コンテンツ索引：建造ガイド、船のデザイン、設計図、モジュール建造の基本。",
+     "metaTitle": "Approximately Up の宇宙船：建造・…",
+     "metaDescription": "Approximately Up の宇宙船コンテンツ索引：建造ガイド、船のデザイン、設計図…",
      "intro": "Approximately Up の宇宙船に関するすべてを一箇所に——最初の建造からコミュニティのデザインアイデアまで。",
      "sections": [
       {
@@ -13197,8 +13210,8 @@
     },
     "ko": {
      "title": "Approximately Up 우주선",
-     "metaTitle": "Approximately Up 우주선: 제작, 아이디어 &…",
-     "metaDescription": "Approximately Up 우주선 콘텐츠 색인: 제작 가이드, 우주선 설계, 설계도, 모듈식 제작 기본.",
+     "metaTitle": "Approximately Up 우주선: 제작, 아…",
+     "metaDescription": "Approximately Up 우주선 콘텐츠 색인: 제작 가이드, 우주선 설계, 설계도, 모…",
      "intro": "Approximately Up 우주선에 관한 모든 것을 한곳에 — 첫 제작부터 커뮤니티 설계 아이디어까지.",
      "sections": [
       {
@@ -13557,7 +13570,7 @@
     },
     "zh-TW": {
      "title": "Approximately Up 飛船",
-     "metaTitle": "Approximately Up 飛船：建造、創意與設計",
+     "metaTitle": "Approximately Up 飛船：建造、創意…",
      "metaDescription": "Approximately Up 飛船內容索引：建造指南、飛船設計、藍圖與模塊化建造基礎。",
      "intro": "關於 Approximately Up 飛船的一切都在這——從你的第一艘船到社區設計創意。",
      "sections": [
@@ -13677,7 +13690,7 @@
     "zh-CN": {
      "title": "Approximately Up 蓝图",
      "metaTitle": "Approximately Up 蓝图：下载与图库",
-     "metaDescription": "Approximately Up 蓝图内容索引：如何使用蓝图、去哪找飞船设计，以及 Steam 创意工坊。",
+     "metaDescription": "Approximately Up 蓝图内容索引：如何使用蓝图、去哪找飞船设计，以及 Steam 创…",
      "intro": "蓝图库索引——找飞船设计、了解（待补的）蓝图流程，并浏览创意工坊。",
      "sections": [
       {
@@ -13711,8 +13724,8 @@
     },
     "ja": {
      "title": "Approximately Up 設計図",
-     "metaTitle": "Approximately Up 設計図：ダウンロードとライブラリ",
-     "metaDescription": "Approximately Up の設計図コンテンツ索引：設計図の使い方、船の設計の探し方、Steam ワークショップ。",
+     "metaTitle": "Approximately Up 設計図一覧：DL と…",
+     "metaDescription": "Approximately Up の設計図コンテンツ索引：設計図の使い方、船の設計の探し方…",
      "intro": "設計図ライブラリの索引——船の設計を見つけ、（未検証の）設計図ワークフローを学び、ワークショップを閲覧。",
      "sections": [
       {
@@ -13746,8 +13759,8 @@
     },
     "ko": {
      "title": "Approximately Up 설계도",
-     "metaTitle": "Approximately Up 설계도: 다운로드 & 라이브러리",
-     "metaDescription": "Approximately Up 설계도 콘텐츠 색인: 설계도 사용법, 우주선 설계를 찾는 곳, Steam 창작마당.",
+     "metaTitle": "Approximately Up 설계도 모음: 다운…",
+     "metaDescription": "Approximately Up 설계도 콘텐츠 색인: 설계도 사용법, 우주선 설계를 찾는 곳,…",
      "intro": "설계도 라이브러리 색인 — 우주선 설계를 찾고, (미확인인) 설계도 절차를 배우고, 창작마당을 둘러보세요.",
      "sections": [
       {
@@ -14097,7 +14110,7 @@
     "zh-TW": {
      "title": "Approximately Up 藍圖",
      "metaTitle": "Approximately Up 藍圖：下載與圖庫",
-     "metaDescription": "Approximately Up 藍圖內容索引：如何使用藍圖、去哪找飛船設計，以及 Steam 創意工坊。",
+     "metaDescription": "Approximately Up 藍圖內容索引：如何使用藍圖、去哪找飛船設計，以及 Steam 創…",
      "intro": "藍圖庫索引——找飛船設計、瞭解（待補的）藍圖流程，並瀏覽創意工坊。",
      "sections": [
       {
@@ -14213,7 +14226,7 @@
     "zh-CN": {
      "title": "Approximately Up 攻略",
      "metaTitle": "Approximately Up 攻略：全部页面",
-     "metaDescription": "Approximately Up 全攻略索引：怎么玩、飞船建造、操作、多人联机、模组、成就等。",
+     "metaDescription": "Approximately Up 全攻略索引：怎么玩、飞船建造、操作、多人联机、模组、成就…",
      "intro": "Approximately Up 完整攻略索引。每一页回答一个玩家真正搜索的问题，未核实的都会标注。",
      "sections": [
       {
@@ -14246,7 +14259,7 @@
     "ja": {
      "title": "Approximately Up 攻略",
      "metaTitle": "Approximately Up 攻略：全ページ",
-     "metaDescription": "Approximately Up の全攻略索引：遊び方、宇宙船建造、操作、マルチプレイ、Mod、実績など。",
+     "metaDescription": "Approximately Up の全攻略索引：遊び方、宇宙船建造、操作、マルチプレイ、Mod…",
      "intro": "Approximately Up の完全な攻略索引。各ページはプレイヤーが実際に検索する質問に答え、未検証のものはすべて明記します。",
      "sections": [
       {
@@ -14278,8 +14291,8 @@
     },
     "ko": {
      "title": "Approximately Up 가이드",
-     "metaTitle": "Approximately Up 가이드: 전체 페이지",
-     "metaDescription": "Approximately Up 전체 가이드 색인: 플레이 방법, 우주선 제작, 조작, 멀티플레이, 모드, 업적 등.",
+     "metaTitle": "Approximately Up 가이드: 전체 페이…",
+     "metaDescription": "Approximately Up 전체 가이드 색인: 플레이 방법, 우주선 제작, 조작, 멀티플…",
      "intro": "Approximately Up 완전 가이드 색인. 각 페이지는 플레이어들이 실제로 검색하는 질문 하나에 답하며, 미확인된 것은 모두 표시합니다.",
      "sections": [
       {
@@ -14609,7 +14622,7 @@
     "zh-TW": {
      "title": "Approximately Up 攻略",
      "metaTitle": "Approximately Up 攻略：全部頁面",
-     "metaDescription": "Approximately Up 全攻略索引：怎麼玩、飛船建造、操作、多人聯機、模組、成就等。",
+     "metaDescription": "Approximately Up 全攻略索引：怎麼玩、飛船建造、操作、多人聯機、模組、成就…",
      "intro": "Approximately Up 完整攻略索引。每一頁回答一個玩家真正搜索的問題，未核實的都會標註。",
      "sections": [
       {
@@ -14705,7 +14718,7 @@
     "zh-CN": {
      "title": "Approximately Up 成就",
      "metaTitle": "Approximately Up 成就：总览",
-     "metaDescription": "Approximately Up 成就总览：已确认 22 项 Steam 成就、列表核实中，以及如何跟踪进度。",
+     "metaDescription": "Approximately Up 成就总览：已确认 22 项 Steam 成就、列表核实中，以及如何跟…",
      "intro": "Approximately Up 的成就中心——已确认数量、当前列表状态，以及完整跟踪页链接。",
      "sections": [
       {
@@ -14740,7 +14753,7 @@
     "ja": {
      "title": "Approximately Up 実績",
      "metaTitle": "Approximately Up 実績：概要",
-     "metaDescription": "Approximately Up の実績概要：Steam 実績22個を確認済み、完全リストを検証中、進捗の追い方。",
+     "metaDescription": "Approximately Up の実績概要：Steam 実績22個を確認済み、完全リストを検証中…",
      "intro": "Approximately Up の実績ハブ——確認済みの数、現在のリスト状況、完全トラッカーページへのリンク。",
      "sections": [
       {
@@ -14775,7 +14788,7 @@
     "ko": {
      "title": "Approximately Up 업적",
      "metaTitle": "Approximately Up 업적: 개요",
-     "metaDescription": "Approximately Up 업적 개요: Steam 업적 22개 확인, 전체 목록 확인 중, 진행 상황 추적 방법.",
+     "metaDescription": "Approximately Up 업적 개요: Steam 업적 22개 확인, 전체 목록 확인 중, 진행…",
      "intro": "Approximately Up 업적 허브 — 확인된 수, 현재 목록 상태, 전체 추적 페이지 링크.",
      "sections": [
       {
@@ -15125,7 +15138,7 @@
     "zh-TW": {
      "title": "Approximately Up 成就",
      "metaTitle": "Approximately Up 成就：總覽",
-     "metaDescription": "Approximately Up 成就總覽：已確認 22 項 Steam 成就、列表核實中，以及如何跟蹤進度。",
+     "metaDescription": "Approximately Up 成就總覽：已確認 22 項 Steam 成就、列表核實中，以及如何跟…",
      "intro": "Approximately Up 的成就中心——已確認數量、當前列表狀態，以及完整跟蹤頁鏈接。",
      "sections": [
       {
