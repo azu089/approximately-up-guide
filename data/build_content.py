@@ -33,7 +33,7 @@ SITE = {
     "tagline": "Build, Crash, Rebuild — Guides for Ships, Blueprints & Multiplayer",
     "description": "The best Approximately Up guides: how to play, ship building, controls, multiplayer, console release status, mods, patch notes and achievements — in 14 languages.",
     "language": "en",
-    "gaId": "",
+    "gaId": "G-YV335TQLWZ",
     "gscVerification": "",
     "adsenseId": "",
     "indexNowKey": "",
