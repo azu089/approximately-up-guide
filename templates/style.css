@@ -76,9 +76,9 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
 .lang-dd summary{list-style:none;cursor:pointer;padding:7px 10px;border-radius:6px;border:1px solid var(--line);color:var(--muted);font-size:13px;display:flex;align-items:center;gap:6px;transition:color 150ms var(--ease),border-color 150ms var(--ease),background-color 150ms var(--ease)}
 .lang-dd[open] summary{border-color:var(--cyan);color:var(--cyan);background:rgba(79,209,197,.05)}
 .lang-dd summary:hover{color:var(--cyan)}
-.dd-lang{position:absolute;right:0;top:calc(100% + 8px);background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:10px;min-width:190px;box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(2,1fr);gap:4px;z-index:60;transform-origin:top right}
+.dd-lang{position:absolute;right:0;top:calc(100% + 8px);background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:10px;min-width:190px;width:max-content;box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(2,max-content);gap:4px;z-index:60;transform-origin:top right;max-height:calc(100vh - 110px);overflow-y:auto}
 .lang-dd[open] .dd-lang{animation:dd-in 160ms var(--ease-out)}
-.dd-lang a{display:flex;align-items:center;gap:7px;padding:6px 8px;min-height:30px;border-radius:6px;color:var(--muted);font-size:13px;transition:color 150ms var(--ease),background-color 150ms var(--ease),transform 150ms var(--ease-out)}
+.dd-lang a{display:flex;align-items:center;gap:7px;padding:6px 8px;min-height:30px;border-radius:6px;color:var(--muted);font-size:13px;white-space:nowrap;transition:color 150ms var(--ease),background-color 150ms var(--ease),transform 150ms var(--ease-out)}
 .dd-lang a:active{transform:scale(.96)}
 .dd-lang a:hover,.dd-lang a.active{color:var(--cyan);background:rgba(79,209,197,.07)}
 .lang-flag{width:18px;height:12px;border-radius:2px;overflow:hidden;flex:none;display:inline-flex}
@@ -373,7 +373,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
   .dd-group a{flex:1 1 45%;min-width:0}
   .header-inner{flex-wrap:wrap;gap:10px}
   .site-search{order:3;width:100%;margin-left:0}
-  .dd-lang{position:fixed;right:12px;left:12px;top:64px;min-width:0;grid-template-columns:repeat(2,1fr)}
+  .dd-lang{position:fixed;right:12px;left:12px;top:64px;min-width:0;width:auto;grid-template-columns:repeat(2,1fr);max-height:calc(100dvh - 84px);overflow-y:auto}
   .dd-lang a{padding:10px 12px;min-height:44px}
   .flightdeck{padding:24px 16px 48px}
   .fd-head{padding-left:12px}
@@ -392,4 +392,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
 
 /* emil: 数据呈现动画（一次性、有目的） */
 @keyframes gauge-in{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.dd-lang::-webkit-scrollbar{width:6px}
+.dd-lang::-webkit-scrollbar-thumb{background:var(--line2);border-radius:3px}
+.dd-lang::-webkit-scrollbar-track{background:transparent}
 @keyframes dd-in{from{opacity:0;transform:translateY(-4px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
