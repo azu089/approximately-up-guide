@@ -2299,7 +2299,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/how-to-play.jpg"
   },
   {
    "slug": "ship-building-guide",
@@ -3243,7 +3244,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/ship-building-guide.jpg"
   },
   {
    "slug": "blueprints-guide",
@@ -4117,7 +4119,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/blueprints-guide.jpg"
   },
   {
    "slug": "wiring-electronics",
@@ -4921,7 +4924,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/wiring-electronics.jpg"
   },
   {
    "slug": "controls",
@@ -5781,7 +5785,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/controls.jpg"
   },
   {
    "slug": "multiplayer",
@@ -6557,7 +6562,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/multiplayer.jpg"
   },
   {
    "slug": "best-ship-designs",
@@ -7249,7 +7255,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/best-ship-designs.jpg"
   },
   {
    "slug": "system-requirements",
@@ -8431,7 +8438,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/system-requirements.jpg"
   },
   {
    "slug": "console-release",
@@ -9459,7 +9467,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/console-release.jpg"
   },
   {
    "slug": "mods",
@@ -10375,7 +10384,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/mods.jpg"
   },
   {
    "slug": "patch-notes",
@@ -11193,7 +11203,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/patch-notes.jpg"
   },
   {
    "slug": "demo-vs-full",
@@ -12235,7 +12246,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/demo-vs-full.jpg"
   },
   {
    "slug": "achievements-list",
@@ -13039,7 +13051,8 @@
       }
      ]
     }
-   }
+   },
+   "heroImage": "/images/achievements-list.jpg"
   },
   {
    "slug": "ships",

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Doloc Town 配图生成：Seedream 文生图，废墟田园统一风格，16:9 高清."""
+"""Approximately Up 配图生成：Seedream 文生图，太空工程蓝图统一风格，16:9 高清."""
 import os, re, json, time, urllib.request, base64, sys
 from pathlib import Path
 
@@ -14,35 +14,30 @@ if not m:
 API_KEY = m.group(1).strip().strip('"').strip("'").strip()
 
 ENDPOINT = "https://ark.cn-beijing.volces.com/api/v3/images/generations"
-# 5.0 pro 文生图模型（备选 lite）
 MODEL_PRO = "doubao-seedream-5-0-pro-260628"
 MODEL_LITE = "doubao-seedream-5-0-lite-260128"
 
-STYLE = ("2D game key art for a cozy post-apocalyptic pixel-art farming game, warm moss green and harvest "
-         "amber palette with rust-grey ruins, soft morning light, gentle depth of field, detailed pixel-art "
-         "textures, cinematic composition, no text, no watermark, no logos, 16:9 widescreen")
+# ui-ux-pro-max Gaming 方向：vibrant + neon + immersive；太空工程蓝图统一风格
+STYLE = ("2D game key art for a co-op space sandbox ship-building game, deep-space navy background with "
+         "cyan blueprint grid lines and amber warning accents, modular spaceship parts and holographic "
+         "blueprints, dramatic lighting, high detail, cinematic composition, no text, no watermark, no logos, "
+         "16:9 widescreen")
 
 PROMPTS = {
-  "hero": "A thriving vertical farm built on stacked wooden platforms among post-apocalyptic ruins, drone flying over crops, solar panels and wind turbines, warm golden sunrise, " + STYLE,
-  "how-to-play": "A young scavenger with a backpack standing on a ruined rooftop holding a sprouting plant, tools and farming gear around, warm hopeful mood, " + STYLE,
-  "farming": "A cozy pixel-art farm plot with seasonal crops, planters on stacked platforms, a sickle and watering can, morning mist, " + STYLE,
-  "automation": "A solar panel and wind turbine powering a drone station that waters crops automatically, clean energy wires, bright daylight, " + STYLE,
-  "gene-system": "A mysterious gene laboratory in a ruined basement with glowing seed pods in test tubes, botanical DNA strands, teal and amber glow, " + STYLE,
-  "fishing": "A calm pond among ruins at golden hour, a pixel-art angler casting a line, fish jumping, reflections, cozy mood, " + STYLE,
-  "drone-combat": "A customized combat drone with a laser barrel hovering over wasteland ruins, sparks and energy glow, dynamic angle, " + STYLE,
-  "exploration": "A winding path through overgrown ruins toward an ancient city skyline, lanterns and fireflies, adventurous mood, " + STYLE,
-  "friendship": "Villagers sharing a meal at a festival table under string lights in a rebuilt town square, warmth and community, " + STYLE,
-  "cooking": "A rustic kitchen with a steaming pot, fresh vegetables and fish on a wooden table, cozy lantern light, " + STYLE,
-  "ranching": "A small barn with a fence, a cow and chickens in a rebuilt meadow, morning sun, peaceful mood, " + STYLE,
-  "characters": "A group of charming pixel-art townsfolk with distinct outfits gathered in a town square, portraits style, warm light, " + STYLE,
-  "story": "A mysterious glowing 'Eden' technology core half-buried in ruins, vines growing over it, secrets and wonder, " + STYLE,
-  "weather": "A dramatic storm over a farm with lightning striking a tower, rain, a drone sheltering crops, intense sky, " + STYLE,
-  "achievements": "A rustic wooden achievement board with medals and ribbons in a rebuilt workshop, trophies on shelves, " + STYLE,
-  "mods": "A workbench with tools, computer parts and a workshop blueprint, tinkerer vibe in a cozy ruin workshop, " + STYLE,
-  "update-log": "A notebook with a quill pen on a wooden desk, a steam locomotive passing outside a window, changelog mood, " + STYLE,
-  "faq": "A cozy town notice board with papers pinned, a villager reading it, morning light, " + STYLE,
-  "system-requirements": "A retro computer setup on a wooden desk in a rebuilt room, pixel-art monitor glowing, " + STYLE,
-  "steam-deck": "A handheld gaming device resting on a farm fence, the farm and ruins in the background, " + STYLE,
+  "hero": "A modular starship assembled from scrap parts flying over a strange alien planet, glowing cyan thrusters and cable wiring, holographic blueprint overlay, deep-space navy and cyan palette, " + STYLE,
+  "how-to-play": "A pilot in a spacesuit standing on a hangar deck in front of a half-built modular ship, holographic controls and floating parts, " + STYLE,
+  "ship-building-guide": "Close-up of a modular ship under construction: giant thrusters being bolted onto a frame, cables hanging, engineering hologram beside it, " + STYLE,
+  "blueprints-guide": "A glowing holographic blueprint table showing a spaceship schematic, hands dragging parts into place, cyan lines on dark panels, " + STYLE,
+  "wiring-electronics": "A tangle of glowing cables and circuit boards being wired into a ship panel, a technician with a welding tool, amber sparks, " + STYLE,
+  "controls": "A spaceship cockpit control panel with holographic displays, joysticks and buttons glowing cyan, viewport showing space, " + STYLE,
+  "multiplayer": "Two astronauts in spacesuits working together to assemble a ship in zero gravity, tools floating, connected by tether, " + STYLE,
+  "best-ship-designs": "A fleet of creative modular spaceships docked in a spaceport, each with unique designs, neon accents, blueprint holograms, " + STYLE,
+  "system-requirements": "A high-tech computer workstation in a spaceship interior, holographic spec sheet floating above the monitor, " + STYLE,
+  "console-release": "A game controller floating in zero gravity next to a spaceship window, planet below, console vibe, " + STYLE,
+  "mods": "A workshop in space with modular ship parts being modified, tools and holographic mods list, tinkerer vibe, " + STYLE,
+  "patch-notes": "A holographic changelog screen in a ship corridor, a crew member reading it, cyan text glow, " + STYLE,
+  "demo-vs-full": "Two ships side by side: a small prototype demo ship and a larger full-version ship, comparison holograms, " + STYLE,
+  "achievements-list": "A wall of glowing holographic achievement badges in a spaceship lounge, crew member looking at them, " + STYLE,
 }
 
 def call(prompt, model=MODEL_PRO, retries=3):
@@ -52,7 +47,7 @@ def call(prompt, model=MODEL_PRO, retries=3):
         try:
             req = urllib.request.Request(ENDPOINT, data=body, method="POST", headers={
                 "Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"})
-            with urllib.request.urlopen(req, timeout=120) as r:
+            with urllib.request.urlopen(req, timeout=180) as r:
                 data = json.loads(r.read().decode())
             items = data.get("data") or []
             if items:
@@ -68,13 +63,12 @@ def download(url, dest):
         Path(dest).write_bytes(base64.b64decode(b64))
         return True
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=120) as r:
+    with urllib.request.urlopen(req, timeout=180) as r:
         Path(dest).write_bytes(r.read())
     return True
 
 def main():
     todo = dict(PROMPTS)
-    # 只生成缺失的
     done = []
     for name, prompt in todo.items():
         dest = ASSETS / f"{name}.jpg"
@@ -82,14 +76,14 @@ def main():
             print(f"skip {name} (exists)")
             done.append(name)
             continue
-        print(f"generating {name} ...")
+        print(f"generating {name} ...", flush=True)
         url = call(prompt)
         if not url:
             print(f"  FAILED {name}, trying lite model")
             url = call(prompt, model=MODEL_LITE)
         if url:
             download(url, dest)
-            print(f"  OK {name} -> {dest.stat().st_size} bytes")
+            print(f"  OK {name} -> {dest.stat().st_size} bytes", flush=True)
             done.append(name)
         else:
             print(f"  FAILED {name}")

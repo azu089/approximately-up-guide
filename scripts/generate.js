@@ -47,6 +47,14 @@ const FLAGS = {
   "ja": '<svg viewBox="0 0 60 40"><rect width="60" height="40" fill="#fff"/><circle cx="30" cy="20" r="11" fill="#BC002D"/></svg>',
   "ko": '<svg viewBox="0 0 60 40"><rect width="60" height="40" fill="#fff"/><g transform="translate(30 20)"><g transform="rotate(45)"><rect x="-10" y="-5" width="20" height="10" fill="#CD2E3A"/><rect x="-10" y="0" width="20" height="10" fill="#0047A0"/><circle r="6" fill="#fff"/></g><circle r="5" fill="#CD2E3A"/><path d="M0-5a5 5 0 0 1 0 10 2 2 0 0 1 0-10" fill="#0047A0"/></g><g fill="#000"><path d="M15 2h3v6h-3zM15 32h3v6h-3zM42 2h3v6h-3zM42 32h3v6h-3z"/></g></svg>',
   "es": '<svg viewBox="0 0 60 40"><rect width="60" height="40" fill="#AA151B"/><rect y="10" width="60" height="20" fill="#F1BF00"/><g transform="translate(30 20)"><path d="M-10 0a10 10 0 0 1 10-10 10 10 0 0 1 0 20 10 10 0 0 1-10-10z" fill="#fff" opacity=".85"/></g></svg>',
+  "fr": '<svg viewBox="0 0 60 40"><rect width="60" height="40" fill="#fff"/><rect width="20" height="40" fill="#0055A4"/><rect x="40" width="20" height="40" fill="#EF4135"/></svg>',
+  "de": '<svg viewBox="0 0 60 40"><rect width="60" height="40" fill="#FFCE00"/><rect width="60" height="13.3" fill="#000"/><rect y="26.7" width="60" height="13.3" fill="#DD0000"/></svg>',
+  "it": '<svg viewBox="0 0 60 40"><rect width="60" height="40" fill="#fff"/><rect width="20" height="40" fill="#009246"/><rect x="40" width="20" height="40" fill="#CE2B37"/></svg>',
+  "pl": '<svg viewBox="0 0 60 40"><rect width="60" height="40" fill="#fff"/><rect width="60" height="20" fill="#DC143C"/></svg>',
+  "pt-BR": '<svg viewBox="0 0 60 40"><rect width="60" height="40" fill="#009C3B"/><rect width="60" height="20" fill="#FFDF00"/><circle cx="30" cy="20" r="9" fill="#002776"/><path d="M30 14l5 6-5 6-5-6z" fill="#fff"/></svg>',
+  "ru": '<svg viewBox="0 0 60 40"><rect width="60" height="40" fill="#fff"/><rect y="13.3" width="60" height="13.3" fill="#0039A6"/><rect y="26.7" width="60" height="13.3" fill="#D52B1E"/></svg>',
+  "uk": '<svg viewBox="0 0 60 40"><rect width="60" height="20" fill="#005BBB"/><rect y="20" width="60" height="20" fill="#FFD500"/></svg>',
+  "vi": '<svg viewBox="0 0 60 40"><rect width="60" height="40" fill="#DA251D"/><path d="M30 8l3.3 6.7 7.3 1-5.3 5.2 1.3 7.3-6.6-3.5-6.6 3.5 1.3-7.3-5.3-5.2 7.3-1z" fill="#FFFF00"/></svg>',
 };
 const flagOf = lang => FLAGS[lang] || "🌐";
 
@@ -222,7 +230,16 @@ function header(lang, active){
 function footer(lang){
   const s = siteI18n(lang);
   const prefix = lang === DEF ? "" : `/${lang}`;
-  const cols = DATA.pages.slice(0, 10).map(p => `<a href="${prefix}/${p.slug}">${esc(pageOf(p,lang).title)}</a>`).join("");
+  // 按 header 的舱段分组（Cockpit/Engine/Cargo/Archive），避免一列 10 个长标题拉到底
+  const GRPS = [
+    {label:s.navGroup1||"Guides", slugs:["how-to-play","ship-building-guide","blueprints-guide","wiring-electronics","controls","multiplayer"]},
+    {label:s.navGroup2||"Reference", slugs:["best-ship-designs","system-requirements","console-release","mods","patch-notes","demo-vs-full"]},
+    {label:s.navGroup3||"Index", slugs:["achievements","achievements-list","ships","blueprints","guides"]},
+  ];
+  const footCols = GRPS.map(g=>`<nav class="footer-col"><b>${esc(g.label)}</b>${g.slugs.map(slug=>{
+    const p=DATA.pages.find(x=>x.slug===slug); if(!p) return "";
+    return `<a href="${prefix}/${slug}">${esc(pageOf(p,lang).title)}</a>`;
+  }).join("")}</nav>`).join("");
   return `<footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand-row">
@@ -232,13 +249,11 @@ function footer(lang){
         <a href="${esc(DATA.game.steamUrl)}" target="_blank" rel="noopener">Steam ↗</a>
       </div>
     </div>
-    <div class="footer-cols">
-      <nav class="footer-col">${cols}</nav>
-      <div class="footer-meta">
-        <p>${esc(s.tagline)}</p>
-        <p>${esc(s.footerNote)}</p>
-        <p>${esc(s.footerSource)} · ${today}</p>
-      </div>
+    <div class="footer-cols">${footCols}</div>
+    <div class="footer-meta">
+      <p>${esc(s.tagline)}</p>
+      <p>${esc(s.footerNote)}</p>
+      <p>${esc(s.footerSource)} · ${today}</p>
     </div>
     ${DATA.site.adsenseId ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${esc(DATA.site.adsenseId)}" crossorigin="anonymous"></script>` : ""}\n    ${DATA.site.adsterra ? DATA.site.adsterra : ""}
   </div>
@@ -441,6 +456,8 @@ function renderHome(lang){
       <div class="hab-links">${links}</div>
     </section>`;
   }).join("");
+  const heroImg = DATA.site.ogImage || "/images/hero.jpg";
+  const heroCardImg = `<div class="ship-imgwrap"><img class="ship-img" src="${esc(heroImg)}" alt="${esc(gname)}" loading="eager" width="1600" height="900"></div>`;
   return `<!doctype html>
 <html lang="${LANG_META[lang].html}"><head>${head(s.name, s.description, "", "index", lang)}</head>
 <body class="home">
@@ -448,7 +465,7 @@ ${header(lang, "")}
 <main class="flightdeck">
   <div class="fd-left">
     <div class="ship-card">
-      <div class="ship-mark" aria-hidden="true"><span class="ship-hull"></span><span class="ship-thruster"></span></div>
+      ${heroCardImg}
       <div class="ship-id"><span class="ship-flag">${flagOf(lang)}</span><b>${esc(gname)}</b></div>
       <p class="ship-desc">${esc(gintro)}</p>
       <div class="gauges">${gaugeRows}</div>
