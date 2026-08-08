@@ -418,66 +418,64 @@ function renderHome(lang){
   const gname = (DATA.game.nameI18n && DATA.game.nameI18n[lang]) || DATA.game.name;
   const gintro = (DATA.game.introI18n && DATA.game.introI18n[lang]) || DATA.game.intro;
   const statsArr = (DATA.game.statsI18n && DATA.game.statsI18n[lang]) || DATA.game.stats || [];
-  const stats = statsArr.map(st=>`<div class="stat"><b>${esc(st.value)}</b><span>${esc(st.label)}</span></div>`).join("");
+  // 仪表盘数据：取前 5 个做成「读数行」（不是并列卡片）
+  const gaugeRows = statsArr.slice(0,5).map((st,i)=>`<div class="gauge-row"><span class="gauge-idx">${String(i+1).padStart(2,"0")}</span><div class="gauge-meta"><span class="gauge-label">${esc(st.label)}</span><b class="gauge-value">${esc(st.value)}</b></div><span class="gauge-rail" aria-hidden="true"><span class="gauge-fill" style="width:${78 - i*13}%"></span></span></div>`).join("");
   const keyFactsArr = (DATA.game.keyFactsI18n && DATA.game.keyFactsI18n[lang]) || DATA.game.keyFacts || [];
-  const keyFacts = keyFactsArr.map(f=>`<li>${esc(f)}</li>`).join("");
+  const keyFacts = keyFactsArr.map(f=>`<li class="log-line">${esc(f)}</li>`).join("");
   const aboutPointsArr = (DATA.game.aboutPointsI18n && DATA.game.aboutPointsI18n[lang]) || DATA.game.aboutPoints || [];
-  const aboutPoints = aboutPointsArr.map(f=>`<li class="about-pt"><span class="about-ic" aria-hidden="true">${SVG.rocket}</span><p>${esc(f)}</p></li>`).join("");
-  const moduleOf = (slug, acc) => {
-    const p=DATA.pages.find(x=>x.slug===slug); if(!p) return "";
-    const m=metaOf(slug); const t=Object.assign(pageOf(p,lang),{slug});
-    return `<a class="eng-module" href="${prefix}/${slug}" style="--mod-acc:${acc}">
-      <span class="mod-rail"></span>
-      <span class="mod-ic">${SVG[m.icon]}</span>
-      <span class="mod-tx"><b>${esc(t.title)}</b><span>${esc(t.metaDescription)}</span></span>
-      <span class="mod-go">${esc(s.readGuide)}</span>
-    </a>`;
-  };
-  const MODULES = [
-    {label:(s.navGroup1||"Guides"), acc:"var(--cyan)", slugs:["how-to-play","ship-building-guide","blueprints-guide","wiring-electronics","controls","multiplayer"]},
-    {label:(s.navGroup2||"Reference"), acc:"var(--amber)", slugs:["best-ship-designs","system-requirements","console-release","mods","patch-notes","demo-vs-full"]},
-    {label:(s.navGroup3||"Index"), acc:"var(--violet)", slugs:["achievements","achievements-list","ships","blueprints","guides"]},
+  // 系统舱段：按「驾驶舱/引擎/蓝图/维生/通讯/资料库」组织（游戏建造隐喻）
+  const HAB = [
+    {code:"COCKPIT", acc:"var(--cyan)",   label:lang==="en"?"Cockpit — start here":lang==="ja"?"コックピット":lang==="ko"?"조종석":"驾驶舱 — 从这里开始", desc:lang==="en"?"First flight, controls, and the build-crash-rebuild loop.":"", slugs:["how-to-play","controls","system-requirements","multiplayer"]},
+    {code:"ENGINE",  acc:"var(--amber)",  label:lang==="en"?"Engine room — ship building":lang==="ja"?"機関室":lang==="ko"?"기관실":"引擎舱 — 飞船建造", desc:lang==="en"?"Modular ships, thrusters, wiring and blueprints.":"", slugs:["ship-building-guide","wiring-electronics","blueprints-guide","best-ship-designs"]},
+    {code:"CARGO",   acc:"var(--violet)", label:lang==="en"?"Cargo bay — references":lang==="ja"?"カーゴベイ":lang==="ko"?"화물칸":"货舱 — 参考资料", desc:lang==="en"?"Console release, mods, updates and demo comparison.":"", slugs:["console-release","mods","patch-notes","demo-vs-full"]},
+    {code:"ARCHIVE", acc:"#5CB8FF",       label:lang==="en"?"Archive — achievements & indexes":lang==="ja"?"資料室":lang==="ko"?"기록실":"资料库 — 成就与索引", desc:lang==="en"?"Achievements, ships index, blueprints index and guide index.":"", slugs:["achievements","achievements-list","ships","blueprints","guides"]},
   ];
-  const moduleGroups = MODULES.map(gr=>`<div class="mod-group"><h3 class="mod-group-title"><span class="mod-led" style="background:${gr.acc}"></span>${esc(gr.label)}</h3><div class="mod-grid">${gr.slugs.map(slug=>moduleOf(slug, gr.acc)).join("")}</div></div>`).join("");
-  const _faqSec = (pageOf(DATA.pages.find(p=>p.slug==="guides"), lang).sections||[]).find(x=>x.type==="faq") || {};
-  const faqItems = _faqSec.items || [];
-  const faqHtml = faqItems.slice(0,6).map(([q,a])=>`<details class="faq"><summary>${esc(q)}<span class="pm">+</span></summary><div class="faq-a">${esc(a)}</div></details>`).join("");
+  const habPanels = HAB.map((h,i)=>{
+    const links = h.slugs.map(slug=>{
+      const p=DATA.pages.find(x=>x.slug===slug); if(!p) return "";
+      const m=metaOf(slug); const t=Object.assign(pageOf(p,lang),{slug});
+      return `<a class="hab-link" href="${prefix}/${slug}" style="--hab-acc:${h.acc}"><span class="hab-ic">${SVG[m.icon]}</span><span class="hab-tx">${esc(t.title)}</span><span class="hab-go">${String(i+1)}.${h.slugs.indexOf(slug)+1} →</span></a>`;
+    }).join("");
+    return `<section class="hab-panel reveal" id="hab-${i+1}" style="--hab-acc:${h.acc}">
+      <div class="hab-head"><span class="hab-code">${h.code}</span><h2>${esc(h.label)}</h2>${h.desc?`<p>${esc(h.desc)}</p>`:""}</div>
+      <div class="hab-links">${links}</div>
+    </section>`;
+  }).join("");
   return `<!doctype html>
 <html lang="${LANG_META[lang].html}"><head>${head(s.name, s.description, "", "index", lang)}</head>
 <body class="home">
 ${header(lang, "")}
-<main>
-  <section class="hero">
-    <div class="hero-grid" aria-hidden="true"></div>
-    <div class="container hero-inner">
-      <p class="hero-eyebrow">${esc(s.blueTag||"BLUEPRINT")} · ${esc(gname)}</p>
-      <h1 class="hero-title">${esc(gname)}</h1>
-      <p class="hero-desc">${esc(gintro)}</p>
-      <div class="hero-stats">${stats}</div>
-      <div class="hero-cta">
+<main class="flightdeck">
+  <div class="fd-left">
+    <div class="ship-card">
+      <div class="ship-mark" aria-hidden="true"><span class="ship-hull"></span><span class="ship-thruster"></span></div>
+      <div class="ship-id"><span class="ship-flag">${flagOf(lang)}</span><b>${esc(gname)}</b></div>
+      <p class="ship-desc">${esc(gintro)}</p>
+      <div class="gauges">${gaugeRows}</div>
+    </div>
+    <div class="fd-log">
+      <span class="hab-code">MISSION LOG</span>
+      <ul class="log-list">${keyFacts}</ul>
+      <div class="fd-cta">
         <a class="btn btn-primary" href="${esc(DATA.game.steamUrl)}" rel="noopener sponsored">${esc(s.getOnSteam)}</a>
         <a class="btn btn-ghost" href="${prefix}/how-to-play">${esc(s.readGuide)}</a>
       </div>
     </div>
-  </section>
-
-  <section class="container section" id="core">
-    <div class="section-head"><span class="section-tag">${esc(s.latest||"Core systems")}</span><h2>${esc(s.aboutGame||"About the game")}</h2></div>
-    <p class="section-lead">${esc(gintro)}</p>
-    <ul class="about-points">${aboutPoints}</ul>
-    <ul class="keyfacts">${keyFacts}</ul>
-  </section>
-
-  <section class="container section" id="guides">
-    <div class="section-head"><span class="section-tag">${esc(s.blueTag||"BLUEPRINT")}</span><h2>${esc(s.guides||"All guides")}</h2></div>
-    ${moduleGroups}
-  </section>
-
-  ${faqHtml ? `<section class="container section" id="faq"><div class="section-head"><span class="section-tag">FAQ</span><h2>${esc(s.quickAnswers||"Quick answers")}</h2></div>${faqHtml}</section>` : ""}
+  </div>
+  <div class="fd-right">
+    <div class="fd-head">
+      <span class="hab-code">HABITAT MODULES</span>
+      <h1 class="fd-title">${esc(s.blueTag||"BLUEPRINT")} · ${esc(gname)}</h1>
+      <p class="fd-sub">${esc(s.explore||gintro)}</p>
+    </div>
+    ${habPanels}
+  </div>
 </main>
 ${footer(lang)}
 </body></html>`;
 }
+
+
 
 
 function renderFull(lang, title, desc, extraLd, slug, body, ogImage){
@@ -492,14 +490,11 @@ function renderPage(lang, page){
   SEC_IDX = 0;
   const toc = (t.sections||[]).filter(x=>x.heading).map((x,i)=>{
     SEC_IDX += 1;
-    return `<a href="#sec-${SEC_IDX}"><span class="toc-no">${String(SEC_IDX).padStart(2,"0")}</span>${esc(x.heading)}</a>`;
+    const n = String(SEC_IDX).padStart(2,"0");
+    return `<a href="#sec-${SEC_IDX}"><span class="node-no">${n}</span><span class="node-tx">${esc(x.heading)}</span></a>`;
   }).join("");
   SEC_IDX = 0;
   const sections2 = (t.sections||[]).map(x => renderSection(x, lang)).join("");
-  const related = DATA.pages.filter(p=>p.slug!==page.slug).slice(0,6).map(p=>{
-    const m = metaOf(p.slug);
-    return `<a href="${prefix}/${p.slug}"><span class="nav-ic">${SVG[m.icon]}</span><span>${esc(pageOf(p,lang).title)}</span></a>`;
-  }).join("");
   const srcList = page.sources || [];
   const sources = srcList.map(x=>`<li>${AFF.anchor({ url: x.url, text: (x.labels && x.labels[lang]) || x.label, suffix: " ↗" })}</li>`).join("");
   const affNote = AFF.needsDisclosure(srcList.map(x=>x.url))
@@ -511,49 +506,56 @@ function renderPage(lang, page){
     const base = img.replace(/\.(jpg|jpeg|png|webp)$/i, "");
     return { srcset: `${base}-640.jpg 640w, ${base}-1280.jpg 1280w, ${img} 1600w`, sizes: "(max-width: 640px) 94vw, (max-width: 960px) 92vw, 820px" };
   };
-  const pageHero = heroImg ? `<div class="eng-hero-img">${KIT.picture({ ...srcsetOf(heroImg), src: heroImg, attrs: `alt="${esc(t.title)}" loading="lazy" width="1600" height="900"` })}</div>` : "";
-  const noImgCls = heroImg ? "" : " noimg";
-  const metaKey = (k) => `<div class="meta-row"><span class="meta-k">${esc(k)}</span><b>${esc(t.title.split(":")[0].split("—")[0].trim())}</b></div>`;
+  const pageHero = heroImg ? `<div class="dossier-img">${KIT.picture({ ...srcsetOf(heroImg), src: heroImg, attrs: `alt="${esc(t.title)}" loading="lazy" width="1600" height="900"` })}</div>` : "";
+  // 相关档案（同舱段内）
+  const related = DATA.pages.filter(p=>p.slug!==page.slug).slice(0,5).map((p,i)=>{
+    const m = metaOf(p.slug);
+    return `<a href="${prefix}/${p.slug}" class="rel-link"><span class="rel-no">${String(i+1).padStart(2,"0")}</span><span class="nav-ic">${SVG[m.icon]}</span><span>${esc(pageOf(p,lang).title)}</span></a>`;
+  }).join("");
   const body = `
-  <main class="container">
-    <nav class="crumbs"><a href="${prefix}/">${esc(s.navHome)}</a><span>›</span><span>${esc(t.title)}</span></nav>
-    <div class="page-hero reveal${noImgCls}">
-      ${heroImg ? "" : `<span class="hero-ic" aria-hidden="true">${SVG[page.meta?.icon || "rocket"]}</span>`}
-      <span class="panel-tag">${esc(s.blueTag||"BLUEPRINT")} // ${esc(page.slug.toUpperCase())}</span>
-      <h1>${esc(t.title)}</h1>
-      <p class="lead">${esc(t.intro)}</p>
-      ${pageHero}
+  <main class="dossier-page">
+  <div class="dossier-wrap">
+    <div class="dossier-bar">
+      <span class="dossier-code">${esc(s.blueTag||"BLUEPRINT")} / ${esc(page.slug.toUpperCase())}</span>
+      <span class="dossier-meta">${esc(t.title.split(":")[0].split("—")[0].trim())} · ${today}</span>
+      <a class="dossier-home" href="${prefix}/">${esc(s.navHome)}</a>
     </div>
-    <div class="page-body">
-      <div class="content">
-        ${toc ? `<nav class="toc reveal"><b class="toc-title">${esc(s.updated)}</b>${toc}</nav>` : ""}
+    <header class="dossier-head reveal">
+      ${heroImg ? "" : `<span class="dossier-ic" aria-hidden="true">${SVG[page.meta?.icon || "rocket"]}</span>`}
+      <h1>${esc(t.title)}</h1>
+      <p class="dossier-lead">${esc(t.intro)}</p>
+      ${pageHero}
+    </header>
+    <div class="dossier-body">
+      <nav class="blueprint-nav reveal">
+        <b class="bp-title">${esc(s.updated||"Contents")}</b>
+        ${toc ? `<div class="bp-nodes">${toc}</div>` : ""}
+      </nav>
+      <div class="dossier-main">
         ${sections2}
-        ${sources ? `<div class="sources reveal"><b>${esc(s.sources)}</b><ul>${sources}</ul>${affNote}</div>` : ""}
+        ${sources ? `<footer class="dossier-src reveal"><b>${esc(s.sources||"Sources")}</b><ul>${sources}</ul>${affNote}</footer>` : ""}
       </div>
-      <aside class="eng-side">
-        <div class="meta-card reveal">
-          <span class="panel-tag">${esc(s.blueTag||"BLUEPRINT")} // DATA</span>
-          ${metaKey(lang==="en"?"Module":lang==="ja"?"モジュール":lang==="ko"?"모듈":"模块")}
-          <div class="meta-row"><span class="meta-k">${esc(s.updated)}</span><b>${today}</b></div>
-          <div class="meta-row"><span class="meta-k">${esc(lang==="en"?"Lang":lang==="ja"?"言語":lang==="ko"?"언어":"语言")}</span><b>${esc(LANG_META[lang].name)}</b></div>
-        </div>
-        <div class="related reveal">
-          <b>${esc(s.moreGuides)}</b>
+      <aside class="dossier-side reveal">
+        <div class="side-block">
+          <span class="hab-code">RELATED</span>
           ${related}
         </div>
-        <div class="cta-box reveal">
-          <span class="panel-tag">${esc(s.blueTag||"BLUEPRINT")} // STEAM</span>
+        <div class="side-block">
+          <span class="hab-code">STEAM</span>
           <p>${esc(DATA.game.name)}</p>
           <a class="btn btn-primary" href="${esc(DATA.game.steamUrl)}" target="_blank" rel="noopener sponsored">${esc(s.getOnSteam)}</a>
         </div>
       </aside>
     </div>
+  </div>
   </main>`;
   const extraLd = [articleLd(page, lang), breadcrumbLd(page, lang)];
   const fq = faqLd(t.sections);
   if (fq) extraLd.push(fq);
   return renderFull(lang, t.metaTitle || t.title, t.metaDescription, extraLd, page.slug, body, heroImg || DATA.site.ogImage);
 }
+
+
 
 
 function gnameOf(lang){ return (DATA.game.nameI18n && DATA.game.nameI18n[lang]) || DATA.game.name; }
