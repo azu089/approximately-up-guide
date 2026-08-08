@@ -459,7 +459,7 @@ function renderHome(lang){
   const heroImg = DATA.site.ogImage || "/images/hero.jpg";
   const heroCardImg = `<div class="ship-imgwrap"><img class="ship-img" src="${esc(heroImg)}" alt="${esc(gname)}" loading="eager" width="1600" height="900"></div>`;
   return `<!doctype html>
-<html lang="${LANG_META[lang].html}"><head>${head(s.name, s.description, "", "index", lang)}</head>
+<html lang="${LANG_META[lang].html}"><head>${head(s.name, s.description, [gameLd()], "index", lang)}</head>
 <body class="home">
 ${header(lang, "")}
 <main class="flightdeck">
