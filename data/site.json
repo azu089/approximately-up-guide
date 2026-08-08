@@ -587,12 +587,12 @@
    "PC (Steam)"
   ],
   "genre": "Adventure / Indie / Simulation",
-  "price": "¥93",
+  "price": "$24.99",
   "steamUrl": "https://store.steampowered.com/app/3904850/",
   "officialSite": "https://approximatelyup.com",
   "intro": "Approximately Up is a space sandbox builder by Approximately Games. Build a fully modular spaceship from whatever bolts together long enough to fly, crash, and rebuild. Explore new planets in co-op multiplayer, mount giant thrusters and annoying cables, complete wild missions, and face the dangers of space. Released on Steam on August 6, 2026, with 14 languages, 22 achievements and Steam Workshop support.",
   "keyFacts": [
-   "Released August 6, 2026 on Steam (¥93, currently 20% off)",
+   "Released August 6, 2026 on Steam ($19.99 at launch, was $24.99)",
    "Build, crash, rebuild — fully modular spaceships",
    "Single-player + online co-op multiplayer",
    "14 languages and 22 Steam achievements",
@@ -617,7 +617,7 @@
     "label": "Modes"
    },
    {
-    "value": "¥93",
+    "value": "$19.99",
     "label": "On Steam (20% off)"
    },
    {
@@ -666,7 +666,7 @@
      "label": "Modes"
     },
     {
-     "value": "¥93",
+     "value": "$19.99",
      "label": "On Steam (20% off)"
     },
     {
@@ -692,7 +692,7 @@
      "label": "模式"
     },
     {
-     "value": "¥93",
+     "value": "$19.99",
      "label": "Steam 售价（8折）"
     },
     {
@@ -718,7 +718,7 @@
      "label": "模式"
     },
     {
-     "value": "¥93",
+     "value": "$19.99",
      "label": "Steam 售價（8折）"
     },
     {
@@ -744,7 +744,7 @@
      "label": "モード"
     },
     {
-     "value": "¥93",
+     "value": "$19.99",
      "label": "Steam（20%オフ）"
     },
     {
@@ -770,7 +770,7 @@
      "label": "모드"
     },
     {
-     "value": "¥93",
+     "value": "$19.99",
      "label": "Steam 가격 (20% 할인)"
     },
     {
@@ -796,7 +796,7 @@
      "label": "Modes"
     },
     {
-     "value": "¥93",
+     "value": "$19.99",
      "label": "Sur Steam (-20 %)"
     },
     {
@@ -822,7 +822,7 @@
      "label": "Modi"
     },
     {
-     "value": "¥93",
+     "value": "$19.99",
      "label": "Auf Steam (20 % Rabatt)"
     },
     {
@@ -848,7 +848,7 @@
      "label": "Modos"
     },
     {
-     "value": "¥93",
+     "value": "$19.99",
      "label": "En Steam (-20 %)"
     },
     {
@@ -874,7 +874,7 @@
      "label": "Modalità"
     },
     {
-     "value": "¥93",
+     "value": "$19.99",
      "label": "Su Steam (-20 %)"
     },
     {
@@ -900,7 +900,7 @@
      "label": "Tryby"
     },
     {
-     "value": "¥93",
+     "value": "$19.99",
      "label": "Na Steam (-20 %)"
     },
     {
@@ -926,7 +926,7 @@
      "label": "Modos"
     },
     {
-     "value": "¥93",
+     "value": "$19.99",
      "label": "Na Steam (-20 %)"
     },
     {
@@ -952,7 +952,7 @@
      "label": "Режимы"
     },
     {
-     "value": "¥93",
+     "value": "$19.99",
      "label": "В Steam (-20 %)"
     },
     {
@@ -978,7 +978,7 @@
      "label": "Режими"
     },
     {
-     "value": "¥93",
+     "value": "$19.99",
      "label": "У Steam (-20 %)"
     },
     {
@@ -1004,7 +1004,7 @@
      "label": "Chế độ"
     },
     {
-     "value": "¥93",
+     "value": "$19.99",
      "label": "Trên Steam (-20%)"
     },
     {
@@ -1031,7 +1031,7 @@
   },
   "keyFactsI18n": {
    "en": [
-    "Released August 6, 2026 on Steam (¥93, currently 20% off)",
+    "Released August 6, 2026 on Steam ($19.99 at launch, was $24.99)",
     "Build, crash, rebuild — fully modular spaceships",
     "Single-player + online co-op multiplayer",
     "14 languages and 22 Steam achievements",
@@ -1039,7 +1039,7 @@
     "Self-published by Approximately Games (developer & publisher)"
    ],
    "zh-CN": [
-    "2026 年 8 月 6 日在 Steam 发售（¥93，当前 20% 折扣）",
+    "2026 年 8 月 6 日在 Steam 发售（$19.99，原价 $24.99，20% 折扣）",
     "建造、坠毁、重建——全模块化飞船",
     "单人 + 在线合作多人",
     "14 种语言、22 项 Steam 成就",
@@ -1047,7 +1047,7 @@
     "由 Approximately Games 自研自发（开发者兼发行商）"
    ],
    "zh-TW": [
-    "2026 年 8 月 6 日在 Steam 發售（¥93，當前 20% 折扣）",
+    "2026 年 8 月 6 日在 Steam 發售（$19.99，原價 $24.99，20% 折扣）",
     "建造、墜毀、重建——全模塊化飛船",
     "單人 + 在線合作多人",
     "14 種語言、22 項 Steam 成就",
@@ -1055,7 +1055,7 @@
     "由 Approximately Games 自研自發（開發者兼發行商）"
    ],
    "ja": [
-    "2026年8月6日に Steam でリリース（¥93、現在20%オフ）",
+    "2026年8月6日に Steam でリリース（$19.99、通常 $24.99、20%オフ）",
     "作って、墜ちて、作り直す——完全モジュラー式宇宙船",
     "シングルプレイ＋オンライン協力マルチプレイ",
     "14言語、22の Steam 実績",
@@ -1063,7 +1063,7 @@
     "Approximately Games が開発・パブリッシング（インディー）"
    ],
    "ko": [
-    "2026년 8월 6일 Steam 출시 (¥93, 현재 20% 할인)",
+    "2026년 8월 6일 Steam 출시 ($19.99, 정가 $24.99, 20% 할인)",
     "만들고, 추락하고, 다시 만들기 — 완전 모듈식 우주선",
     "싱글플레이 + 온라인 협동 멀티플레이",
     "14개 언어, 22개 Steam 업적",
@@ -1071,7 +1071,7 @@
     "Approximately Games 자체 개발·배급 (인디)"
    ],
    "fr": [
-    "Sorti le 6 août 2026 sur Steam (¥93, actuellement -20 %)",
+    "Sorti le 6 août 2026 sur Steam (19,99 $, au lieu de 24,99 $, -20 %)",
     "Construire, s'écraser, reconstruire — vaisseaux entièrement modulaires",
     "Solo + multijoueur coopératif en ligne",
     "14 langues et 22 succès Steam",
@@ -1079,7 +1079,7 @@
     "Auto-édité par Approximately Games (développeur et éditeur)"
    ],
    "de": [
-    "Erschienen am 6. August 2026 auf Steam (¥93, aktuell 20 % Rabatt)",
+    "Erschienen am 6. August 2026 auf Steam (19,99 $, statt 24,99 $, 20 % Rabatt)",
     "Bauen, abstürzen, neu bauen — vollständig modulare Raumschiffe",
     "Einzelspieler + Online-Koop-Mehrspieler",
     "14 Sprachen und 22 Steam-Erfolge",
@@ -1087,7 +1087,7 @@
     "Selbst veröffentlicht von Approximately Games (Entwickler & Publisher)"
    ],
    "es": [
-    "Lanzado el 6 de agosto de 2026 en Steam (¥93, actualmente -20 %)",
+    "Lanzado el 6 de agosto de 2026 en Steam (19,99 $, antes 24,99 $, -20 %)",
     "Construye, choca, reconstruye — naves totalmente modulares",
     "Un jugador + multijugador cooperativo en línea",
     "14 idiomas y 22 logros de Steam",
@@ -1095,7 +1095,7 @@
     "Autopublicado por Approximately Games (desarrollador y editor)"
    ],
    "it": [
-    "Uscito il 6 agosto 2026 su Steam (¥93, attualmente -20 %)",
+    "Uscito il 6 agosto 2026 su Steam (19,99 $, invece di 24,99 $, -20 %)",
     "Costruisci, schianta, ricostruisci — astronavi completamente modulari",
     "Giocatore singolo + multigiocatore cooperativo online",
     "14 lingue e 22 obiettivi Steam",
@@ -1103,7 +1103,7 @@
     "Autopubblicato da Approximately Games (sviluppatore ed editore)"
    ],
    "pl": [
-    "Premiera 6 sierpnia 2026 na Steam (¥93, obecnie -20 %)",
+    "Premiera 6 sierpnia 2026 na Steam (19,99 $, zamiast 24,99 $, -20 %)",
     "Buduj, rozbijaj, buduj od nowa — w pełni modułowe statki",
     "Tryb jednoosobowy + kooperacja online",
     "14 języków i 22 osiągnięcia Steam",
@@ -1111,7 +1111,7 @@
     "Samodzielne wydawnictwo Approximately Games (deweloper i wydawca)"
    ],
    "pt-BR": [
-    "Lançado em 6 de agosto de 2026 na Steam (¥93, atualmente -20 %)",
+    "Lançado em 6 de agosto de 2026 na Steam (US$ 19,99, antes US$ 24,99, -20 %)",
     "Construa, caia, reconstrua — naves totalmente modulares",
     "Um jogador + multijogador cooperativo online",
     "14 idiomas e 22 conquistas na Steam",
@@ -1119,7 +1119,7 @@
     "Autopublicado pela Approximately Games (desenvolvedora e publicadora)"
    ],
    "ru": [
-    "Релиз 6 августа 2026 года в Steam (¥93, сейчас скидка 20 %)",
+    "Релиз 6 августа 2026 года в Steam (19,99 $, вместо 24,99 $, скидка 20 %)",
     "Строй, разбивай, строй заново — полностью модульные корабли",
     "Одиночный режим + онлайн-кооператив",
     "14 языков и 22 достижения Steam",
@@ -1127,7 +1127,7 @@
     "Самиздат Approximately Games (разработчик и издатель)"
    ],
    "uk": [
-    "Реліз 6 серпня 2026 року в Steam (¥93, зараз знижка 20 %)",
+    "Реліз 6 серпня 2026 року в Steam (19,99 $, замість 24,99 $, знижка 20 %)",
     "Будуй, розбивай, будуй заново — повністю модульні кораблі",
     "Одиночний режим + онлайн-кооператив",
     "14 мов і 22 досягнення Steam",
@@ -1135,7 +1135,7 @@
     "Самвидав Approximately Games (розробник і видавець)"
    ],
    "vi": [
-    "Phát hành ngày 6 tháng 8 năm 2026 trên Steam (¥93, hiện giảm 20%)",
+    "Phát hành ngày 6 tháng 8 năm 2026 trên Steam (19,99 $, thay vì 24,99 $, giảm 20%)",
     "Xây, rơi, xây lại — tàu hoàn toàn mô-đun",
     "Chơi đơn + chơi mạng hợp tác trực tuyến",
     "14 ngôn ngữ và 22 thành tựu Steam",
@@ -2299,8 +2299,7 @@
       }
      ]
     }
-   },
-   "heroImage": "/images/how-to-play.jpg"
+   }
   },
   {
    "slug": "ship-building-guide",
@@ -3244,8 +3243,7 @@
       }
      ]
     }
-   },
-   "heroImage": "/images/ship-building-guide.jpg"
+   }
   },
   {
    "slug": "blueprints-guide",
@@ -4119,8 +4117,7 @@
       }
      ]
     }
-   },
-   "heroImage": "/images/blueprints-guide.jpg"
+   }
   },
   {
    "slug": "wiring-electronics",
@@ -4924,8 +4921,7 @@
       }
      ]
     }
-   },
-   "heroImage": "/images/wiring-electronics.jpg"
+   }
   },
   {
    "slug": "controls",
@@ -5785,8 +5781,7 @@
       }
      ]
     }
-   },
-   "heroImage": "/images/controls.jpg"
+   }
   },
   {
    "slug": "multiplayer",
@@ -6562,8 +6557,7 @@
       }
      ]
     }
-   },
-   "heroImage": "/images/multiplayer.jpg"
+   }
   },
   {
    "slug": "best-ship-designs",
@@ -7255,8 +7249,7 @@
       }
      ]
     }
-   },
-   "heroImage": "/images/best-ship-designs.jpg"
+   }
   },
   {
    "slug": "system-requirements",
@@ -8438,8 +8431,7 @@
       }
      ]
     }
-   },
-   "heroImage": "/images/system-requirements.jpg"
+   }
   },
   {
    "slug": "console-release",
@@ -9467,8 +9459,7 @@
       }
      ]
     }
-   },
-   "heroImage": "/images/console-release.jpg"
+   }
   },
   {
    "slug": "mods",
@@ -10384,8 +10375,7 @@
       }
      ]
     }
-   },
-   "heroImage": "/images/mods.jpg"
+   }
   },
   {
    "slug": "patch-notes",
@@ -10408,7 +10398,7 @@
       ],
       [
        "Price",
-       "¥93 at launch, with a 20% launch discount at the time of writing."
+       "$19.99 at launch (20% off; list $24.99)."
       ]
      ]
     },
@@ -10508,7 +10498,7 @@
         ],
         [
          "价格",
-         "发售时 ¥93，写作时正值 20% 首发折扣。"
+         "发售时 $19.99（20% 折扣，原价 $24.99）。"
         ]
        ]
       },
@@ -10563,7 +10553,7 @@
         ],
         [
          "価格",
-         "発売時 ¥93、執筆時点で 20% のローンチ割引。"
+         "発売時 $19.99（20% オフ、通常 $24.99）。"
         ]
        ]
       },
@@ -10618,7 +10608,7 @@
         ],
         [
          "가격",
-         "출시가 ¥93, 작성 시점에 20% 출시 할인."
+         "출시가 $19.99 (20% 할인, 정가 $24.99)."
         ]
        ]
       },
@@ -10673,7 +10663,7 @@
         ],
         [
          "Prix",
-         "¥93 au lancement, avec une remise de lancement de 20 % au moment de la rédaction."
+         "19,99 $ au lancement (remise de 20 % ; liste 24,99 $)."
         ]
        ]
       },
@@ -10728,7 +10718,7 @@
         ],
         [
          "Preis",
-         "¥93 zum Launch, mit 20 % Launch-Rabatt zum Zeitpunkt der Erstellung."
+         "19,99 $ zum Launch (20 % Rabatt; Listenpreis 24,99 $)."
         ]
        ]
       },
@@ -10783,7 +10773,7 @@
         ],
         [
          "Precio",
-         "¥93 en el lanzamiento, con un 20 % de descuento de lanzamiento al momento de escribir esto."
+         "19,99 $ en el lanzamiento (20 % de descuento; precio de lista 24,99 $)."
         ]
        ]
       },
@@ -10838,7 +10828,7 @@
         ],
         [
          "Prezzo",
-         "¥93 al lancio, con uno sconto di lancio del 20 % al momento della stesura."
+         "19,99 $ al lancio (sconto del 20 %; prezzo di listino 24,99 $)."
         ]
        ]
       },
@@ -10893,7 +10883,7 @@
         ],
         [
          "Cena",
-         "¥93 przy premierze, z 20% zniżką startową w momencie pisania."
+         "19,99 $ przy premierze (20% zniżki; cena katalogowa 24,99 $)."
         ]
        ]
       },
@@ -10948,7 +10938,7 @@
         ],
         [
          "Preço",
-         "¥93 no lançamento, com desconto de lançamento de 20% no momento da escrita."
+         "US$ 19,99 no lançamento (20% de desconto; preço de tabela US$ 24,99)."
         ]
        ]
       },
@@ -11003,7 +10993,7 @@
         ],
         [
          "Цена",
-         "¥93 на релизе, со скидкой 20 % на момент написания."
+         "19,99 $ на релизе (скидка 20 %; обычная цена 24,99 $)."
         ]
        ]
       },
@@ -11058,7 +11048,7 @@
         ],
         [
          "Ціна",
-         "¥93 на релізі, зі знижкою 20 % на момент написання."
+         "19,99 $ на релізі (знижка 20 %; звичайна ціна 24,99 $)."
         ]
        ]
       },
@@ -11113,7 +11103,7 @@
         ],
         [
          "Giá",
-         "¥93 khi phát hành, giảm 20% khi ra mắt tại thời điểm viết."
+         "19,99 $ khi phát hành (giảm 20%; giá niêm yết 24,99 $)."
         ]
        ]
       },
@@ -11168,7 +11158,7 @@
         ],
         [
          "價格",
-         "發售時 ¥93，寫作時正值 20% 首發折扣。"
+         "發售時 $19.99（20% 折扣，原價 $24.99）。"
         ]
        ]
       },
@@ -11203,8 +11193,7 @@
       }
      ]
     }
-   },
-   "heroImage": "/images/patch-notes.jpg"
+   }
   },
   {
    "slug": "demo-vs-full",
@@ -11230,7 +11219,7 @@
       [
        "Price",
        "unverified",
-       "¥93 (20% launch discount at time of writing)"
+       "$19.99 (20% launch discount; list $24.99)"
       ],
       [
        "Steam Workshop",
@@ -11346,7 +11335,7 @@
         [
          "价格",
          "待补",
-         "¥93（写作时为 20% 首发折扣）"
+         "$19.99（20% 首发折扣，原价 $24.99）"
         ],
         [
          "Steam 创意工坊",
@@ -11417,7 +11406,7 @@
         [
          "価格",
          "未検証",
-         "¥93（執筆時点でローンチ20%オフ）"
+         "$19.99（ローンチ20%オフ、通常 $24.99）"
         ],
         [
          "Steam ワークショップ",
@@ -11488,7 +11477,7 @@
         [
          "가격",
          "미확인",
-         "¥93 (작성 시점 20% 출시 할인)"
+         "$19.99 (출시 20% 할인, 정가 $24.99)"
         ],
         [
          "Steam 창작마당",
@@ -11559,7 +11548,7 @@
         [
          "Prix",
          "non vérifié",
-         "¥93 (remise de lancement de 20 % au moment de la rédaction)"
+         "19,99 $ (remise de lancement de 20 % ; liste 24,99 $)"
         ],
         [
          "Steam Workshop",
@@ -11630,7 +11619,7 @@
         [
          "Preis",
          "unbestätigt",
-         "¥93 (20 % Launch-Rabatt zum Zeitpunkt der Erstellung)"
+         "19,99 $ (20 % Launch-Rabatt; Listenpreis 24,99 $)"
         ],
         [
          "Steam Workshop",
@@ -11701,7 +11690,7 @@
         [
          "Precio",
          "sin verificar",
-         "¥93 (20 % de descuento de lanzamiento al momento de escribir esto)"
+         "19,99 $ (20 % de descuento de lanzamiento; precio de lista 24,99 $)"
         ],
         [
          "Steam Workshop",
@@ -11772,7 +11761,7 @@
         [
          "Prezzo",
          "non verificato",
-         "¥93 (sconto di lancio del 20 % al momento della stesura)"
+         "19,99 $ (sconto di lancio del 20 %; prezzo di listino 24,99 $)"
         ],
         [
          "Workshop di Steam",
@@ -11843,7 +11832,7 @@
         [
          "Cena",
          "niepotwierdzone",
-         "¥93 (20% zniżka startowa w momencie pisania)"
+         "19,99 $ (20% zniżki startowej; cena katalogowa 24,99 $)"
         ],
         [
          "Steam Workshop",
@@ -11914,7 +11903,7 @@
         [
          "Preço",
          "não verificado",
-         "¥93 (desconto de lançamento de 20% no momento da escrita)"
+         "US$ 19,99 (desconto de lançamento de 20%; preço de tabela US$ 24,99)"
         ],
         [
          "Oficina da Steam",
@@ -11985,7 +11974,7 @@
         [
          "Цена",
          "неподтверждено",
-         "¥93 (скидка 20 % на момент написания)"
+         "19,99 $ (скидка 20 %; обычная цена 24,99 $)"
         ],
         [
          "Мастерская Steam",
@@ -12056,7 +12045,7 @@
         [
          "Ціна",
          "непідтверджено",
-         "¥93 (знижка 20 % на момент написання)"
+         "19,99 $ (знижка 20 %; звичайна ціна 24,99 $)"
         ],
         [
          "Майстерня Steam",
@@ -12127,7 +12116,7 @@
         [
          "Giá",
          "chưa xác minh",
-         "¥93 (giảm 20% khi ra mắt tại thời điểm viết)"
+         "19,99 $ (giảm 20% khi ra mắt; giá niêm yết 24,99 $)"
         ],
         [
          "Steam Workshop",
@@ -12198,7 +12187,7 @@
         [
          "價格",
          "待補",
-         "¥93（寫作時為 20% 首發折扣）"
+         "$19.99（20% 首發折扣，原價 $24.99）"
         ],
         [
          "Steam 創意工坊",
@@ -12246,8 +12235,7 @@
       }
      ]
     }
-   },
-   "heroImage": "/images/demo-vs-full.jpg"
+   }
   },
   {
    "slug": "achievements-list",
@@ -13051,8 +13039,7 @@
       }
      ]
     }
-   },
-   "heroImage": "/images/achievements-list.jpg"
+   }
   },
   {
    "slug": "ships",

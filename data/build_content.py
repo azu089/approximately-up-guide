@@ -289,12 +289,12 @@ GAME = {
     "releaseDate": "2026-08-06",
     "platforms": ["PC (Steam)"],
     "genre": "Adventure / Indie / Simulation",
-    "price": "¥93",
+    "price": "$24.99",
     "steamUrl": "https://store.steampowered.com/app/3904850/",
     "officialSite": "https://approximatelyup.com",
     "intro": "Approximately Up is a space sandbox builder by Approximately Games. Build a fully modular spaceship from whatever bolts together long enough to fly, crash, and rebuild. Explore new planets in co-op multiplayer, mount giant thrusters and annoying cables, complete wild missions, and face the dangers of space. Released on Steam on August 6, 2026, with 14 languages, 22 achievements and Steam Workshop support.",
     "keyFacts": [
-        "Released August 6, 2026 on Steam (¥93, currently 20% off)",
+        "Released August 6, 2026 on Steam ($19.99 at launch, was $24.99)",
         "Build, crash, rebuild — fully modular spaceships",
         "Single-player + online co-op multiplayer",
         "14 languages and 22 Steam achievements",
@@ -306,7 +306,7 @@ GAME = {
         {"value": "14", "label": "Languages"},
         {"value": "22", "label": "Achievements"},
         {"value": "Solo + Co-op", "label": "Modes"},
-        {"value": "¥93", "label": "On Steam (20% off)"},
+        {"value": "$19.99", "label": "On Steam (20% off)"},
         {"value": "TBD", "label": "Steam rating"},
     ],
     "aboutPoints": [
@@ -322,7 +322,7 @@ GAME_I18N = {
         "name": "Approximately Up",
         "intro": "《Approximately Up》是 Approximately Games 出品的太空沙盒建造游戏。用任何「能拼到能飞」的部件组装全模块化飞船，坠毁后再重建。在多人合作中探索新星球、安装巨型推进器与恼人的缆线、完成疯狂任务，直面太空的危险。游戏于 2026 年 8 月 6 日在 Steam 发售，支持 14 种语言、22 项成就与 Steam 创意工坊。",
         "keyFacts": [
-            "2026 年 8 月 6 日在 Steam 发售（¥93，当前 20% 折扣）",
+            "2026 年 8 月 6 日在 Steam 发售（$19.99，原价 $24.99，20% 折扣）",
             "建造、坠毁、重建——全模块化飞船",
             "单人 + 在线合作多人",
             "14 种语言、22 项 Steam 成就",
@@ -334,7 +334,7 @@ GAME_I18N = {
             {"value": "14", "label": "语言"},
             {"value": "22", "label": "成就"},
             {"value": "单人+联机", "label": "模式"},
-            {"value": "¥93", "label": "Steam 售价（8折）"},
+            {"value": "$19.99", "label": "Steam 售价（8折）"},
             {"value": "待补", "label": "Steam 好评"},
         ],
         "aboutPoints": [
@@ -348,7 +348,7 @@ GAME_I18N = {
         "name": "Approximately Up",
         "intro": "『Approximately Up』は Approximately Games による宇宙サンドボックス建造ゲーム。飛ぶのに十分なだけ繋ぎ合わせた部品で完全モジュラー式の宇宙船を作り、墜ちて、作り直す。オンライン協力で新惑星を探索し、巨大スラスターや鬱陶しいケーブルを取り付け、ワイルドなミッションをこなし、宇宙の危険に立ち向かおう。2026年8月6日に Steam でリリース。14言語、22実績、Steam ワークショップ対応。",
         "keyFacts": [
-            "2026年8月6日に Steam でリリース（¥93、現在20%オフ）",
+            "2026年8月6日に Steam でリリース（$19.99、通常 $24.99、20%オフ）",
             "作って、墜ちて、作り直す——完全モジュラー式宇宙船",
             "シングルプレイ＋オンライン協力マルチプレイ",
             "14言語、22の Steam 実績",
@@ -360,7 +360,7 @@ GAME_I18N = {
             {"value": "14", "label": "言語"},
             {"value": "22", "label": "実績"},
             {"value": "ソロ+協力", "label": "モード"},
-            {"value": "¥93", "label": "Steam（20%オフ）"},
+            {"value": "$19.99", "label": "Steam（20%オフ）"},
             {"value": "未検証", "label": "Steam 評価"},
         ],
         "aboutPoints": [
@@ -374,7 +374,7 @@ GAME_I18N = {
         "name": "Approximately Up",
         "intro": "Approximately Up은 Approximately Games가 만든 우주 샌드박스 건설 게임입니다. 날기에 충분할 만큼 볼트로 조인 부품으로 완전 모듈식 우주선을 만들고, 추락하고, 다시 만듭니다. 온라인 협동으로 새 행성을 탐험하고, 거대한 추진기와 성가신 케이블을 달고, 엉뚱한 임무를 완수하며 우주의 위험에 맞서세요. 2026년 8월 6일 Steam 출시, 14개 언어, 22개 업적, Steam 창작마당 지원.",
         "keyFacts": [
-            "2026년 8월 6일 Steam 출시 (¥93, 현재 20% 할인)",
+            "2026년 8월 6일 Steam 출시 ($19.99, 정가 $24.99, 20% 할인)",
             "만들고, 추락하고, 다시 만들기 — 완전 모듈식 우주선",
             "싱글플레이 + 온라인 협동 멀티플레이",
             "14개 언어, 22개 Steam 업적",
@@ -386,7 +386,7 @@ GAME_I18N = {
             {"value": "14", "label": "언어"},
             {"value": "22", "label": "업적"},
             {"value": "솔로+협동", "label": "모드"},
-            {"value": "¥93", "label": "Steam 가격 (20% 할인)"},
+            {"value": "$19.99", "label": "Steam 가격 (20% 할인)"},
             {"value": "미확인", "label": "Steam 평가"},
         ],
         "aboutPoints": [
@@ -400,7 +400,7 @@ GAME_I18N = {
         "name": "Approximately Up",
         "intro": "Approximately Up est un jeu de construction sandbox spatial de Approximately Games. Construisez un vaisseau entièrement modulaire à partir de tout ce qui se boulonne assez longtemps pour voler, écrasez-vous et reconstruisez. Explorez de nouvelles planètes en multijoueur coopératif, montez d'énormes propulseurs et des câbles agaçants, accomplissez de folles missions et affrontez les dangers de l'espace. Sorti sur Steam le 6 août 2026, avec 14 langues, 22 succès et le support du Steam Workshop.",
         "keyFacts": [
-            "Sorti le 6 août 2026 sur Steam (¥93, actuellement -20 %)",
+            "Sorti le 6 août 2026 sur Steam (19,99 $, au lieu de 24,99 $, -20 %)",
             "Construire, s'écraser, reconstruire — vaisseaux entièrement modulaires",
             "Solo + multijoueur coopératif en ligne",
             "14 langues et 22 succès Steam",
@@ -412,7 +412,7 @@ GAME_I18N = {
             {"value": "14", "label": "Langues"},
             {"value": "22", "label": "Succès"},
             {"value": "Solo + Coop", "label": "Modes"},
-            {"value": "¥93", "label": "Sur Steam (-20 %)"},
+            {"value": "$19.99", "label": "Sur Steam (-20 %)"},
             {"value": "à vérifier", "label": "Note Steam"},
         ],
         "aboutPoints": [
@@ -426,7 +426,7 @@ GAME_I18N = {
         "name": "Approximately Up",
         "intro": "Approximately Up ist ein Weltraum-Sandbox-Bauspiel von Approximately Games. Baue ein vollständig modulares Raumschiff aus allem, was sich lange genug zusammenschrauben lässt, um zu fliegen, stürze ab und baue neu. Erkunde neue Planeten im Online-Koop, montiere riesige Triebwerke und nervige Kabel, meistere wilde Missionen und stelle dich den Gefahren des Weltraums. Erschienen am 6. August 2026 auf Steam, mit 14 Sprachen, 22 Erfolgen und Steam-Workshop-Support.",
         "keyFacts": [
-            "Erschienen am 6. August 2026 auf Steam (¥93, aktuell 20 % Rabatt)",
+            "Erschienen am 6. August 2026 auf Steam (19,99 $, statt 24,99 $, 20 % Rabatt)",
             "Bauen, abstürzen, neu bauen — vollständig modulare Raumschiffe",
             "Einzelspieler + Online-Koop-Mehrspieler",
             "14 Sprachen und 22 Steam-Erfolge",
@@ -438,7 +438,7 @@ GAME_I18N = {
             {"value": "14", "label": "Sprachen"},
             {"value": "22", "label": "Erfolge"},
             {"value": "Solo + Co-op", "label": "Modi"},
-            {"value": "¥93", "label": "Auf Steam (20 % Rabatt)"},
+            {"value": "$19.99", "label": "Auf Steam (20 % Rabatt)"},
             {"value": "unbestätigt", "label": "Steam-Bewertung"},
         ],
         "aboutPoints": [
@@ -452,7 +452,7 @@ GAME_I18N = {
         "name": "Approximately Up",
         "intro": "Approximately Up es un juego de construcción sandbox espacial de Approximately Games. Construye una nave totalmente modular con lo que sea que se pueda atornillar el tiempo suficiente para volar, choca y reconstruye. Explora nuevos planetas en multijugador cooperativo, monta propulsores gigantes y cables molestos, completa misiones locas y enfréntate a los peligros del espacio. Lanzado en Steam el 6 de agosto de 2026, con 14 idiomas, 22 logros y soporte del Steam Workshop.",
         "keyFacts": [
-            "Lanzado el 6 de agosto de 2026 en Steam (¥93, actualmente -20 %)",
+            "Lanzado el 6 de agosto de 2026 en Steam (19,99 $, antes 24,99 $, -20 %)",
             "Construye, choca, reconstruye — naves totalmente modulares",
             "Un jugador + multijugador cooperativo en línea",
             "14 idiomas y 22 logros de Steam",
@@ -464,7 +464,7 @@ GAME_I18N = {
             {"value": "14", "label": "Idiomas"},
             {"value": "22", "label": "Logros"},
             {"value": "Solo + Cooperativo", "label": "Modos"},
-            {"value": "¥93", "label": "En Steam (-20 %)"},
+            {"value": "$19.99", "label": "En Steam (-20 %)"},
             {"value": "por verificar", "label": "Valoración en Steam"},
         ],
         "aboutPoints": [
@@ -478,7 +478,7 @@ GAME_I18N = {
         "name": "Approximately Up",
         "intro": "Approximately Up è un gioco di costruzione sandbox spaziale di Approximately Games. Costruisci un'astronave completamente modulare con qualsiasi cosa si possa imbullonare abbastanza a lungo da volare, schiantati e ricostruisci. Esplora nuovi pianeti in multigiocatore cooperativo online, monta propulsori giganti e cavi fastidiosi, completa missioni assurde e affronta i pericoli dello spazio. Uscito su Steam il 6 agosto 2026, con 14 lingue, 22 obiettivi e supporto al Workshop di Steam.",
         "keyFacts": [
-            "Uscito il 6 agosto 2026 su Steam (¥93, attualmente -20 %)",
+            "Uscito il 6 agosto 2026 su Steam (19,99 $, invece di 24,99 $, -20 %)",
             "Costruisci, schianta, ricostruisci — astronavi completamente modulari",
             "Giocatore singolo + multigiocatore cooperativo online",
             "14 lingue e 22 obiettivi Steam",
@@ -490,7 +490,7 @@ GAME_I18N = {
             {"value": "14", "label": "Lingue"},
             {"value": "22", "label": "Obiettivi"},
             {"value": "Solo + Co-op", "label": "Modalità"},
-            {"value": "¥93", "label": "Su Steam (-20 %)"},
+            {"value": "$19.99", "label": "Su Steam (-20 %)"},
             {"value": "da verificare", "label": "Valutazione Steam"},
         ],
         "aboutPoints": [
@@ -504,7 +504,7 @@ GAME_I18N = {
         "name": "Approximately Up",
         "intro": "Approximately Up to kosmiczna gra sandboxowa o budowaniu od Approximately Games. Zbuduj w pełni modułowy statek z czegokolwiek, co da się skręcić na tyle długo, by polecieć, rozbij się i zbuduj od nowa. Eksploruj nowe planety w trybie kooperacji online, montuj ogromne silniki i irytujące kable, wykonuj zwariowane misje i stawiaj czoła zagrożeniom kosmosu. Premiera na Steam 6 sierpnia 2026, 14 języków, 22 osiągnięcia i wsparcie Steam Workshop.",
         "keyFacts": [
-            "Premiera 6 sierpnia 2026 na Steam (¥93, obecnie -20 %)",
+            "Premiera 6 sierpnia 2026 na Steam (19,99 $, zamiast 24,99 $, -20 %)",
             "Buduj, rozbijaj, buduj od nowa — w pełni modułowe statki",
             "Tryb jednoosobowy + kooperacja online",
             "14 języków i 22 osiągnięcia Steam",
@@ -516,7 +516,7 @@ GAME_I18N = {
             {"value": "14", "label": "Języki"},
             {"value": "22", "label": "Osiągnięcia"},
             {"value": "Solo + Koop", "label": "Tryby"},
-            {"value": "¥93", "label": "Na Steam (-20 %)"},
+            {"value": "$19.99", "label": "Na Steam (-20 %)"},
             {"value": "do potwierdzenia", "label": "Ocena Steam"},
         ],
         "aboutPoints": [
@@ -530,7 +530,7 @@ GAME_I18N = {
         "name": "Approximately Up",
         "intro": "Approximately Up é um jogo de construção sandbox espacial da Approximately Games. Construa uma nave totalmente modular com qualquer coisa que se parafuse por tempo suficiente para voar, caia e reconstrua. Explore novos planetas em multijogador cooperativo, monte propulsores gigantes e cabos irritantes, complete missões malucas e enfrente os perigos do espaço. Lançado na Steam em 6 de agosto de 2026, com 14 idiomas, 22 conquistas e suporte à Oficina da Steam.",
         "keyFacts": [
-            "Lançado em 6 de agosto de 2026 na Steam (¥93, atualmente -20 %)",
+            "Lançado em 6 de agosto de 2026 na Steam (US$ 19,99, antes US$ 24,99, -20 %)",
             "Construa, caia, reconstrua — naves totalmente modulares",
             "Um jogador + multijogador cooperativo online",
             "14 idiomas e 22 conquistas na Steam",
@@ -542,7 +542,7 @@ GAME_I18N = {
             {"value": "14", "label": "Idiomas"},
             {"value": "22", "label": "Conquistas"},
             {"value": "Solo + Cooperativo", "label": "Modos"},
-            {"value": "¥93", "label": "Na Steam (-20 %)"},
+            {"value": "$19.99", "label": "Na Steam (-20 %)"},
             {"value": "a verificar", "label": "Avaliação na Steam"},
         ],
         "aboutPoints": [
@@ -556,7 +556,7 @@ GAME_I18N = {
         "name": "Approximately Up",
         "intro": "Approximately Up — космическая песочница о строительстве от Approximately Games. Собирайте полностью модульный корабль из всего, что можно скрутить достаточно надолго, чтобы взлететь, разбивайтесь и стройте заново. Исследуйте новые планеты в кооперативном мультиплеере, устанавливайте гигантские двигатели и надоедливые кабели, выполняйте безумные миссии и встречайте опасности космоса. Релиз в Steam — 6 августа 2026 года, 14 языков, 22 достижения и поддержка Мастерской Steam.",
         "keyFacts": [
-            "Релиз 6 августа 2026 года в Steam (¥93, сейчас скидка 20 %)",
+            "Релиз 6 августа 2026 года в Steam (19,99 $, вместо 24,99 $, скидка 20 %)",
             "Строй, разбивай, строй заново — полностью модульные корабли",
             "Одиночный режим + онлайн-кооператив",
             "14 языков и 22 достижения Steam",
@@ -568,7 +568,7 @@ GAME_I18N = {
             {"value": "14", "label": "Языки"},
             {"value": "22", "label": "Достижения"},
             {"value": "Соло + Кооп", "label": "Режимы"},
-            {"value": "¥93", "label": "В Steam (-20 %)"},
+            {"value": "$19.99", "label": "В Steam (-20 %)"},
             {"value": "не подтверждено", "label": "Оценка в Steam"},
         ],
         "aboutPoints": [
@@ -582,7 +582,7 @@ GAME_I18N = {
         "name": "Approximately Up",
         "intro": "Approximately Up — космічна пісочниця про будівництво від Approximately Games. Зберіть повністю модульний корабель з усього, що можна скрутити достатньо довго, щоб злетіти, розбийтеся й будуйте заново. Досліджуйте нові планети в кооперативному мультиплеєрі, встановлюйте гігантські двигуни й набридливі кабелі, виконуйте божевільні місії та зустрічайте небезпеки космосу. Реліз у Steam — 6 серпня 2026 року, 14 мов, 22 досягнення та підтримка Майстерні Steam.",
         "keyFacts": [
-            "Реліз 6 серпня 2026 року в Steam (¥93, зараз знижка 20 %)",
+            "Реліз 6 серпня 2026 року в Steam (19,99 $, замість 24,99 $, знижка 20 %)",
             "Будуй, розбивай, будуй заново — повністю модульні кораблі",
             "Одиночний режим + онлайн-кооператив",
             "14 мов і 22 досягнення Steam",
@@ -594,7 +594,7 @@ GAME_I18N = {
             {"value": "14", "label": "Мови"},
             {"value": "22", "label": "Досягнення"},
             {"value": "Соло + Кооп", "label": "Режими"},
-            {"value": "¥93", "label": "У Steam (-20 %)"},
+            {"value": "$19.99", "label": "У Steam (-20 %)"},
             {"value": "не підтверджено", "label": "Оцінка в Steam"},
         ],
         "aboutPoints": [
@@ -608,7 +608,7 @@ GAME_I18N = {
         "name": "Approximately Up",
         "intro": "Approximately Up là trò chơi xây dựng hộp cát không gian của Approximately Games. Hãy lắp một con tàu hoàn toàn mô-đun từ bất cứ thứ gì bắt vít đủ lâu để bay, rơi xuống và xây lại. Khám phá hành tinh mới trong chế độ chơi mạng hợp tác, gắn động cơ đẩy khổng lồ và dây cáp phiền phức, hoàn thành các nhiệm vụ điên rồ và đối mặt với hiểm nguy ngoài không gian. Phát hành trên Steam ngày 6 tháng 8 năm 2026, với 14 ngôn ngữ, 22 thành tựu và hỗ trợ Steam Workshop.",
         "keyFacts": [
-            "Phát hành ngày 6 tháng 8 năm 2026 trên Steam (¥93, hiện giảm 20%)",
+            "Phát hành ngày 6 tháng 8 năm 2026 trên Steam (19,99 $, thay vì 24,99 $, giảm 20%)",
             "Xây, rơi, xây lại — tàu hoàn toàn mô-đun",
             "Chơi đơn + chơi mạng hợp tác trực tuyến",
             "14 ngôn ngữ và 22 thành tựu Steam",
@@ -620,7 +620,7 @@ GAME_I18N = {
             {"value": "14", "label": "Ngôn ngữ"},
             {"value": "22", "label": "Thành tựu"},
             {"value": "Đơn + Hợp tác", "label": "Chế độ"},
-            {"value": "¥93", "label": "Trên Steam (-20%)"},
+            {"value": "$19.99", "label": "Trên Steam (-20%)"},
             {"value": "chưa xác minh", "label": "Đánh giá Steam"},
         ],
         "aboutPoints": [
@@ -1067,7 +1067,7 @@ PAGES.append(_page(
          "items": [
             ["Release date", "August 6, 2026 (Steam full release)."],
             ["Demo", "A demo predates the full release."],
-            ["Price", "¥93 at launch, with a 20% launch discount at the time of writing."],
+            ["Price", "$19.99 at launch (20% off; list $24.99)."],
          ]},
         {"type": "timeline", "heading": "Update timeline (unverified)",
          "body": "We have not yet verified a detailed update history from an official source. Entries below are placeholders until confirmed:",
@@ -1099,7 +1099,7 @@ PAGES.append(_page(
          "columns": ["Aspect", "Demo", "Full game"],
          "rows": [
             ["Availability", "Demo (released earlier, per store page)", "Full release August 6, 2026"],
-            ["Price", "unverified", "¥93 (20% launch discount at time of writing)"],
+            ["Price", "unverified", "$19.99 (20% launch discount; list $24.99)"],
             ["Steam Workshop", "unverified", "Supported (per store page)"],
             ["Achievements", "unverified", "22 Steam achievements (per store page)"],
             ["Co-op multiplayer", "unverified", "Single-player + online co-op (per store page)"],
@@ -1542,7 +1542,7 @@ TR_ZH = {
              "items": [
                 ["发售日", "2026 年 8 月 6 日（Steam 正式版）。"],
                 ["Demo", "先于正式版推出的 Demo。"],
-                ["价格", "发售时 ¥93，写作时正值 20% 首发折扣。"],
+                ["价格", "发售时 $19.99（20% 折扣，原价 $24.99）。"],
              ]},
             {"heading": "更新时间线（待补）", "body": "我们尚未从官方来源核实详细的更新历史。以下条目在确认前为占位：",
              "items": [
@@ -1568,7 +1568,7 @@ TR_ZH = {
              "columns": ["项目", "Demo", "正式版"],
              "rows": [
                 ["可用性", "Demo（据商店页更早推出）", "2026 年 8 月 6 日正式发售"],
-                ["价格", "待补", "¥93（写作时为 20% 首发折扣）"],
+                ["价格", "待补", "$19.99（20% 首发折扣，原价 $24.99）"],
                 ["Steam 创意工坊", "待补", "支持（据商店页）"],
                 ["成就", "待补", "22 项 Steam 成就（据商店页）"],
                 ["合作多人", "待补", "单人 + 在线合作（据商店页）"],
@@ -1982,7 +1982,7 @@ TR_JA = {
              "items": [
                 ["リリース日", "2026年8月6日（Steam 正式版）。"],
                 ["デモ", "正式版より前にデモが公開。"],
-                ["価格", "発売時 ¥93、執筆時点で 20% のローンチ割引。"],
+                ["価格", "発売時 $19.99（20% オフ、通常 $24.99）。"],
              ]},
             {"heading": "アップデートのタイムライン（未検証）", "body": "詳細な更新履歴は公式ソースで未確認。以下の項目は確認までのプレースホルダー：",
              "items": [
@@ -2008,7 +2008,7 @@ TR_JA = {
              "columns": ["項目", "デモ", "製品版"],
              "rows": [
                 ["入手方法", "デモ（ストア記載どおり先に公開）", "2026年8月6日正式リリース"],
-                ["価格", "未検証", "¥93（執筆時点でローンチ20%オフ）"],
+                ["価格", "未検証", "$19.99（ローンチ20%オフ、通常 $24.99）"],
                 ["Steam ワークショップ", "未検証", "対応（ストア記載）"],
                 ["実績", "未検証", "Steam 実績22個（ストア記載）"],
                 ["協力マルチ", "未検証", "シングル＋オンライン協力（ストア記載）"],
@@ -2422,7 +2422,7 @@ TR_KO = {
              "items": [
                 ["출시일", "2026년 8월 6일 (Steam 정식 출시)."],
                 ["데모", "정식 출시보다 먼저 나온 데모."],
-                ["가격", "출시가 ¥93, 작성 시점에 20% 출시 할인."],
+                ["가격", "출시가 $19.99 (20% 할인, 정가 $24.99)."],
              ]},
             {"heading": "업데이트 타임라인 (미확인)", "body": "공식 소스에서 상세한 업데이트 기록을 아직 확인하지 못했습니다. 아래 항목은 확인 전까지의 자리 표시자입니다:",
              "items": [
@@ -2448,7 +2448,7 @@ TR_KO = {
              "columns": ["항목", "데모", "정식 게임"],
              "rows": [
                 ["이용 가능 여부", "데모 (스토어 기준 더 먼저 출시)", "2026년 8월 6일 정식 출시"],
-                ["가격", "미확인", "¥93 (작성 시점 20% 출시 할인)"],
+                ["가격", "미확인", "$19.99 (출시 20% 할인, 정가 $24.99)"],
                 ["Steam 창작마당", "미확인", "지원 (스토어 기준)"],
                 ["업적", "미확인", "Steam 업적 22개 (스토어 기준)"],
                 ["협동 멀티플레이", "미확인", "싱글플레이 + 온라인 협동 (스토어 기준)"],
@@ -2862,7 +2862,7 @@ TR_FR = {
              "items": [
                 ["Date de sortie", "6 août 2026 (sortie complète Steam)."],
                 ["Démo", "Une démo précède la sortie complète."],
-                ["Prix", "¥93 au lancement, avec une remise de lancement de 20 % au moment de la rédaction."],
+                ["Prix", "19,99 $ au lancement (remise de 20 % ; liste 24,99 $)."],
              ]},
             {"heading": "Chronologie des mises à jour (non vérifiée)", "body": "Nous n'avons pas encore vérifié d'historique détaillé des mises à jour auprès d'une source officielle. Les entrées ci-dessous sont des espaces réservés jusqu'à confirmation :",
              "items": [
@@ -2888,7 +2888,7 @@ TR_FR = {
              "columns": ["Aspect", "Démo", "Jeu complet"],
              "rows": [
                 ["Disponibilité", "Démo (sortie plus tôt, selon la page du magasin)", "Sortie complète le 6 août 2026"],
-                ["Prix", "non vérifié", "¥93 (remise de lancement de 20 % au moment de la rédaction)"],
+                ["Prix", "non vérifié", "19,99 $ (remise de lancement de 20 % ; liste 24,99 $)"],
                 ["Steam Workshop", "non vérifié", "Pris en charge (selon la page du magasin)"],
                 ["Succès", "non vérifié", "22 succès Steam (selon la page du magasin)"],
                 ["Multijoueur co-op", "non vérifié", "Solo + co-op en ligne (selon la page du magasin)"],
@@ -3302,7 +3302,7 @@ TR_DE = {
              "items": [
                 ["Release-Datum", "6. August 2026 (Steam-Vollrelease)."],
                 ["Demo", "Eine Demo erschien vor dem Vollrelease."],
-                ["Preis", "¥93 zum Launch, mit 20 % Launch-Rabatt zum Zeitpunkt der Erstellung."],
+                ["Preis", "19,99 $ zum Launch (20 % Rabatt; Listenpreis 24,99 $)."],
              ]},
             {"heading": "Update-Zeitlinie (unbestätigt)", "body": "Wir haben noch keinen detaillierten Update-Verlauf gegen eine offizielle Quelle verifiziert. Die Einträge unten sind Platzhalter bis zur Bestätigung:",
              "items": [
@@ -3328,7 +3328,7 @@ TR_DE = {
              "columns": ["Aspekt", "Demo", "Vollversion"],
              "rows": [
                 ["Verfügbarkeit", "Demo (früher erschienen, laut Store-Seite)", "Vollrelease am 6. August 2026"],
-                ["Preis", "unbestätigt", "¥93 (20 % Launch-Rabatt zum Zeitpunkt der Erstellung)"],
+                ["Preis", "unbestätigt", "19,99 $ (20 % Launch-Rabatt; Listenpreis 24,99 $)"],
                 ["Steam Workshop", "unbestätigt", "Unterstützt (laut Store-Seite)"],
                 ["Erfolge", "unbestätigt", "22 Steam-Erfolge (laut Store-Seite)"],
                 ["Koop-Mehrspieler", "unbestätigt", "Einzelspieler + Online-Koop (laut Store-Seite)"],
@@ -3742,7 +3742,7 @@ TR_ES = {
              "items": [
                 ["Fecha de lanzamiento", "6 de agosto de 2026 (lanzamiento completo en Steam)."],
                 ["Demo", "Una demo precede al lanzamiento completo."],
-                ["Precio", "¥93 en el lanzamiento, con un 20 % de descuento de lanzamiento al momento de escribir esto."],
+                ["Precio", "19,99 $ en el lanzamiento (20 % de descuento; precio de lista 24,99 $)."],
              ]},
             {"heading": "Cronología de actualizaciones (sin verificar)", "body": "Aún no hemos verificado un historial detallado de actualizaciones contra una fuente oficial. Las entradas siguientes son marcadores hasta que se confirmen:",
              "items": [
@@ -3768,7 +3768,7 @@ TR_ES = {
              "columns": ["Aspecto", "Demo", "Juego completo"],
              "rows": [
                 ["Disponibilidad", "Demo (salió antes, según la página de la tienda)", "Lanzamiento completo el 6 de agosto de 2026"],
-                ["Precio", "sin verificar", "¥93 (20 % de descuento de lanzamiento al momento de escribir esto)"],
+                ["Precio", "sin verificar", "19,99 $ (20 % de descuento de lanzamiento; precio de lista 24,99 $)"],
                 ["Steam Workshop", "sin verificar", "Admitido (según la página de la tienda)"],
                 ["Logros", "sin verificar", "22 logros de Steam (según la página de la tienda)"],
                 ["Multijugador cooperativo", "sin verificar", "Un jugador + cooperativo en línea (según la página de la tienda)"],
@@ -4182,7 +4182,7 @@ TR_IT = {
              "items": [
                 ["Data di uscita", "6 agosto 2026 (uscita completa su Steam)."],
                 ["Demo", "Una demo precede l'uscita completa."],
-                ["Prezzo", "¥93 al lancio, con uno sconto di lancio del 20 % al momento della stesura."],
+                ["Prezzo", "19,99 $ al lancio (sconto del 20 %; prezzo di listino 24,99 $)."],
              ]},
             {"heading": "Cronologia aggiornamenti (non verificata)", "body": "Non abbiamo ancora verificato una cronologia dettagliata degli aggiornamenti contro una fonte ufficiale. Le voci seguenti sono segnaposto finché non saranno confermate:",
              "items": [
@@ -4208,7 +4208,7 @@ TR_IT = {
              "columns": ["Aspetto", "Demo", "Gioco completo"],
              "rows": [
                 ["Disponibilità", "Demo (uscita prima, secondo la pagina del negozio)", "Uscita completa il 6 agosto 2026"],
-                ["Prezzo", "non verificato", "¥93 (sconto di lancio del 20 % al momento della stesura)"],
+                ["Prezzo", "non verificato", "19,99 $ (sconto di lancio del 20 %; prezzo di listino 24,99 $)"],
                 ["Workshop di Steam", "non verificato", "Supportato (secondo la pagina del negozio)"],
                 ["Obiettivi", "non verificato", "22 obiettivi Steam (secondo la pagina del negozio)"],
                 ["Multigiocatore co-op", "non verificato", "Giocatore singolo + co-op online (secondo la pagina del negozio)"],
@@ -4622,7 +4622,7 @@ TR_PL = {
              "items": [
                 ["Data premiery", "6 sierpnia 2026 (pełna premiera na Steam)."],
                 ["Demo", "Demo ukazało się przed pełną premierą."],
-                ["Cena", "¥93 przy premierze, z 20% zniżką startową w momencie pisania."],
+                ["Cena", "19,99 $ przy premierze (20% zniżki; cena katalogowa 24,99 $)."],
              ]},
             {"heading": "Oś czasu aktualizacji (niepotwierdzona)", "body": "Nie zweryfikowaliśmy jeszcze szczegółowej historii aktualizacji w oficjalnym źródle. Poniższe wpisy to placeholdery do czasu potwierdzenia:",
              "items": [
@@ -4648,7 +4648,7 @@ TR_PL = {
              "columns": ["Aspekt", "Demo", "Pełna gra"],
              "rows": [
                 ["Dostępność", "Demo (ukazało się wcześniej, według strony sklepu)", "Pełna premiera 6 sierpnia 2026"],
-                ["Cena", "niepotwierdzone", "¥93 (20% zniżka startowa w momencie pisania)"],
+                ["Cena", "niepotwierdzone", "19,99 $ (20% zniżki startowej; cena katalogowa 24,99 $)"],
                 ["Steam Workshop", "niepotwierdzone", "Wspierany (według strony sklepu)"],
                 ["Osiągnięcia", "niepotwierdzone", "22 osiągnięcia Steam (według strony sklepu)"],
                 ["Kooperacja online", "niepotwierdzone", "Tryb jednoosobowy + kooperacja online (według strony sklepu)"],
@@ -5062,7 +5062,7 @@ TR_PT = {
              "items": [
                 ["Data de lançamento", "6 de agosto de 2026 (lançamento completo na Steam)."],
                 ["Demo", "Uma demo precede o lançamento completo."],
-                ["Preço", "¥93 no lançamento, com desconto de lançamento de 20% no momento da escrita."],
+                ["Preço", "US$ 19,99 no lançamento (20% de desconto; preço de tabela US$ 24,99)."],
              ]},
             {"heading": "Linha do tempo de atualizações (não verificada)", "body": "Ainda não verificamos um histórico detalhado de atualizações em uma fonte oficial. As entradas abaixo são espaços reservados até confirmação:",
              "items": [
@@ -5088,7 +5088,7 @@ TR_PT = {
              "columns": ["Aspecto", "Demo", "Jogo completo"],
              "rows": [
                 ["Disponibilidade", "Demo (lançada antes, segundo a página da loja)", "Lançamento completo em 6 de agosto de 2026"],
-                ["Preço", "não verificado", "¥93 (desconto de lançamento de 20% no momento da escrita)"],
+                ["Preço", "não verificado", "US$ 19,99 (desconto de lançamento de 20%; preço de tabela US$ 24,99)"],
                 ["Oficina da Steam", "não verificado", "Suportada (segundo a página da loja)"],
                 ["Conquistas", "não verificado", "22 conquistas da Steam (segundo a página da loja)"],
                 ["Multijogador cooperativo", "não verificado", "Um jogador + cooperativo online (segundo a página da loja)"],
@@ -5502,7 +5502,7 @@ TR_RU = {
              "items": [
                 ["Дата релиза", "6 августа 2026 (полный релиз в Steam)."],
                 ["Демо", "Демо вышло до полного релиза."],
-                ["Цена", "¥93 на релизе, со скидкой 20 % на момент написания."],
+                ["Цена", "19,99 $ на релизе (скидка 20 %; обычная цена 24,99 $)."],
              ]},
             {"heading": "Таймлайн обновлений (неподтверждён)", "body": "Мы ещё не проверили подробную историю обновлений по официальному источнику. Записи ниже — заглушки до подтверждения:",
              "items": [
@@ -5528,7 +5528,7 @@ TR_RU = {
              "columns": ["Аспект", "Демо", "Полная версия"],
              "rows": [
                 ["Доступность", "Демо (вышло раньше, по странице магазина)", "Полный релиз 6 августа 2026"],
-                ["Цена", "неподтверждено", "¥93 (скидка 20 % на момент написания)"],
+                ["Цена", "неподтверждено", "19,99 $ (скидка 20 %; обычная цена 24,99 $)"],
                 ["Мастерская Steam", "неподтверждено", "Поддерживается (по странице магазина)"],
                 ["Достижения", "неподтверждено", "22 достижения Steam (по странице магазина)"],
                 ["Кооперативный мультиплеер", "неподтверждено", "Одиночный режим + онлайн-кооператив (по странице магазина)"],
@@ -5942,7 +5942,7 @@ TR_UK = {
              "items": [
                 ["Дата релізу", "6 серпня 2026 (повний реліз у Steam)."],
                 ["Демо", "Демо вийшло раніше за повний реліз."],
-                ["Ціна", "¥93 на релізі, зі знижкою 20 % на момент написання."],
+                ["Ціна", "19,99 $ на релізі (знижка 20 %; звичайна ціна 24,99 $)."],
              ]},
             {"heading": "Таймлайн оновлень (непідтверджений)", "body": "Ми ще не перевірили детальну історію оновлень за офіційним джерелом. Записи нижче — заглушки до підтвердження:",
              "items": [
@@ -5968,7 +5968,7 @@ TR_UK = {
              "columns": ["Аспект", "Демо", "Повна версія"],
              "rows": [
                 ["Доступність", "Демо (вийшло раніше, згідно зі сторінкою магазину)", "Повний реліз 6 серпня 2026"],
-                ["Ціна", "непідтверджено", "¥93 (знижка 20 % на момент написання)"],
+                ["Ціна", "непідтверджено", "19,99 $ (знижка 20 %; звичайна ціна 24,99 $)"],
                 ["Майстерня Steam", "непідтверджено", "Підтримується (згідно зі сторінкою магазину)"],
                 ["Досягнення", "непідтверджено", "22 досягнення Steam (згідно зі сторінкою магазину)"],
                 ["Кооперативний мультиплеєр", "непідтверджено", "Одиночний режим + онлайн-кооператив (згідно зі сторінкою магазину)"],
@@ -6382,7 +6382,7 @@ TR_VI = {
              "items": [
                 ["Ngày phát hành", "6 tháng 8 năm 2026 (bản đầy đủ trên Steam)."],
                 ["Demo", "Bản demo ra mắt trước bản đầy đủ."],
-                ["Giá", "¥93 khi phát hành, giảm 20% khi ra mắt tại thời điểm viết."],
+                ["Giá", "19,99 $ khi phát hành (giảm 20%; giá niêm yết 24,99 $)."],
              ]},
             {"heading": "Dòng thời gian cập nhật (chưa xác minh)", "body": "Chúng tôi chưa xác minh lịch sử cập nhật chi tiết từ nguồn chính thức. Các mục bên dưới là chỗ trống cho đến khi được xác nhận:",
              "items": [
@@ -6408,7 +6408,7 @@ TR_VI = {
              "columns": ["Khía cạnh", "Demo", "Bản đầy đủ"],
              "rows": [
                 ["Khả dụng", "Demo (ra mắt sớm hơn, theo trang cửa hàng)", "Bản đầy đủ phát hành 6 tháng 8 năm 2026"],
-                ["Giá", "chưa xác minh", "¥93 (giảm 20% khi ra mắt tại thời điểm viết)"],
+                ["Giá", "chưa xác minh", "19,99 $ (giảm 20% khi ra mắt; giá niêm yết 24,99 $)"],
                 ["Steam Workshop", "chưa xác minh", "Được hỗ trợ (theo trang cửa hàng)"],
                 ["Thành tựu", "chưa xác minh", "22 thành tựu Steam (theo trang cửa hàng)"],
                 ["Chơi mạng hợp tác", "chưa xác minh", "Chơi đơn + hợp tác trực tuyến (theo trang cửa hàng)"],
