@@ -186,10 +186,10 @@ ${DATA.site.gaId ? `<script async src="https://www.googletagmanager.com/gtag/js?
 }
 function langSwitcher(lang, slug){
   const items = LANGS.map(l =>
-    `<a href="${urlOf(slug,l)}" class="${l===lang?"active":""}"><span class="flag svg-flag">${flagOf(l)}</span>${LANG_META[l]?.name||l}</a>`
+    `<a href="${urlOf(slug,l)}" class="${l===lang?"active":""}"><span class="lang-flag">${flagOf(l)}</span>${LANG_META[l]?.name||l}</a>`
   ).join("");
   return `<details class="lang-dd">
-    <summary><span class="flag svg-flag">${flagOf(lang)}</span><span class="lang-name">${LANG_META[lang]?.name||lang}</span><span class="caret">▾</span></summary>
+    <summary><span class="lang-flag">${flagOf(lang)}</span><span class="lang-name">${LANG_META[lang]?.name||lang}</span><span class="caret">▾</span></summary>
     <div class="dd-menu dd-lang">${items}</div>
   </details>`;
 }
