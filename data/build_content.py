@@ -35,7 +35,7 @@ SITE = {
     "language": "en",
     "gaId": "G-YV335TQLWZ",
     "gscVerification": "",
-    "adsenseId": "",
+    "adsenseId": "pub-9306318946895917",
     "indexNowKey": "",
     "ogImage": "/images/hero.jpg",
     "awinVerification": "",
