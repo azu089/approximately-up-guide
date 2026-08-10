@@ -396,3 +396,16 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
 .dd-lang::-webkit-scrollbar-thumb{background:var(--line2);border-radius:3px}
 .dd-lang::-webkit-scrollbar-track{background:transparent}
 @keyframes dd-in{from{opacity:0;transform:translateY(-4px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+
+/* ============ Amazon 联盟推荐（页脚内） ============ */
+.amazon-gear { margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(127,127,127,0.22); }
+.amazon-gear h3 { font-size: 15px; margin: 0 0 10px; letter-spacing: .3px; }
+.amazon-gear-links { display: flex; flex-wrap: wrap; gap: 8px 12px; }
+.amazon-gear-links a {
+  font-size: 13px; text-decoration: none;
+  border: 1px solid rgba(127,127,127,0.35); border-radius: 999px;
+  padding: 4px 13px; transition: border-color .2s, color .2s, background .2s;
+}
+.amazon-gear-links a:hover { border-color: currentColor; background: rgba(127,127,127,0.08); }
+.amazon-gear .aff-note { font-size: 12px; opacity: .65; margin: 10px 0 0; }
+@media (max-width: 640px){ .amazon-gear-links a { font-size: 12px; padding: 3px 11px; } }
