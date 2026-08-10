@@ -585,6 +585,7 @@ function renderPage(lang, page){
       </nav>
       <div class="dossier-main">
         ${sections2}
+        ${renderAmazonAffiliate(lang)}
         ${sources ? `<footer class="dossier-src reveal"><b>${esc(s.sources||"Sources")}</b><ul>${sources}</ul>${affNote}
 </footer>` : ""}
       </div>
