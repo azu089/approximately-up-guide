@@ -492,7 +492,7 @@ function renderHome(lang){
     </section>`;
   }).join("");
   const heroImg = DATA.site.ogImage || "/images/hero.jpg";
-  const heroCardImg = `<div class="ship-imgwrap"><img class="ship-img" src="${esc(heroImg)}" alt="${esc(gname)}" loading="eager" width="1600" height="900"></div>`;
+  const heroCardImg = `<div class="ship-imgwrap">${KIT.picture({ src: heroImg, srcset: "/images/hero-640.jpg 640w, /images/hero-1280.jpg 1280w, /images/hero.jpg 1600w", sizes: "100vw", attrs: `class="ship-img" alt="${esc(gname)}" loading="eager" width="1600" height="900"` })}</div>`;
   return `<!doctype html>
 <html lang="${LANG_META[lang].html}"><head>${head(s.name, s.description, [gameLd()], "index", lang)}</head>
 <body class="home">
