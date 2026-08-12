@@ -1060,8 +1060,8 @@ PAGES.append(_page(
     "patch-notes",
     "Approximately Up Patch Notes",
     "Approximately Up Patch Notes & Update History",
-    "Approximately Up patch notes and update history: launch info, where official updates are posted, and our tracked changelog (unverified items marked).",
-    "Approximately Up released on August 6, 2026. This page tracks official patch notes and updates — with anything unverified clearly marked.",
+    "Approximately Up patch notes and update history: launch info, verified official update timeline (1.0.006\u20131.0.010) and where updates are posted.",
+    "Approximately Up released on August 6, 2026. This page tracks official patch notes and updates, verified from Steam announcements.",
     [
         {"type": "evidence", "heading": "Launch facts (verified)",
          "items": [
@@ -1069,11 +1069,15 @@ PAGES.append(_page(
             ["Demo", "A demo predates the full release."],
             ["Price", "$19.99 at launch (20% off; list $24.99)."],
          ]},
-        {"type": "timeline", "heading": "Update timeline (unverified)",
-         "body": "We have not yet verified a detailed update history from an official source. Entries below are placeholders until confirmed:",
+        {"type": "timeline", "heading": "Update timeline (verified from Steam)",
+         "body": "Patch notes verified from official Steam announcements (August 2026):",
          "items": [
+            ["2026-08-12", "1.0.010 — Fixed Workshop \'Most Popular\' sorting filter, page loading and missing results; improved search clarity."],
+            ["2026-08-11", "1.0.009 — Improved Frame Quarter With Ports (ports mirror across the frame chain, A\u2013D labels stay consistent); fixed Middle Window, Small Switch and Small Button geometry."],
+            ["2026-08-10", "1.0.008 — Fixed Axis Rotometer hitbox and remaining issues; Plasma Cables now paintable; Autohemisphere Solar Panels return to position after Fly Mode; cable holders now paintable."],
+            ["2026-08-09", "1.0.007 — Fixed Metal device compatibility; corrected default keybind (middle mouse for \'pick component\'); fixed pipe description typo; added more hints."],
+            ["2026-08-08", "1.0.006 — Fixed Fuse Box power-on; Axis Rotometer outputs signed local-axis values; fixed Large Disposable Battery preview; added credits, startup screen and objectives completion tracking."],
             ["2026-08-06", "Full release (verified)."],
-            ["Future", "unverified — official patch notes will be added here as they are verified."],
          ]},
         {"type": "list", "heading": "Where official updates are posted",
          "items": [
@@ -1082,7 +1086,7 @@ PAGES.append(_page(
             "Developer YouTube channel for feature announcements.",
          ]},
         {"type": "note", "heading": "What is still unverified",
-         "body": "Specific patch content (balance changes, fixes, new parts) is not verified. We mark everything as unverified rather than guessing."},
+         "body": "Patch notes above are verified from official Steam announcements. Details of pre-release builds and unannounced changes remain unverified."},
     ],
     [SRC_STEAM, SRC_NEWS],
     "update-log",
@@ -1315,7 +1319,7 @@ TR_ZH = {
                 ["怎么去月球", "Steam 论坛真实帖——玩家想要登月教程。月球的具体机制待补。"],
                 ["入门雷达监视器 / 设备", "Steam 论坛真实帖——玩家想要雷达设备教程。雷达机制待补。"],
              ]},
-            {"heading": "仍待核实的内容", "body": "具体的零件名、数值、配方、星球目的地与任务名尚未核实。本指南只使用官方描述与标注过的社区问题；核实信息到位后我们会加深内容。"},
+            {"heading": "仍待核实的内容", "body": "以上补丁说明已从 Steam 官方公告核实。预发布版本的细节和未公布的改动仍待核实。"}
         ],
     },
     "blueprints-guide": {
@@ -1544,10 +1548,13 @@ TR_ZH = {
                 ["Demo", "先于正式版推出的 Demo。"],
                 ["价格", "发售时 $19.99（20% 折扣，原价 $24.99）。"],
              ]},
-            {"heading": "更新时间线（待补）", "body": "我们尚未从官方来源核实详细的更新历史。以下条目在确认前为占位：",
+            {"heading": "更新时间线（已从 Steam 核实）", "body": "以下更新说明已从 Steam 官方公告核实（2026 年 8 月）：",
              "items": [
-                ["2026-08-06", "正式发售（已核实）。"],
-                ["未来", "待补——官方补丁说明核实后会添加到这里。"],
+                ["2026-08-12", "1.0.010 — 修复了创意工坊「最热门」排序筛选、页面加载和结果缺失问题；优化了搜索清晰度。"],
+                ["2026-08-11", "1.0.009 — 改进了 Frame Quarter With Ports（连接线缆后对面端口会同步出现，A–D 标签保持一致）；修复了 Middle Window、Small Switch 和 Small Button 的几何形状。"],
+                ["2026-08-10", "1.0.008 — 修复了 Axis Rotometer 判定框及剩余问题；Plasma Cables 现在可涂色；Autohemisphere Solar Panels 在 Fly 模式后恢复原位；线缆支架可涂色。"],
+                ["2026-08-09", "1.0.007 — 修复了 Metal 设备兼容性；修正了默认按键（「拾取组件」改为鼠标中键）；修复了管道描述错字；增加了更多提示。"],
+                ["2026-08-08", "1.0.006 — 修复了 Fuse Box 无法重新开启；Axis Rotometer 现在输出正确的本地轴带符号数值；修复了 Large Disposable Battery 预览；增加了制作人员名单、启动画面和目标完成度追踪。"],
              ]},
             {"heading": "官方更新发布位置",
              "items": [
@@ -1755,7 +1762,7 @@ TR_JA = {
                 ["月へはどう行く？", "Steam フォーラムの実在スレッド——月旅行ガイドを求めています。月の具体的メカニクスは未検証。"],
                 ["初心者向けレーダーモニター／デバイス", "Steam フォーラムの実在スレッド——レーダー装置のチュートリアルを求めています。レーダー機構は未検証。"],
              ]},
-            {"heading": "まだ未検証の内容", "body": "具体的な部品名・性能・レシピ・惑星の目的地・ミッション名は未検証。本ガイドは公式説明と注記したコミュニティ質問のみを使用し、検証情報が届き次第深掘りします。"},
+            {"heading": "まだ未検証の内容", "body": "上記のパッチノートは Steam 公式アナウンスで検証済みです。リリース前ビルドの詳細と未発表の変更は未検証のままです。"}
         ],
     },
     "blueprints-guide": {
@@ -1984,10 +1991,13 @@ TR_JA = {
                 ["デモ", "正式版より前にデモが公開。"],
                 ["価格", "発売時 $19.99（20% オフ、通常 $24.99）。"],
              ]},
-            {"heading": "アップデートのタイムライン（未検証）", "body": "詳細な更新履歴は公式ソースで未確認。以下の項目は確認までのプレースホルダー：",
+            {"heading": "アップデートのタイムライン（Steam で検証済み）", "body": "以下の更新情報は Steam 公式アナウンスで確認済み（2026年8月）：",
              "items": [
-                ["2026-08-06", "正式リリース（検証済み）。"],
-                ["今後", "未検証——公式パッチノートは検証され次第ここに追加。"],
+                ["2026-08-12", "1.0.010 — ワークショップの「人気順」ソートフィルター、ページ読み込み、結果欠落を修正。検索の分かりやすさを改善。"],
+                ["2026-08-11", "1.0.009 — Frame Quarter With Ports を改善（ケーブル接続で反対側にもポートが反映、A–D ラベルも一致）。Middle Window、Small Switch、Small Button の形状を修正。"],
+                ["2026-08-10", "1.0.008 — Axis Rotometer の当たり判定と残りの問題を修正。Plasma Cables が塗装可能に。Autohemisphere Solar Panels が Fly モード後に元の位置へ。ケーブルホルダーの塗装に対応。"],
+                ["2026-08-09", "1.0.007 — Metal デバイスとの互換性を修正。デフォルトキーバインドを修正（「部品を拾う」をマウス中ボタンに）。パイプ説明の誤字を修正。ヒントを追加。"],
+                ["2026-08-08", "1.0.006 — Fuse Box が再びオンにできない問題を修正。Axis Rotometer がローカル軸の符号付き値を出力するよう修正。Large Disposable Battery のプレビューを修正。クレジット、起動画面、目標達成率トラッキングを追加。"],
              ]},
             {"heading": "公式アップデートの掲載場所",
              "items": [
@@ -2195,7 +2205,7 @@ TR_KO = {
                 ["달에는 어떻게 가나요?", "Steam 포럼의 실제 스레드 — 달 여행 가이드를 원합니다. 달의 구체적 메커니즘은 미확인."],
                 ["초보용 레이더 모니터/장치", "Steam 포럼의 실제 스레드 — 레이더 장치 튜토리얼을 원합니다. 레이더 메커니즘은 미확인."],
              ]},
-            {"heading": "아직 확인되지 않은 내용", "body": "구체적인 부품 이름, 수치, 레시피, 행성 목적지, 임무 이름은 아직 확인되지 않았습니다. 이 가이드는 공식 설명과 표시된 커뮤니티 질문만 사용하며, 검증된 정보가 도착하면 더 깊게 다룹니다."},
+            {"heading": "아직 미확인인 내용", "body": "위 패치 노트는 Steam 공식 발표로 검증되었습니다. 출시 전 빌드의 세부 사항과 미공개 변경 사항은 아직 미확인입니다."}
         ],
     },
     "blueprints-guide": {
@@ -2424,10 +2434,13 @@ TR_KO = {
                 ["데모", "정식 출시보다 먼저 나온 데모."],
                 ["가격", "출시가 $19.99 (20% 할인, 정가 $24.99)."],
              ]},
-            {"heading": "업데이트 타임라인 (미확인)", "body": "공식 소스에서 상세한 업데이트 기록을 아직 확인하지 못했습니다. 아래 항목은 확인 전까지의 자리 표시자입니다:",
+            {"heading": "업데이트 타임라인 (Steam에서 검증됨)", "body": "다음 업데이트 내역은 Steam 공식 발표로 확인되었습니다 (2026년 8월):",
              "items": [
-                ["2026-08-06", "정식 출시 (검증됨)."],
-                ["향후", "미확인 — 공식 패치 노트가 검증되는 대로 여기에 추가됩니다."],
+                ["2026-08-12", "1.0.010 — 워크숍 '인기순' 정렬 필터, 페이지 로딩, 결과 누락 문제를 수정하고 검색 명확성을 개선했습니다."],
+                ["2026-08-11", "1.0.009 — Frame Quarter With Ports 개선(케이블 연결 시 반대쪽 포트도 동기화, A–D 라벨 일치). Middle Window, Small Switch, Small Button 기하 구조를 수정했습니다."],
+                ["2026-08-10", "1.0.008 — Axis Rotometer 히트박스 및 남은 문제를 수정하고, Plasma Cables 페인팅 지원, Fly 모드 후 Autohemisphere Solar Panels 복귀, 케이블 홀더 페인팅을 추가했습니다."],
+                ["2026-08-09", "1.0.007 — Metal 기기 호환성 수정, 기본 키바인드 수정(부품 집기를 마우스 가운데 버튼으로), 파이프 설명 오타 수정, 힌트 추가."],
+                ["2026-08-08", "1.0.006 — Fuse Box 재시작 불가 문제 수정, Axis Rotometer의 부호 있는 로컬 축 값 출력 수정, Large Disposable Battery 미리보기 수정, 크레딧·시작 화면·목표 완료율 추적 추가."],
              ]},
             {"heading": "공식 업데이트 게시 위치",
              "items": [
@@ -2864,10 +2877,13 @@ TR_FR = {
                 ["Démo", "Une démo précède la sortie complète."],
                 ["Prix", "19,99 $ au lancement (remise de 20 % ; liste 24,99 $)."],
              ]},
-            {"heading": "Chronologie des mises à jour (non vérifiée)", "body": "Nous n'avons pas encore vérifié d'historique détaillé des mises à jour auprès d'une source officielle. Les entrées ci-dessous sont des espaces réservés jusqu'à confirmation :",
+            {"heading": "Chronologie des mises à jour (vérifiée via Steam)", "body": "Notes de mise à jour vérifiées à partir des annonces officielles Steam (août 2026) :",
              "items": [
-                ["2026-08-06", "Sortie complète (vérifié)."],
-                ["Futur", "non vérifié — les notes de patch officielles seront ajoutées ici dès vérification."],
+                ["2026-08-12", "1.0.010 — Correction du filtre de tri « Plus populaires » du Workshop, du chargement des pages et des résultats manquants ; amélioration de la clarté de recherche."],
+                ["2026-08-11", "1.0.009 — Amélioration de Frame Quarter With Ports (les ports se reflètent de l'autre côté de la chaîne, étiquettes A–D cohérentes) ; correction de la géométrie de Middle Window, Small Switch et Small Button."],
+                ["2026-08-10", "1.0.008 — Correction de la hitbox de l'Axis Rotometer et des problèmes restants ; câbles Plasma peignables ; panneaux Autohemisphere de retour en position après Fly Mode ; supports de câble peignables."],
+                ["2026-08-09", "1.0.007 — Correction de la compatibilité avec les appareils Metal ; correction du raccourci par défaut (molette pour « prendre le composant ») ; faute de frappe corrigée ; plus d'indices."],
+                ["2026-08-08", "1.0.006 — Correction du Fuse Box impossible à rallumer ; Axis Rotometer renvoie des valeurs signées correctes ; aperçu de la grosse batterie corrigé ; ajout des crédits, de l'écran de démarrage et du suivi de progression."],
              ]},
             {"heading": "Où sont publiées les mises à jour officielles",
              "items": [
@@ -3075,7 +3091,7 @@ TR_DE = {
                 ["Wie komme ich zum Mond?", "Ein echtes Steam-Forum-Thread — Spieler wollen einen Mondreise-Guide. Die genauen Mond-Mechaniken sind unbestätigt."],
                 ["Radar-Monitor/-Gerät für Anfänger", "Ein echtes Steam-Forum-Thread — Spieler wollen ein Radar-Geräte-Tutorial. Die Radar-Mechaniken sind unbestätigt."],
              ]},
-            {"heading": "Was noch unbestätigt ist", "body": "Konkrete Teilenamen, Werte, Rezepte, Planetenziele und Missionsnamen sind noch nicht verifiziert. Dieser Guide nutzt nur die offizielle Beschreibung und markierte Community-Fragen; wir vertiefen ihn, sobald verifizierte Informationen eintreffen."},
+            {"heading": "Was noch unbestätigt ist", "body": "Die Patch-Notizen oben sind aus offiziellen Steam-Ankündigungen verifiziert. Details zu Vorab-Builds und nicht angekündigten Änderungen bleiben unbestätigt."}
         ],
     },
     "blueprints-guide": {
@@ -3304,10 +3320,13 @@ TR_DE = {
                 ["Demo", "Eine Demo erschien vor dem Vollrelease."],
                 ["Preis", "19,99 $ zum Launch (20 % Rabatt; Listenpreis 24,99 $)."],
              ]},
-            {"heading": "Update-Zeitlinie (unbestätigt)", "body": "Wir haben noch keinen detaillierten Update-Verlauf gegen eine offizielle Quelle verifiziert. Die Einträge unten sind Platzhalter bis zur Bestätigung:",
+            {"heading": "Update-Zeitlinie (via Steam verifiziert)", "body": "Patch-Notizen aus offiziellen Steam-Ankündigungen verifiziert (August 2026):",
              "items": [
-                ["2026-08-06", "Vollrelease (verifiziert)."],
-                ["Zukunft", "unbestätigt — offizielle Patchnotes werden hier ergänzt, sobald sie verifiziert sind."],
+                ["2026-08-12", "1.0.010 — Workshop-Sortierung 'Am beliebtesten', Seitenladen und fehlende Ergebnisse behoben; Suchübersicht verbessert."],
+                ["2026-08-11", "1.0.009 — Frame Quarter With Ports verbessert (Ports spiegeln sich über die Kette, A–D-Beschriftung konsistent); Geometrie von Middle Window, Small Switch und Small Button behoben."],
+                ["2026-08-10", "1.0.008 — Axis-Rotometer-Hitbox und restliche Probleme behoben; Plasma-Kabel lackierbar; Autohemisphere-Solarpanels kehren nach Fly Mode zurück; Kabelhalter lackierbar."],
+                ["2026-08-09", "1.0.007 — Metal-Geräte-Kompatibilität behoben; Standard-Tastenzuordnung korrigiert (mittlere Maustaste für 'Komponente aufnehmen'); Tippfehler in Rohrbeschreibung korrigiert; mehr Hinweise."],
+                ["2026-08-08", "1.0.006 — Fuse Box ließ sich nicht wieder einschalten; Axis Rotometer gibt nun korrekt vorzeichenbehaftete lokale Achsenwerte aus; Vorschau der Large Disposable Battery behoben; Credits, Startbildschirm und Zielverfolgung hinzugefügt."],
              ]},
             {"heading": "Wo offizielle Updates erscheinen",
              "items": [
@@ -3744,10 +3763,13 @@ TR_ES = {
                 ["Demo", "Una demo precede al lanzamiento completo."],
                 ["Precio", "19,99 $ en el lanzamiento (20 % de descuento; precio de lista 24,99 $)."],
              ]},
-            {"heading": "Cronología de actualizaciones (sin verificar)", "body": "Aún no hemos verificado un historial detallado de actualizaciones contra una fuente oficial. Las entradas siguientes son marcadores hasta que se confirmen:",
+            {"heading": "Cronología de actualizaciones (verificada desde Steam)", "body": "Notas de parche verificadas desde anuncios oficiales de Steam (agosto de 2026):",
              "items": [
-                ["2026-08-06", "Lanzamiento completo (verificado)."],
-                ["Futuro", "sin verificar: las notas del parche oficiales se añadirán aquí cuando se verifiquen."],
+                ["2026-08-12", "1.0.010 — Corregido el filtro de orden 'Más populares' del Workshop, la carga de páginas y los resultados faltantes; mejorada la claridad de búsqueda."],
+                ["2026-08-11", "1.0.009 — Mejorado Frame Quarter With Ports (los puertos se reflejan al otro lado de la cadena, etiquetas A–D coherentes); corregida la geometría de Middle Window, Small Switch y Small Button."],
+                ["2026-08-10", "1.0.008 — Corregido el hitbox del Axis Rotometer y problemas restantes; cables Plasma ahora pintables; paneles Autohemisphere vuelven a su posición tras Fly Mode; soportes de cable pintables."],
+                ["2026-08-09", "1.0.007 — Corregida la compatibilidad con dispositivos Metal; corregido el atajo por defecto (botón central del ratón para 'recoger componente'); corregida la errata de las tuberías; más pistas."],
+                ["2026-08-08", "1.0.006 — Corregido Fuse Box que no podía encenderse; Axis Rotometer ahora da valores con signo correctos; corregida la vista previa de la Large Disposable Battery; añadidos créditos, pantalla de inicio y seguimiento de objetivos."],
              ]},
             {"heading": "Dónde se publican las actualizaciones oficiales",
              "items": [
@@ -4184,10 +4206,13 @@ TR_IT = {
                 ["Demo", "Una demo precede l'uscita completa."],
                 ["Prezzo", "19,99 $ al lancio (sconto del 20 %; prezzo di listino 24,99 $)."],
              ]},
-            {"heading": "Cronologia aggiornamenti (non verificata)", "body": "Non abbiamo ancora verificato una cronologia dettagliata degli aggiornamenti contro una fonte ufficiale. Le voci seguenti sono segnaposto finché non saranno confermate:",
+            {"heading": "Cronologia aggiornamenti (verificata da Steam)", "body": "Note di patch verificate dagli annunci ufficiali di Steam (agosto 2026):",
              "items": [
-                ["2026-08-06", "Uscita completa (verificato)."],
-                ["Futuro", "non verificato: le note di patch ufficiali verranno aggiunte qui appena verificate."],
+                ["2026-08-12", "1.0.010 — Corretti il filtro di ordinamento 'Più popolari' del Workshop, il caricamento delle pagine e i risultati mancanti; migliorata la chiarezza della ricerca."],
+                ["2026-08-11", "1.0.009 — Migliorato Frame Quarter With Ports (le porte si riflettono sul lato opposto della catena, etichette A–D coerenti); corretta la geometria di Middle Window, Small Switch e Small Button."],
+                ["2026-08-10", "1.0.008 — Corretti hitbox dell'Axis Rotometer e problemi residui; cavi Plasma verniciabili; pannelli Autohemisphere tornano in posizione dopo Fly Mode; supporti cavi verniciabili."],
+                ["2026-08-09", "1.0.007 — Corretta la compatibilità con i dispositivi Metal; corretto il tasto predefinito (tasto centrale del mouse per 'raccogliere componente'); corretta la svista nelle descrizioni dei tubi; aggiunti più suggerimenti."],
+                ["2026-08-08", "1.0.006 — Corretto Fuse Box impossibile da riaccendere; Axis Rotometer ora emette valori con segno corretti; corretta l'anteprima della Large Disposable Battery; aggiunti crediti, schermata iniziale e tracciamento obiettivi."],
              ]},
             {"heading": "Dove vengono pubblicati gli aggiornamenti ufficiali",
              "items": [
@@ -4624,10 +4649,13 @@ TR_PL = {
                 ["Demo", "Demo ukazało się przed pełną premierą."],
                 ["Cena", "19,99 $ przy premierze (20% zniżki; cena katalogowa 24,99 $)."],
              ]},
-            {"heading": "Oś czasu aktualizacji (niepotwierdzona)", "body": "Nie zweryfikowaliśmy jeszcze szczegółowej historii aktualizacji w oficjalnym źródle. Poniższe wpisy to placeholdery do czasu potwierdzenia:",
+            {"heading": "Oś czasu aktualizacji (zweryfikowana przez Steam)", "body": "Notatki aktualizacji zweryfikowane z oficjalnych ogłoszeń Steam (sierpień 2026):",
              "items": [
-                ["2026-08-06", "Pełna premiera (zweryfikowane)."],
-                ["Przyszłość", "niepotwierdzone — oficjalne noty aktualizacji zostaną dodane tutaj po weryfikacji."],
+                ["2026-08-12", "1.0.010 — Naprawiono filtr sortowania „Najpopularniejsze” w Warsztacie, ładowanie stron i brakujące wyniki; poprawiono czytelność wyszukiwania."],
+                ["2026-08-11", "1.0.009 — Ulepszono Frame Quarter With Ports (porty odbijają się po drugiej stronie łańcucha, etykiety A–D spójne); naprawiono geometrię Middle Window, Small Switch i Small Button."],
+                ["2026-08-10", "1.0.008 — Naprawiono hitbox Axis Rotometer i pozostałe problemy; kable Plasma można malować; panele Autohemisphere wracają po Fly Mode; uchwyty kabli można malować."],
+                ["2026-08-09", "1.0.007 — Naprawiono kompatybilność z urządzeniami Metal; poprawiono domyślny klawisz (środkowy przycisk myszy do 'podnoszenia komponentu'); poprawiono literówkę w opisach rur; dodano więcej podpowiedzi."],
+                ["2026-08-08", "1.0.006 — Naprawiono Fuse Box, którego nie można było włączyć; Axis Rotometer poprawnie podaje wartości ze znakiem; naprawiono podgląd Large Disposable Battery; dodano napisy, ekran startowy i śledzenie postępów."],
              ]},
             {"heading": "Gdzie publikowane są oficjalne aktualizacje",
              "items": [
@@ -5064,10 +5092,13 @@ TR_PT = {
                 ["Demo", "Uma demo precede o lançamento completo."],
                 ["Preço", "US$ 19,99 no lançamento (20% de desconto; preço de tabela US$ 24,99)."],
              ]},
-            {"heading": "Linha do tempo de atualizações (não verificada)", "body": "Ainda não verificamos um histórico detalhado de atualizações em uma fonte oficial. As entradas abaixo são espaços reservados até confirmação:",
+            {"heading": "Linha do tempo de atualizações (verificada via Steam)", "body": "Notas de patch verificadas nos anúncios oficiais da Steam (agosto de 2026):",
              "items": [
-                ["2026-08-06", "Lançamento completo (verificado)."],
-                ["Futuro", "não verificado — as notas de patch oficiais serão adicionadas aqui quando verificadas."],
+                ["2026-08-12", "1.0.010 — Corrigidos o filtro de classificação 'Mais populares' da Workshop, o carregamento de páginas e resultados ausentes; melhorada a clareza da busca."],
+                ["2026-08-11", "1.0.009 — Melhorado Frame Quarter With Ports (as portas se espelham no outro lado da cadeia, rótulos A–D consistentes); corrigidas as geometrias de Middle Window, Small Switch e Small Button."],
+                ["2026-08-10", "1.0.008 — Corrigidos o hitbox do Axis Rotometer e problemas restantes; cabos Plasma agora pintáveis; painéis Autohemisphere voltam à posição após Fly Mode; suportes de cabo pintáveis."],
+                ["2026-08-09", "1.0.007 — Corrigida a compatibilidade com dispositivos Metal; corrigida a tecla padrão (botão do meio do mouse para 'pegar componente'); corrigido erro de digitação nas descrições de canos; mais dicas."],
+                ["2026-08-08", "1.0.006 — Corrigido Fuse Box que não ligava; Axis Rotometer agora exibe valores com sinal corretos; corrigida a pré-visualização da Large Disposable Battery; adicionados créditos, tela inicial e rastreamento de objetivos."],
              ]},
             {"heading": "Onde as atualizações oficiais são publicadas",
              "items": [
@@ -5504,10 +5535,13 @@ TR_RU = {
                 ["Демо", "Демо вышло до полного релиза."],
                 ["Цена", "19,99 $ на релизе (скидка 20 %; обычная цена 24,99 $)."],
              ]},
-            {"heading": "Таймлайн обновлений (неподтверждён)", "body": "Мы ещё не проверили подробную историю обновлений по официальному источнику. Записи ниже — заглушки до подтверждения:",
+            {"heading": "Таймлайн обновлений (подтверждено через Steam)", "body": "Примечания к обновлениям подтверждены официальными объявлениями Steam (август 2026):",
              "items": [
-                ["2026-08-06", "Полный релиз (подтверждено)."],
-                ["Будущее", "неподтверждено — официальные патчноуты будут добавлены сюда после проверки."],
+                ["2026-08-12", "1.0.010 — Исправлены фильтр сортировки «Самые популярные» в Мастерской, загрузка страниц и пропадающие результаты; улучшена понятность поиска."],
+                ["2026-08-11", "1.0.009 — Улучшен Frame Quarter With Ports (порты зеркалятся на другой стороне цепи, метки A–D согласованы); исправлена геометрия Middle Window, Small Switch и Small Button."],
+                ["2026-08-10", "1.0.008 — Исправлены хитбокс Axis Rotometer и оставшиеся проблемы; Plasma Cables теперь красятся; Autohemisphere Solar Panels возвращаются на место после Fly Mode; держатели кабелей красятся."],
+                ["2026-08-09", "1.0.007 — Исправлена совместимость с устройствами Metal; исправлена клавиша по умолчанию (средняя кнопка мыши для «поднять компонент»); исправлена опечатка в описании труб; добавлены подсказки."],
+                ["2026-08-08", "1.0.006 — Исправлен Fuse Box, который нельзя было включить; Axis Rotometer теперь выдаёт корректные значения со знаком; исправлен предпросмотр Large Disposable Battery; добавлены титры, стартовый экран и отслеживание целей."],
              ]},
             {"heading": "Где публикуются официальные обновления",
              "items": [
@@ -5715,7 +5749,7 @@ TR_UK = {
                 ["Як потрапити на Місяць?", "Реальний тред на форумі Steam — гравці хочуть гайд про політ на Місяць. Конкретні місячні механіки непідтверджені."],
                 ["Радар-монітор / пристрій для новачків", "Реальний тред на форумі Steam — гравці хочуть туторіал про радар-пристрій. Механіки радара непідтверджені."],
              ]},
-            {"heading": "Що лишається непідтвердженим", "body": "Конкретні назви деталей, характеристики, рецепти, планети-цілі та назви місій ще не перевірені. Цей гайд використовує лише офіційний опис і позначені питання спільноти; ми поглибимо його, коли з'являться перевірені дані."},
+            {"heading": "Що лишається непідтвердженим", "body": "Примітки до оновлень вище підтверджено офіційними оголошеннями Steam. Деталі передрелізних збірок і неанонсовані зміни залишаються непідтвердженими."}
         ],
     },
     "blueprints-guide": {
@@ -5944,10 +5978,13 @@ TR_UK = {
                 ["Демо", "Демо вийшло раніше за повний реліз."],
                 ["Ціна", "19,99 $ на релізі (знижка 20 %; звичайна ціна 24,99 $)."],
              ]},
-            {"heading": "Таймлайн оновлень (непідтверджений)", "body": "Ми ще не перевірили детальну історію оновлень за офіційним джерелом. Записи нижче — заглушки до підтвердження:",
+            {"heading": "Таймлайн оновлень (підтверджено через Steam)", "body": "Примітки до оновлень підтверджено офіційними оголошеннями Steam (серпень 2026):",
              "items": [
-                ["2026-08-06", "Повний реліз (підтверджено)."],
-                ["Майбутнє", "непідтверджено — офіційні патчноути буде додано сюди після перевірки."],
+                ["2026-08-12", "1.0.010 — Виправлено фільтр сортування «Найпопулярніші» в майстерні, завантаження сторінок і зниклі результати; покращено зрозумілість пошуку."],
+                ["2026-08-11", "1.0.009 — Покращено Frame Quarter With Ports (порти дзеркаляться на іншому боці ланцюга, мітки A–D узгоджені); виправлено геометрію Middle Window, Small Switch і Small Button."],
+                ["2026-08-10", "1.0.008 — Виправлено хітбокс Axis Rotometer та решту проблем; Plasma Cables тепер можна фарбувати; Autohemisphere Solar Panels повертаються після Fly Mode; тримачі кабелів можна фарбувати."],
+                ["2026-08-09", "1.0.007 — Виправлено сумісність із пристроями Metal; виправлено клавішу за замовчуванням (середня кнопка миші для «підняти компонент»); виправлено друкарську помилку в описах труб; додано підказки."],
+                ["2026-08-08", "1.0.006 — Виправлено Fuse Box, який не вмикався; Axis Rotometer тепер коректно видає знакові значення; виправлено попередній перегляд Large Disposable Battery; додано титри, стартовий екран і відстеження цілей."],
              ]},
             {"heading": "Де публікуються офіційні оновлення",
              "items": [
@@ -6155,7 +6192,7 @@ TR_VI = {
                 ["Làm sao lên Mặt Trăng?", "Một chủ đề thật trên diễn đàn Steam — người chơi muốn hướng dẫn lên Mặt Trăng. Cơ chế Mặt Trăng cụ thể chưa xác minh."],
                 ["Màn hình / thiết bị radar cho người mới", "Một chủ đề thật trên diễn đàn Steam — người chơi muốn hướng dẫn thiết bị radar. Cơ chế radar chưa xác minh."],
              ]},
-            {"heading": "Điều vẫn chưa xác minh", "body": "Tên bộ phận cụ thể, chỉ số, công thức, điểm đến hành tinh và tên nhiệm vụ chưa được xác minh. Hướng dẫn này chỉ dùng mô tả chính thức và câu hỏi cộng đồng được đánh dấu; chúng tôi sẽ đào sâu khi có thông tin xác minh."},
+            {"heading": "Điều vẫn chưa xác minh", "body": "Ghi chú bản vá ở trên được xác minh từ thông báo chính thức của Steam. Chi tiết bản dựng trước phát hành và thay đổi chưa công bố vẫn chưa được xác minh."}
         ],
     },
     "blueprints-guide": {
@@ -6384,10 +6421,13 @@ TR_VI = {
                 ["Demo", "Bản demo ra mắt trước bản đầy đủ."],
                 ["Giá", "19,99 $ khi phát hành (giảm 20%; giá niêm yết 24,99 $)."],
              ]},
-            {"heading": "Dòng thời gian cập nhật (chưa xác minh)", "body": "Chúng tôi chưa xác minh lịch sử cập nhật chi tiết từ nguồn chính thức. Các mục bên dưới là chỗ trống cho đến khi được xác nhận:",
+            {"heading": "Dòng thời gian cập nhật (xác minh từ Steam)", "body": "Ghi chú bản vá được xác minh từ thông báo chính thức trên Steam (tháng 8/2026):",
              "items": [
-                ["2026-08-06", "Bản đầy đủ phát hành (đã xác minh)."],
-                ["Tương lai", "chưa xác minh — ghi chú bản vá chính thức sẽ được thêm vào đây khi được xác minh."],
+                ["2026-08-12", "1.0.010 — Đã sửa bộ lọc sắp xếp 'Phổ biến nhất' của Workshop, tải trang và kết quả bị thiếu; cải thiện độ rõ của tìm kiếm."],
+                ["2026-08-11", "1.0.009 — Cải thiện Frame Quarter With Ports (cổng phản chiếu sang phía đối diện của chuỗi, nhãn A–D nhất quán); sửa hình dạng Middle Window, Small Switch và Small Button."],
+                ["2026-08-10", "1.0.008 — Đã sửa hitbox của Axis Rotometer và các vấn đề còn lại; Plasma Cables giờ sơn được; Autohemisphere Solar Panels trở về vị trí sau Fly Mode; giá đỡ cáp sơn được."],
+                ["2026-08-09", "1.0.007 — Đã sửa tương thích với thiết bị Metal; sửa phím mặc định (nút giữa chuột để 'nhặt linh kiện'); sửa lỗi chính tả trong mô tả ống; thêm gợi ý."],
+                ["2026-08-08", "1.0.006 — Đã sửa Fuse Box không bật lại được; Axis Rotometer giờ xuất giá trị có dấu đúng; sửa bản xem trước Large Disposable Battery; thêm credits, màn hình khởi động và theo dõi tiến độ mục tiêu."],
              ]},
             {"heading": "Nơi đăng cập nhật chính thức",
              "items": [
