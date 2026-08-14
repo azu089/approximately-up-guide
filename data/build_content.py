@@ -36,6 +36,11 @@ SITE = {
     "gaId": "G-YV335TQLWZ",
     "gscVerification": "",
     "adsenseId": "pub-4174270222899193",
+    "adsenseServing": {
+        "enabled": False,
+        "providerReady": False,
+        "certifiedCmpReady": False,
+    },
     "indexNowKey": "1d3c9081af5f6615482e53da0c46918f",
     "ogImage": "/images/hero.jpg",
     "awinVerification": "",
