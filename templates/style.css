@@ -306,8 +306,18 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
 .footer-col a:hover{color:var(--cyan);text-decoration:none}
 .footer-meta{border-top:1px solid var(--line);padding-top:18px;display:flex;flex-direction:column;gap:4px}
 .footer-meta p{color:var(--muted);font-size:12.5px;margin:0}
+.privacy-settings{min-height:44px;margin-top:16px;justify-self:start;border:1px solid var(--line2);border-radius:8px;background:var(--bg3);color:var(--text);padding:8px 14px;font:inherit;font-weight:700;cursor:pointer}
+.privacy-settings:hover{border-color:var(--cyan);color:var(--cyan)}
+.consent-dialog{width:min(680px,calc(100vw - 32px));max-height:calc(100dvh - 32px);padding:0;border:1px solid var(--line2);border-radius:14px;background:var(--bg2);color:var(--text);box-shadow:var(--shadow);overflow:auto}
+.consent-dialog::backdrop{background:rgba(0,0,0,.76);backdrop-filter:blur(3px)}
+.consent-card{position:relative;padding:26px}.consent-card h2{margin:0 48px 8px 0;font-family:var(--display);font-weight:400}.consent-card>p{color:var(--muted)}
+.consent-close{position:absolute;right:12px;top:10px;width:44px;height:44px;border:0;border-radius:8px;background:transparent;color:var(--text);font-size:1.7rem;cursor:pointer}
+.consent-summary{display:grid;gap:4px;margin:18px 0}.consent-summary span{color:var(--muted);margin-bottom:10px}
+.consent-manage{display:grid;gap:10px;margin:18px 0}.consent-manage label{display:flex;gap:12px;align-items:flex-start;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--bg3)}.consent-manage input{width:22px;height:22px;flex:0 0 auto;accent-color:var(--cyan)}.consent-manage small{display:block;color:var(--muted);margin-top:3px}
+.consent-actions{display:flex;flex-wrap:wrap;gap:8px}.consent-actions button{min-height:44px;border:1px solid var(--line2);border-radius:8px;background:var(--bg3);color:var(--text);padding:9px 13px;font:inherit;font-weight:700;cursor:pointer}.consent-actions [data-consent-accept]{background:var(--cyan);color:#04222A}.consent-actions [data-consent-reject],.consent-actions [data-consent-withdraw]{background:transparent}
+.privacy-copy h2{font-size:1.05rem;margin:18px 0 8px}.privacy-copy code{overflow-wrap:anywhere}.privacy-date{margin-top:14px;opacity:.75}
 @media(max-width:720px){.footer-cols{grid-template-columns:1fr 1fr;gap:18px}}
-@media(max-width:480px){.footer-cols{grid-template-columns:1fr}}
+@media(max-width:480px){.footer-cols{grid-template-columns:1fr}.consent-card{padding:22px 18px}.consent-actions button{width:100%}}
 
 /* Reveal */
 .reveal.in{opacity:1;transform:none}
