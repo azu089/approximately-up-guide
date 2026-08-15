@@ -42,6 +42,8 @@ const eagerProvider = /<script[^>]+src=["'][^"']*(?:googletagmanager\.com\/gtag\
 
 function validateRow(row){
   const lang=localeOf(row.relative),html=row.html;
+  const leaf=path.basename(row.relative);
+  const eligible=!(["about.html","privacy.html","contact.html","404.html"].includes(leaf));
   assert.equal(eagerProvider.test(html),false,`eager optional provider in ${row.relative}`);
   for(const token of ["data-consent-settings","data-consent-dialog","data-consent-accept","data-consent-reject","data-consent-manage-open","data-consent-save","data-consent-withdraw"])
     assert.equal(html.includes(token),true,`${token} missing in ${row.relative}`);
@@ -49,7 +51,8 @@ function validateRow(row){
   assert.equal(html.includes(consentKey),true,`consent storage/version missing in ${row.relative}`);
   assert.equal(/rel="[^"]*\bsponsored\b/i.test(html),false,`sponsored rel pollution in ${row.relative}`);
   assert.equal(html.includes("affiliate_click"),false,`affiliate classifier pollution in ${row.relative}`);
-  assert.equal(count(html,'"adsterraSrc":"https://pl30767409.effectivecpmnetwork.com/c8bf889a0dcc57e129ef61a0c31f243d/invoke.js"'),1,`Adsterra config count in ${row.relative}`);
+  assert.equal(count(html,'"adsterraSrc":"https://pl30767409.effectivecpmnetwork.com/c8bf889a0dcc57e129ef61a0c31f243d/invoke.js"'),eligible?1:0,`Adsterra config count in ${row.relative}`);
+  assert.equal(count(html,'<aside class="commercial-slot" data-commercial-slot="primary-display"'),eligible?1:0,`commercial wrapper count in ${row.relative}`);
   assert.equal(count(html,'"gaId":"G-YV335TQLWZ"'),1,`GA4 config count in ${row.relative}`);
   assert.equal(count(html,'"adsenseSrc":""'),1,`AdSense serving gate in ${row.relative}`);
   assert.equal(html.includes("outbound_click"),true,`outbound classifier missing in ${row.relative}`);

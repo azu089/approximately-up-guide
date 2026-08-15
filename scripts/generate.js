@@ -269,11 +269,24 @@ function header(lang, active){
 </header>`;
 }
 
-function consentUi(lang){
+const AD_LABEL = {
+  en:"Advertisement", "zh-CN":"广告", "zh-TW":"廣告", ja:"広告", ko:"광고", fr:"Publicité",
+  de:"Werbung", es:"Publicidad", it:"Pubblicità", pl:"Reklama", "pt-BR":"Publicidade",
+  ru:"Реклама", uk:"Реклама", vi:"Quảng cáo"
+};
+function commercialSlot(lang){
+  const label = AD_LABEL[lang] || AD_LABEL.en;
+  return `<aside class="commercial-slot" data-commercial-slot="primary-display" data-state="idle" aria-label="${esc(label)}" hidden>
+    <div class="commercial-label">${esc(label)}</div>
+    <div class="commercial-surface" data-commercial-surface></div>
+  </aside>`;
+}
+
+function consentUi(lang, commercialEligible){
   const t = CONSENT_I18N[lang] || CONSENT_I18N.en;
   const rawAd = String(DATA.site.adsterra || "");
-  const adsterraSrc = (rawAd.match(/src="([^"]*effectivecpmnetwork\.com[^"]*)"/) || [])[1] || "";
-  const adsterraContainer = (rawAd.match(/id="(container-[^"]+)"/) || [])[1] || "";
+  const adsterraSrc = commercialEligible ? ((rawAd.match(/src="([^"]*effectivecpmnetwork\.com[^"]*)"/) || [])[1] || "") : "";
+  const adsterraContainer = commercialEligible ? ((rawAd.match(/id="(container-[^"]+)"/) || [])[1] || "") : "";
   const adsenseSrc = ADSENSE_SERVING_ENABLED
     ? `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`
     : "";
@@ -296,17 +309,26 @@ function consentUi(lang){
         <button type="button" data-consent-withdraw hidden>${esc(t.withdraw)}</button>
       </div>
     </div>
-  </dialog><div id="consent-ad-slot" aria-hidden="true"></div>
+  </dialog>
   <script>
   (function(){
     var cfg=${cfg},key="approximately-up-consent-v1",dialog=document.querySelector("[data-consent-dialog]");
-    var settings=document.querySelector("[data-consent-settings]"),opener=null,loaded={analytics:false,adsterra:false,adsense:false};
+    var settings=document.querySelector("[data-consent-settings]"),opener=null,loaded={analytics:false,adsterra:false,adsense:false},adObserver=null;
     function read(){try{var v=JSON.parse(localStorage.getItem(key)||"null");return v&&typeof v.analytics==="boolean"&&typeof v.advertising==="boolean"?v:null;}catch(_){return null;}}
     function loadAnalytics(){if(loaded.analytics||!cfg.gaId)return;loaded.analytics=true;window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){dataLayer.push(arguments);};gtag("js",new Date());gtag("config",cfg.gaId);var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+encodeURIComponent(cfg.gaId);document.head.appendChild(s);}
-    function loadAdvertising(){var slot=document.getElementById("consent-ad-slot");if(cfg.adsterraSrc&&!loaded.adsterra){loaded.adsterra=true;if(cfg.adsterraContainer){var d=document.createElement("div");d.id=cfg.adsterraContainer;slot.appendChild(d);}var a=document.createElement("script");a.async=true;a.setAttribute("data-cfasync","false");a.src=cfg.adsterraSrc;slot.appendChild(a);}if(cfg.adsenseSrc&&!loaded.adsense){loaded.adsense=true;var g=document.createElement("script");g.async=true;g.crossOrigin="anonymous";g.src=cfg.adsenseSrc;slot.appendChild(g);}}
-    function apply(v){if(v&&v.analytics)loadAnalytics();if(v&&v.advertising)loadAdvertising();}
-    function restoreFocus(){settings.setAttribute("aria-expanded","false");if(opener&&opener.focus)opener.focus();}
-    function close(){if(dialog.open)dialog.close();restoreFocus();}
+    function removeSlot(slot,state){if(!slot)return;slot.dataset.state=state||"empty";slot.hidden=true;slot.replaceChildren();slot.remove();}
+    function loadAdvertising(slot){if(!slot||!slot.isConnected||loaded.adsterra||!cfg.adsterraSrc)return;loaded.adsterra=true;slot.hidden=false;slot.dataset.state="loading";var surface=slot.querySelector("[data-commercial-surface]");if(!surface){removeSlot(slot,"error");return;}var provider=document.createElement("div");provider.setAttribute("data-commercial-provider","");if(cfg.adsterraContainer)provider.id=cfg.adsterraContainer;surface.appendChild(provider);var settled=false,stable=0,lastHeight=0,a=null;
+      function providerError(e){if(!settled&&slot.dataset.state==="loading"&&(e.target===a||e.target===window||(e.filename&&e.filename.indexOf(cfg.adsterraSrc)>-1)))fail("error");}
+      function finish(){if(mutation)mutation.disconnect();window.removeEventListener("error",providerError,true);}
+      function fail(state){if(settled)return;settled=true;finish();removeSlot(slot,state);}
+      function inspect(){if(settled||!slot.isConnected)return;var child=provider.querySelector("iframe,a,img,video,object,embed")||provider.firstElementChild;var h=child?Math.max(child.getBoundingClientRect().height,provider.getBoundingClientRect().height):0;if(h>0&&Math.abs(h-lastHeight)<1){stable+=1;}else{stable=0;lastHeight=h;}if(stable>=2){settled=true;finish();slot.style.setProperty("--commercial-filled-height",Math.ceil(h)+"px");slot.dataset.state="filled";}else requestAnimationFrame(inspect);}
+      var mutation=new MutationObserver(function(){requestAnimationFrame(inspect);});mutation.observe(provider,{childList:true,subtree:true,attributes:true});a=document.createElement("script");a.async=true;a.setAttribute("data-cfasync","false");a.src=cfg.adsterraSrc;a.onerror=function(){fail("error");};window.addEventListener("error",providerError,true);surface.appendChild(a);requestAnimationFrame(inspect);setTimeout(function(){fail("empty");},2500);
+    }
+    function armAdvertising(){var slot=document.querySelector('[data-commercial-slot="primary-display"]');if(!slot||loaded.adsterra||!cfg.adsterraSrc)return;var target=slot.previousElementSibling||slot.parentElement;if("IntersectionObserver" in window&&target){adObserver=new IntersectionObserver(function(es){if(es.some(function(e){return e.isIntersecting;})){adObserver.disconnect();loadAdvertising(slot);}},{rootMargin:"1200px 0px",threshold:0});adObserver.observe(target);}else loadAdvertising(slot);}
+    function clearAdvertising(){if(adObserver){adObserver.disconnect();adObserver=null;}var slot=document.querySelector('[data-commercial-slot="primary-display"]');if(!slot)return;if(loaded.adsterra)removeSlot(slot,"empty");else{slot.dataset.state="idle";slot.hidden=true;}}
+    function apply(v){if(v&&v.analytics)loadAnalytics();if(v&&v.advertising)armAdvertising();else clearAdvertising();}
+    function restoreFocus(){settings.setAttribute("aria-expanded","false");if(opener&&opener.isConnected&&opener.focus)opener.focus();opener=null;}
+    function close(){if(dialog.open)dialog.close();}
     function open(source){opener=source||document.activeElement;var v=read(),manage=dialog.querySelector("[data-consent-manage]");dialog.querySelector("[data-consent-analytics]").checked=!!(v&&v.analytics);dialog.querySelector("[data-consent-advertising]").checked=!!(v&&v.advertising);manage.hidden=true;dialog.querySelector("[data-consent-save]").hidden=true;dialog.querySelector("[data-consent-withdraw]").hidden=!v;settings.setAttribute("aria-expanded","true");dialog.showModal();dialog.querySelector("#privacy-consent-title").focus();}
     function save(v){localStorage.setItem(key,JSON.stringify(v));apply(v);close();}
     settings.addEventListener("click",function(){open(settings);});
@@ -316,6 +338,7 @@ function consentUi(lang){
     dialog.querySelector("[data-consent-manage-open]").addEventListener("click",function(){dialog.querySelector("[data-consent-manage]").hidden=false;dialog.querySelector("[data-consent-save]").hidden=false;});
     dialog.querySelector("[data-consent-save]").addEventListener("click",function(){save({analytics:dialog.querySelector("[data-consent-analytics]").checked,advertising:dialog.querySelector("[data-consent-advertising]").checked});});
     dialog.querySelector("[data-consent-withdraw]").addEventListener("click",function(){save({analytics:false,advertising:false});});
+    dialog.addEventListener("keydown",function(e){if(e.key!=="Tab")return;var f=Array.prototype.filter.call(dialog.querySelectorAll('button:not([hidden]),input:not([hidden]),[href]:not([hidden]),[tabindex]:not([tabindex="-1"]):not([hidden])'),function(el){return !el.disabled&&el.offsetParent!==null;});if(!f.length){e.preventDefault();return;}var first=f[0],last=f[f.length-1];if(e.shiftKey&&(document.activeElement===first||document.activeElement===dialog)){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}});
     dialog.addEventListener("cancel",function(e){e.preventDefault();close();});
     dialog.addEventListener("close",restoreFocus);
     var initial=read();if(initial)apply(initial);else setTimeout(function(){open(settings);},0);
@@ -332,7 +355,7 @@ function decisionEventsScript(){
     document.addEventListener("change",function(e){var root=e.target.closest&&e.target.closest(".tracker,[data-tool]");if(root)send("tool_interaction",{tool_name:root.getAttribute("data-tool")||root.id||"interactive_tool",interaction_type:e.target.type||e.target.tagName.toLowerCase(),page_path:location.pathname});});
   })();</script>`;
 }
-function footer(lang){
+function footer(lang, commercialEligible=false){
   const s = siteI18n(lang);
   const prefix = lang === DEF ? "" : `/${lang}`;
   // 按 header 的舱段分组（Cockpit/Engine/Cargo/Archive），避免一列 10 个长标题拉到底
@@ -360,7 +383,7 @@ function footer(lang){
       <p>${esc(s.footerNote)}</p>
       <p>${esc(s.footerSource)} · ${updLabel(lang)} ${today}</p>
     </div>
-	    ${consentUi(lang)}
+	    ${consentUi(lang, commercialEligible)}
 	  </div>
 	${decisionEventsScript()}
 <script>
@@ -557,10 +580,11 @@ function renderHome(lang){
       const m=metaOf(slug); const t=Object.assign(pageOf(p,lang),{slug});
       return `<a class="hab-link" href="${prefix}/${slug}" style="--hab-acc:${h.acc}"><span class="hab-ic">${SVG[m.icon]}</span><span class="hab-tx">${esc(t.title)}</span><span class="hab-go">${String(i+1)}.${h.slugs.indexOf(slug)+1} →</span></a>`;
     }).join("");
-    return `<section class="hab-panel reveal" id="hab-${i+1}" style="--hab-acc:${h.acc}">
+    const panel = `<section class="hab-panel reveal" id="hab-${i+1}" style="--hab-acc:${h.acc}">
       <div class="hab-head"><span class="hab-code">${h.code}</span><h2>${esc(h.label)}</h2>${h.desc?`<p>${esc(h.desc)}</p>`:""}</div>
       <div class="hab-links">${links}</div>
     </section>`;
+    return panel + (i === 1 ? commercialSlot(lang) : "");
   }).join("");
   const heroImg = DATA.site.ogImage || "/images/hero.jpg";
   const heroCardImg = `<div class="ship-imgwrap">${KIT.picture({ src: heroImg, srcset: "/images/hero-640.jpg 640w, /images/hero-1280.jpg 1280w, /images/hero.jpg 1600w", sizes: "100vw", attrs: `class="ship-img" alt="${esc(gname)}" loading="eager" width="1600" height="900"` })}</div>`;
@@ -594,7 +618,7 @@ ${header(lang, "")}
     ${habPanels}
   </div>
 </main>
-${footer(lang)}
+${footer(lang, true)}
 </body></html>`;
 }
 
@@ -603,7 +627,8 @@ ${footer(lang)}
 
 function renderFull(lang, title, desc, extraLd, slug, body, ogImage){
   const s = siteI18n(lang);
-  return head(title, desc, extraLd, slug, lang, ogImage) + header(lang, slug === "index" ? "" : slug) + body + footer(lang);
+  const commercialEligible = slug === "index" || DATA.pages.some(page => page.slug === slug);
+  return head(title, desc, extraLd, slug, lang, ogImage) + header(lang, slug === "index" ? "" : slug) + body + footer(lang, commercialEligible);
 }
 
 /* ---------- article pages ---------- */
@@ -617,7 +642,10 @@ function renderPage(lang, page){
     return `<a href="#sec-${SEC_IDX}"><span class="node-no">${n}</span><span class="node-tx">${esc(x.heading)}</span></a>`;
   }).join("");
   SEC_IDX = 0;
-  const sections2 = (t.sections||[]).map(x => renderSection(x, lang)).join("");
+  const renderedSections = (t.sections||[]).map(x => renderSection(x, lang));
+  const insertionIndex = renderedSections.length >= 3 ? 2 : renderedSections.length;
+  renderedSections.splice(insertionIndex, 0, commercialSlot(lang));
+  const sections2 = renderedSections.join("");
   const srcList = page.sources || [];
   const sources = srcList.map(x=>`<li>${AFF.anchor({ url: x.url, text: (x.labels && x.labels[lang]) || x.label, suffix: " ↗" })}</li>`).join("");
   const affNote = AFF.needsDisclosure(srcList.map(x=>x.url))
@@ -736,7 +764,7 @@ function genStatic(lang){
 function gen404(){
   const s404 = siteI18n(DEF);
   const pop404 = DATA.pages.filter(p=>["how-to-play","ship-building-guide","blueprints-guide","controls"].includes(p.slug)).map(p=>`<a href="/${p.slug}" style="display:inline-block;margin:6px;padding:9px 16px;border:1px solid var(--border);border-radius:10px;color:var(--muted);text-decoration:none">${esc(p.title)}</a>`).join("");
-  fs.writeFileSync(path.join(OUT,"404.html"), `<!DOCTYPE html><html lang="${LANG_META[DEF].html}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>404 - ${esc(s404.name)}</title><meta name="robots" content="noindex" /><link rel="stylesheet" href="/css/style.css?v=${CSS_V}"></head><body>${header(DEF,"")}<main class="container" style="padding-top:70px;text-align:center"><section class="card grow-card" style="max-width:560px;margin:0 auto"><h1 style="font-size:3rem">404</h1><p>This page doesn't exist. Try one of these guides instead:</p><div style="margin:18px 0">${pop404}</div><p><a class="btn btn-primary" href="/">← Back to Home</a></p></section></main>${footer(DEF)}</body></html>`);
+  fs.writeFileSync(path.join(OUT,"404.html"), `<!DOCTYPE html><html lang="${LANG_META[DEF].html}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>404 - ${esc(s404.name)}</title><meta name="robots" content="noindex" /><link rel="stylesheet" href="/css/style.css?v=${CSS_V}"></head><body>${header(DEF,"")}<main class="container" style="padding-top:70px;text-align:center"><section class="card grow-card" style="max-width:560px;margin:0 auto"><h1 style="font-size:3rem">404</h1><p>This page doesn't exist. Try one of these guides instead:</p><div style="margin:18px 0">${pop404}</div><p><a class="btn btn-primary" href="/">← Back to Home</a></p></section></main>${footer(DEF, false)}</body></html>`);
 }
 
 /* ---------- JSON-LD ---------- */

@@ -25,6 +25,7 @@
   --shadow:0 8px 24px rgba(0,0,0,.35);
 }
 *{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.65;font-size:16px}
 /* ui-ux-pro-max Gaming Bold: Russo One display + Chakra Petch body（Google Fonts swap 防阻塞） */
@@ -316,6 +317,19 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
 .consent-manage{display:grid;gap:10px;margin:18px 0}.consent-manage label{display:flex;gap:12px;align-items:flex-start;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--bg3)}.consent-manage input{width:22px;height:22px;flex:0 0 auto;accent-color:var(--cyan)}.consent-manage small{display:block;color:var(--muted);margin-top:3px}
 .consent-actions{display:flex;flex-wrap:wrap;gap:8px}.consent-actions button{min-height:44px;border:1px solid var(--line2);border-radius:8px;background:var(--bg3);color:var(--text);padding:9px 13px;font:inherit;font-weight:700;cursor:pointer}.consent-actions [data-consent-accept]{background:var(--cyan);color:#04222A}.consent-actions [data-consent-reject],.consent-actions [data-consent-withdraw]{background:transparent}
 .privacy-copy h2{font-size:1.05rem;margin:18px 0 8px}.privacy-copy code{overflow-wrap:anywhere}.privacy-date{margin-top:14px;opacity:.75}
+
+/* Approved commercial boundary: one consented in-main Adsterra opportunity. */
+.commercial-slot{width:100%;max-width:760px;margin:32px auto;border:0;padding:0;background:transparent}
+.commercial-slot[data-state="loading"],.commercial-slot[data-state="filled"]{display:block}
+.commercial-label{margin:0 0 8px;color:var(--amber);font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.commercial-surface{width:100%;max-width:100%;margin-inline:auto;padding:12px clamp(0px,2vw,16px);border-block:1px solid var(--line);background:var(--bg2);overflow:hidden;text-align:center}
+.commercial-slot[data-state="loading"] .commercial-surface{min-height:180px}
+.commercial-slot[data-state="filled"] .commercial-surface{min-height:var(--commercial-filled-height,0)}
+.commercial-surface>[data-commercial-provider]{max-width:100%;margin-inline:auto}
+.commercial-surface iframe,.commercial-surface img,.commercial-surface video,.commercial-surface object,.commercial-surface embed{max-width:100%;margin-inline:auto}
+.commercial-slot[hidden],.commercial-slot[data-state="idle"],.commercial-slot[data-state="empty"],.commercial-slot[data-state="error"]{display:none!important;height:0!important;min-height:0!important;margin:0!important;padding:0!important;border:0!important}
+@media(max-width:1080px){.commercial-slot{margin-block:28px}.commercial-slot[data-state="loading"] .commercial-surface{min-height:220px}}
+@media(max-width:720px){.commercial-slot{margin-block:24px}.commercial-slot[data-state="loading"] .commercial-surface{min-height:250px}}
 @media(max-width:720px){.footer-cols{grid-template-columns:1fr 1fr;gap:18px}}
 @media(max-width:480px){.footer-cols{grid-template-columns:1fr}.consent-card{padding:22px 18px}.consent-actions button{width:100%}}
 
@@ -406,16 +420,3 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
 .dd-lang::-webkit-scrollbar-thumb{background:var(--line2);border-radius:3px}
 .dd-lang::-webkit-scrollbar-track{background:transparent}
 @keyframes dd-in{from{opacity:0;transform:translateY(-4px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
-
-/* ============ Amazon 联盟推荐（页脚内） ============ */
-.amazon-gear { margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(127,127,127,0.22); }
-.amazon-gear h3 { font-size: 15px; margin: 0 0 10px; letter-spacing: .3px; }
-.amazon-gear-links { display: flex; flex-wrap: wrap; gap: 8px 12px; }
-.amazon-gear-links a {
-  font-size: 13px; text-decoration: none;
-  border: 1px solid rgba(127,127,127,0.35); border-radius: 999px;
-  padding: 4px 13px; transition: border-color .2s, color .2s, background .2s;
-}
-.amazon-gear-links a:hover { border-color: currentColor; background: rgba(127,127,127,0.08); }
-.amazon-gear .aff-note { font-size: 12px; opacity: .65; margin: 10px 0 0; }
-@media (max-width: 640px){ .amazon-gear-links a { font-size: 12px; padding: 3px 11px; } }
