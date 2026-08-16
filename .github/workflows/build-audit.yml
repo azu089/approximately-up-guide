@@ -25,6 +25,11 @@ jobs:
       - name: Commercial and consent audit
         run: node scripts/audit-commercial-gates.mjs
 
+      - name: Ad layout and touch-target audit
+        # 静态模式在 CI 跑（ad wrapper/放置、触控契约、locale 文案、文档壳回归）。
+        # --browser 模式依赖本机 Chrome + homebrew playwright 路径，只在本地验证时用。
+        run: node scripts/audit-ad-layout.mjs
+
       - name: Assert no drift
         # 构建应当是幂等的：同一份输入重跑两次，产物必须一致。
         # 不一致说明生成器里混进了时间戳/随机数这类非确定性因素。
