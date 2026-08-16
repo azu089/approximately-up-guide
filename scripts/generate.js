@@ -166,7 +166,7 @@ function hreflang(slug){
   const alt = LANGS.map(l => `<link rel="alternate" hreflang="${LANG_META[l]?.html || l}" href="${urlOf(slug,l)}" />`).join("\n");
   return `${alt}\n<link rel="alternate" hreflang="x-default" href="${urlOf(slug,DEF)}" />`;
 }
-function head(title, desc, extraLd, slug, lang, ogImage){
+function head(title, desc, extraLd, slug, lang, ogImage, bodyClass){
   const ld = JSON.stringify([siteLd(lang)].concat(extraLd || []));
   const gsc = DATA.site.gscVerification ? `<meta name="google-site-verification" content="${esc(DATA.site.gscVerification)}" />` : "";
   const adsenseMeta = ADSENSE_CLIENT_ID ? `<meta name="google-adsense-account" content="${esc(ADSENSE_CLIENT_ID)}" />` : "";
@@ -219,7 +219,7 @@ ${adsenseMeta}${awin}${impact}
 <link rel="stylesheet" href="/css/style.css?v=${CSS_V}" />${slug === "index" ? "\n" + KIT.heroPreload({ srcset: HERO_SET, sizes: "100vw" }) : ""}
 	<script type="application/ld+json">${ld}</script>
 	</head>
-	<body>`;
+	<body${bodyClass ? ` class="${bodyClass}"` : ""}>`;
 }
 function langSwitcher(lang, slug){
   const items = LANGS.map(l =>
@@ -556,6 +556,74 @@ function renderSection(s, lang){
 }
 
 /* ---------- home ---------- */
+// 首页系统舱段：14 语言均提供适切标签与描述（zh-TW 用繁体，非中文语言不回退简体中文）
+const HAB_I18N = {
+  COCKPIT: {
+    en: { label: "Cockpit — start here", desc: "First flight, controls, and the build-crash-rebuild loop." },
+    "zh-CN": { label: "驾驶舱 — 从这里开始", desc: "首次飞行、操作方式，以及建造-坠毁-重建的循环。" },
+    "zh-TW": { label: "駕駛艙 — 從這裡開始", desc: "首次飛行、操作方式，以及建造—墜毀—重建的循環。" },
+    ja: { label: "コックピット — ここから始める", desc: "初飛行、操作、そして作って・壊して・作り直すループ。" },
+    ko: { label: "조종석 — 여기서 시작", desc: "첫 비행, 조작, 그리고 만들고-부수고-다시 만드는 순환." },
+    fr: { label: "Poste de pilotage — commencez ici", desc: "Premier vol, commandes et le cycle construire-écraser-reconstruire." },
+    de: { label: "Cockpit — hier beginnen", desc: "Erster Flug, Steuerung und der Kreislauf aus Bauen, Absturz und Neuaufbau." },
+    es: { label: "Cabina — empieza aquí", desc: "Primer vuelo, controles y el ciclo construir-estrellarse-reconstruir." },
+    it: { label: "Cabina di pilotaggio — inizia qui", desc: "Primo volo, comandi e il ciclo costruisci-schiantati-ricostruisci." },
+    pl: { label: "Kabina — zacznij tutaj", desc: "Pierwszy lot, sterowanie i cykl buduj-rozbij-odbuduj." },
+    "pt-BR": { label: "Cabine — comece aqui", desc: "Primeiro voo, controles e o ciclo construir-quebrar-reconstruir." },
+    ru: { label: "Кабина — начните здесь", desc: "Первый полёт, управление и цикл «построй-разбей-перестрой»." },
+    uk: { label: "Кабіна — почніть тут", desc: "Перший політ, керування та цикл «побудуй-розбий-перебудуй»." },
+    vi: { label: "Buồng lái — bắt đầu tại đây", desc: "Chuyến bay đầu tiên, điều khiển và vòng lặp xây-dựng-hỏng-xây-lại." },
+  },
+  ENGINE: {
+    en: { label: "Engine room — ship building", desc: "Modular ships, thrusters, wiring and blueprints." },
+    "zh-CN": { label: "引擎舱 — 飞船建造", desc: "模块化飞船、推进器、电路与蓝图。" },
+    "zh-TW": { label: "引擎艙 — 飛船建造", desc: "模組化飛船、推進器、電路與藍圖。" },
+    ja: { label: "機関室 — 船の建造", desc: "モジュール式の船、スラスター、配線、ブループリント。" },
+    ko: { label: "기관실 — 함선 건조", desc: "모듈식 함선, 추진기, 배선, 설계도." },
+    fr: { label: "Salle des machines — construction de vaisseaux", desc: "Vaisseaux modulaires, propulseurs, câblage et plans." },
+    de: { label: "Maschinenraum — Schiffbau", desc: "Modulare Schiffe, Triebwerke, Verkabelung und Baupläne." },
+    es: { label: "Sala de máquinas — construcción de naves", desc: "Naves modulares, propulsores, cableado y planos." },
+    it: { label: "Sala macchine — costruzione di navi", desc: "Navi modulari, propulsori, cablaggio e progetti." },
+    pl: { label: "Maszynownia — budowa statków", desc: "Modułowe statki, silniki, okablowanie i plany." },
+    "pt-BR": { label: "Casa de máquinas — construção de naves", desc: "Naves modulares, propulsores, fiação e projetos." },
+    ru: { label: "Машинное отделение — строительство кораблей", desc: "Модульные корабли, двигатели, проводка и чертежи." },
+    uk: { label: "Машинне відділення — будівництво кораблів", desc: "Модульні кораблі, двигуни, проводка та креслення." },
+    vi: { label: "Phòng máy — đóng tàu", desc: "Tàu mô-đun, động cơ đẩy, hệ thống dây điện và bản thiết kế." },
+  },
+  CARGO: {
+    en: { label: "Cargo bay — references", desc: "Console release, mods, updates and demo comparison." },
+    "zh-CN": { label: "货舱 — 参考资料", desc: "主机版发售、模组、更新与试玩版对比。" },
+    "zh-TW": { label: "貨艙 — 參考資料", desc: "主機版發售、模組、更新與試玩版比較。" },
+    ja: { label: "カーゴベイ — リファレンス", desc: "コンソール版、MOD、アップデート、デモ比較。" },
+    ko: { label: "화물칸 — 참고 자료", desc: "콘솔 출시, 모드, 업데이트, 데모 비교." },
+    fr: { label: "Soute à marchandises — références", desc: "Sortie console, mods, mises à jour et comparaison de la démo." },
+    de: { label: "Frachtraum — Referenzen", desc: "Konsolen-Release, Mods, Updates und Demo-Vergleich." },
+    es: { label: "Bodega de carga — referencias", desc: "Lanzamiento en consolas, mods, actualizaciones y comparación de la demo." },
+    it: { label: "Stiva cargo — riferimenti", desc: "Uscita console, mod, aggiornamenti e confronto con la demo." },
+    pl: { label: "Ładownia — materiały", desc: "Premiera na konsole, mody, aktualizacje i porównanie wersji demo." },
+    "pt-BR": { label: "Porão de carga — referências", desc: "Lançamento em consoles, mods, atualizações e comparação da demo." },
+    ru: { label: "Грузовой отсек — справочники", desc: "Релиз на консолях, моды, обновления и сравнение демо." },
+    uk: { label: "Вантажний відсік — довідники", desc: "Реліз на консолях, моди, оновлення та порівняння демо." },
+    vi: { label: "Khoang hàng — tài liệu tham khảo", desc: "Bản console, mod, cập nhật và so sánh bản demo." },
+  },
+  ARCHIVE: {
+    en: { label: "Archive — achievements & indexes", desc: "Achievements, ships index, blueprints index and guide index." },
+    "zh-CN": { label: "资料库 — 成就与索引", desc: "成就、飞船索引、蓝图索引与攻略索引。" },
+    "zh-TW": { label: "資料庫 — 成就與索引", desc: "成就、飛船索引、藍圖索引與攻略索引。" },
+    ja: { label: "資料室 — 実績と索引", desc: "実績、船の索引、ブループリント索引、ガイド索引。" },
+    ko: { label: "기록실 — 업적 및 색인", desc: "업적, 함선 색인, 설계도 색인, 가이드 색인." },
+    fr: { label: "Archives — succès et index", desc: "Succès, index des vaisseaux, index des plans et index des guides." },
+    de: { label: "Archiv — Erfolge und Verzeichnisse", desc: "Erfolge, Schiffsverzeichnis, Bauplan-Verzeichnis und Guide-Verzeichnis." },
+    es: { label: "Archivo — logros e índices", desc: "Logros, índice de naves, índice de planos e índice de guías." },
+    it: { label: "Archivio — obiettivi e indici", desc: "Obiettivi, indice delle navi, indice dei progetti e indice delle guide." },
+    pl: { label: "Archiwum — osiągnięcia i indeksy", desc: "Osiągnięcia, indeks statków, indeks planów i indeks poradników." },
+    "pt-BR": { label: "Arquivo — conquistas e índices", desc: "Conquistas, índice de naves, índice de projetos e índice de guias." },
+    ru: { label: "Архив — достижения и указатели", desc: "Достижения, указатель кораблей, чертежей и гайдов." },
+    uk: { label: "Архів — досягнення та покажчики", desc: "Досягнення, покажчик кораблів, креслень і гайдів." },
+    vi: { label: "Kho lưu trữ — thành tựu và chỉ mục", desc: "Thành tựu, chỉ mục tàu, chỉ mục bản thiết kế và chỉ mục hướng dẫn." },
+  },
+};
+
 function renderHome(lang){
   const s = siteI18n(lang);
   const prefix = lang === DEF ? "" : `/${lang}`;
@@ -569,28 +637,27 @@ function renderHome(lang){
   const aboutPointsArr = (DATA.game.aboutPointsI18n && DATA.game.aboutPointsI18n[lang]) || DATA.game.aboutPoints || [];
   // 系统舱段：按「驾驶舱/引擎/蓝图/维生/通讯/资料库」组织（游戏建造隐喻）
   const HAB = [
-    {code:"COCKPIT", acc:"var(--cyan)",   label:lang==="en"?"Cockpit — start here":lang==="ja"?"コックピット":lang==="ko"?"조종석":"驾驶舱 — 从这里开始", desc:lang==="en"?"First flight, controls, and the build-crash-rebuild loop.":"", slugs:["how-to-play","controls","system-requirements","multiplayer"]},
-    {code:"ENGINE",  acc:"var(--amber)",  label:lang==="en"?"Engine room — ship building":lang==="ja"?"機関室":lang==="ko"?"기관실":"引擎舱 — 飞船建造", desc:lang==="en"?"Modular ships, thrusters, wiring and blueprints.":"", slugs:["ship-building-guide","wiring-electronics","blueprints-guide","best-ship-designs"]},
-    {code:"CARGO",   acc:"var(--violet)", label:lang==="en"?"Cargo bay — references":lang==="ja"?"カーゴベイ":lang==="ko"?"화물칸":"货舱 — 参考资料", desc:lang==="en"?"Console release, mods, updates and demo comparison.":"", slugs:["console-release","mods","patch-notes","demo-vs-full"]},
-    {code:"ARCHIVE", acc:"#5CB8FF",       label:lang==="en"?"Archive — achievements & indexes":lang==="ja"?"資料室":lang==="ko"?"기록실":"资料库 — 成就与索引", desc:lang==="en"?"Achievements, ships index, blueprints index and guide index.":"", slugs:["achievements","achievements-list","ships","blueprints","guides"]},
+    {code:"COCKPIT", acc:"var(--cyan)",   slugs:["how-to-play","controls","system-requirements","multiplayer"]},
+    {code:"ENGINE",  acc:"var(--amber)",  slugs:["ship-building-guide","wiring-electronics","blueprints-guide","best-ship-designs"]},
+    {code:"CARGO",   acc:"var(--violet)", slugs:["console-release","mods","patch-notes","demo-vs-full"]},
+    {code:"ARCHIVE", acc:"#5CB8FF",       slugs:["achievements","achievements-list","ships","blueprints","guides"]},
   ];
   const habPanels = HAB.map((h,i)=>{
+    const t = HAB_I18N[h.code][lang] || HAB_I18N[h.code].en;
     const links = h.slugs.map(slug=>{
       const p=DATA.pages.find(x=>x.slug===slug); if(!p) return "";
-      const m=metaOf(slug); const t=Object.assign(pageOf(p,lang),{slug});
-      return `<a class="hab-link" href="${prefix}/${slug}" style="--hab-acc:${h.acc}"><span class="hab-ic">${SVG[m.icon]}</span><span class="hab-tx">${esc(t.title)}</span><span class="hab-go">${String(i+1)}.${h.slugs.indexOf(slug)+1} →</span></a>`;
+      const m=metaOf(slug); const t2=Object.assign(pageOf(p,lang),{slug});
+      return `<a class="hab-link" href="${prefix}/${slug}" style="--hab-acc:${h.acc}"><span class="hab-ic">${SVG[m.icon]}</span><span class="hab-tx">${esc(t2.title)}</span><span class="hab-go">${String(i+1)}.${h.slugs.indexOf(slug)+1} →</span></a>`;
     }).join("");
     const panel = `<section class="hab-panel reveal" id="hab-${i+1}" style="--hab-acc:${h.acc}">
-      <div class="hab-head"><span class="hab-code">${h.code}</span><h2>${esc(h.label)}</h2>${h.desc?`<p>${esc(h.desc)}</p>`:""}</div>
+      <div class="hab-head"><span class="hab-code">${h.code}</span><h2>${esc(t.label)}</h2>${t.desc?`<p>${esc(t.desc)}</p>`:""}</div>
       <div class="hab-links">${links}</div>
     </section>`;
     return panel + (i === 1 ? commercialSlot(lang) : "");
   }).join("");
   const heroImg = DATA.site.ogImage || "/images/hero.jpg";
   const heroCardImg = `<div class="ship-imgwrap">${KIT.picture({ src: heroImg, srcset: "/images/hero-640.jpg 640w, /images/hero-1280.jpg 1280w, /images/hero.jpg 1600w", sizes: "100vw", attrs: `class="ship-img" alt="${esc(gname)}" loading="eager" width="1600" height="900"` })}</div>`;
-  return `<!doctype html>
-<html lang="${LANG_META[lang].html}"><head>${head(s.name, s.description, [gameLd()], "index", lang)}</head>
-<body class="home">
+  return head(s.name, s.description, [gameLd()], "index", lang, undefined, "home") + `
 ${header(lang, "")}
 <main class="flightdeck">
   <div class="fd-left">
@@ -730,10 +797,10 @@ const PRIVACY_BODY = {
   vi: `<p>Trước khi bạn lựa chọn, trang web không yêu cầu Google Analytics 4 (GA4), Adsterra/effectivecpmnetwork.com hoặc phân phối quảng cáo Google AdSense.</p><h2>Dịch vụ tùy chọn và dữ liệu</h2><p>Nếu cho phép phân tích, GA4 có thể xử lý địa chỉ IP, thông tin thiết bị và trình duyệt, trang đã xem, nguồn giới thiệu, khu vực gần đúng và cookie hoặc mã nhận dạng tương tự để đo lường. Nếu cho phép quảng cáo, vị trí Adsterra/effectivecpmnetwork.com duy nhất có thể xử lý địa chỉ IP và dữ liệu thiết bị hoặc mạng khác để phân phối và đo lường một quảng cáo. Chỉ siêu dữ liệu xác minh quyền sở hữu và ads.txt của Google AdSense được cấu hình; tập lệnh phân phối vẫn tắt.</p><h2>Lựa chọn của bạn</h2><p>Lựa chọn chỉ được lưu trong trình duyệt này với khóa <code>approximately-up-consent-v1</code>. Từ chối sẽ tiếp tục chặn nhà cung cấp tùy chọn. Nút Cài đặt quyền riêng tư luôn hiển thị cho phép thay đổi hoặc rút lại lựa chọn; việc rút lại ngăn yêu cầu tùy chọn mới trong các lần tải trang sau.</p><h2>Hạ tầng cần thiết</h2><p>Biểu định kiểu Google Fonts tải độc lập trước lựa chọn và Google có thể nhận dữ liệu mạng tiêu chuẩn. Cloudflare có thể lưu nhật ký truy cập tiêu chuẩn. Chúng tôi không bán dữ liệu cá nhân và không tuyên bố sử dụng CMP được Google chứng nhận.</p>`,
 };
 
-function renderStatic(lang, slug, title, body){
+function renderStatic(lang, slug, title, body, descOverride){
   const prefix = lang === DEF ? "" : `/${lang}`;
   const s = siteI18n(lang);
-  const descRaw = KIT.staticDesc(slug, lang, s.name, title);
+  const descRaw = descOverride || KIT.staticDesc(slug, lang, s.name, title);
   const isCjk = lang === "zh-CN" || lang === "zh-TW" || lang === "ja" || lang === "ko";
   const desc = descRaw.length > (isCjk ? 74 : 148) ? descRaw.slice(0, (isCjk ? 73 : 147)).replace(/\s+[^\s]*$/, "") + "…" : descRaw;
   const pageTitle = `${title} — ${s.name}`;
@@ -748,17 +815,26 @@ function genStatic(lang){
     aboutBody + `<section class="card">` + KIT.editorialPolicy(lang, { siteName: s.name, contactEmail: `contact@${DATA.site.domain}` }) + `</section>`));
 	  const privacyBody = `<section class="privacy-copy" data-privacy-locale="${esc(lang)}">${PRIVACY_BODY[lang] || ""}<h2>${esc(s.contactTitle)}</h2><p><a href="mailto:contact@${esc(DATA.site.domain)}">contact@${esc(DATA.site.domain)}</a></p><p class="privacy-date">${today}</p></section>`;
   writePage(path.join(dir,"privacy.html"), "privacy", lang, renderStatic(lang,"privacy", s.privacyTitle, privacyBody));
-  const contactPh = lang==="zh-CN"||lang==="zh-TW" ? "联系我们："
-    : lang==="ja" ? "お問い合わせ："
-    : lang==="ko" ? "문의하기: "
-    : lang==="es" ? "Contáctanos: "
-    : "Reach us at:";
-  const contactReply = lang==="zh-CN"||lang==="zh-TW" ? "我们通常会在 2-3 个工作日内回复。"
-    : lang==="ja" ? "通常 2〜3 営業日以内に返信します。"
-    : lang==="ko" ? "보통 2~3 영업일 내에 답변드립니다."
-    : lang==="es" ? "Normalmente respondemos en 2-3 días laborables."
-    : "We usually reply within 2-3 business days.";
-  writePage(path.join(dir,"contact.html"), "contact", lang, renderStatic(lang,"contact", s.contactTitle, `<p>${contactPh} <a href="mailto:contact@${esc(DATA.site.domain)}">contact@${esc(DATA.site.domain)}</a></p><p style="margin-top:10px">${contactReply}</p>`));
+  const contactI18n = {
+    en: { ph: "Reach us at:", reply: "We usually reply within 2-3 business days." },
+    "zh-CN": { ph: "联系我们：", reply: "我们通常会在 2-3 个工作日内回复。" },
+    "zh-TW": { ph: "聯絡我們：", reply: "我們通常會在 2-3 個工作日內回覆。" },
+    ja: { ph: "お問い合わせ：", reply: "通常 2〜3 営業日以内に返信します。" },
+    ko: { ph: "문의하기: ", reply: "보통 2~3 영업일 내에 답변드립니다." },
+    fr: { ph: "Contactez-nous : ", reply: "Nous répondons généralement sous 2 à 3 jours ouvrés." },
+    de: { ph: "Kontaktieren Sie uns: ", reply: "Wir antworten in der Regel innerhalb von 2–3 Werktagen." },
+    es: { ph: "Contáctanos: ", reply: "Normalmente respondemos en 2-3 días laborables." },
+    it: { ph: "Contattaci: ", reply: "Di solito rispondiamo entro 2-3 giorni lavorativi." },
+    pl: { ph: "Skontaktuj się z nami: ", reply: "Zwykle odpowiadamy w ciągu 2–3 dni roboczych." },
+    "pt-BR": { ph: "Fale conosco: ", reply: "Normalmente respondemos em 2-3 dias úteis." },
+    ru: { ph: "Свяжитесь с нами: ", reply: "Обычно мы отвечаем в течение 2–3 рабочих дней." },
+    uk: { ph: "Зв'яжіться з нами: ", reply: "Зазвичай ми відповідаємо протягом 2–3 робочих днів." },
+    vi: { ph: "Liên hệ với chúng tôi: ", reply: "Chúng tôi thường trả lời trong vòng 2-3 ngày làm việc." },
+  };
+  const contact = contactI18n[lang] || contactI18n.en;
+  writePage(path.join(dir,"contact.html"), "contact", lang, renderStatic(lang,"contact", s.contactTitle,
+    `<p>${contact.ph} <a href="mailto:contact@${esc(DATA.site.domain)}">contact@${esc(DATA.site.domain)}</a></p><p style="margin-top:10px">${contact.reply}</p>`,
+    `${s.name} — ${contact.reply}`));
 }
 // 404 (default lang) — function so OUT exists when called
 function gen404(){

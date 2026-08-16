@@ -406,8 +406,24 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
   .dossier-bar{gap:8px}
   .dossier-home{margin-left:0;width:100%}
 }
+/* 320px 触控契约：header ≤150px，可见交互目标 ≥44×44，无横向溢出 */
 @media(max-width:480px){
-  .dd-group a{flex:1 1 100%}
+  .site-header{border-bottom-width:0}
+  .header-inner{flex-wrap:wrap;gap:6px 8px;padding:8px 12px}
+  .logo{order:1;min-height:44px;min-width:44px;font-size:14px}
+  .logo-badge{width:28px;height:28px}
+  .logo-txt{max-width:32vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .lang-dd{order:2;margin-left:auto}
+  .lang-dd summary{min-height:44px;min-width:44px;display:flex;align-items:center;padding:0 10px;font-size:12.5px}
+  .nav{order:3;flex:1 1 auto;min-width:0;gap:4px}
+  .nav>a{min-height:44px;min-width:44px;display:inline-flex;align-items:center;padding:0 10px;font-size:14px}
+  .dd summary{min-height:44px;min-width:44px;display:flex;align-items:center;padding:0 10px;font-size:14px}
+  .site-search{order:4;flex:1 1 140px;width:auto;min-width:0;min-height:44px;margin-left:0;padding:0 10px}
+  .site-search input{min-width:0;width:100%;height:100%;min-height:44px;font-size:14px}
+  .dd-menu{top:112px}
+  .dd-lang{top:112px}
+  .dd-group a{flex:1 1 100%;min-height:44px;display:flex;align-items:center}
+  .footer-links a,.footer-col a{min-height:44px;min-width:44px;display:inline-flex;align-items:center}
   .dd-lang{grid-template-columns:1fr}
   .gauge-row{grid-template-columns:18px 1fr}
   .gauge-rail{display:none}
