@@ -192,6 +192,7 @@ function validateTouchCss(text){
     assert(block.includes(rule),`touch rule missing: ${rule}`);
   assert(/\.header-inner\{[^}]*padding:8px 12px/.test(block),"header padding contract missing");
   assert(/\.header-inner\{[^}]*gap:6px 8px/.test(block),"header gap contract missing");
+  assert(/\.site-search\{order:4;flex:1 1 84px/.test(block),"search basis contract missing");
   assert(!/\.nav\b[^\n{]*\{[^}]*\b(?:animation|transition|transform)\s*:/.test(text),"navigation motion forbidden on mobile");
 }
 
@@ -229,6 +230,7 @@ expectFault("contact missing reply",()=>validateContactLocale({...rows.find(row=
 expectFault("touch selector removed",()=>validateTouchCss(css.replace(".logo{order:1"," .logoX{order:1")),"touch selector missing: .logo{");
 expectFault("touch min-height removed",()=>validateTouchCss(css.replaceAll("min-height:44px","min-height:40px")),"touch rule missing: min-height:44px");
 expectFault("header padding contract removed",()=>validateTouchCss(css.replace(".header-inner{flex-wrap:wrap;gap:6px 8px;padding:8px 12px}",".header-inner{flex-wrap:wrap;gap:6px 8px;padding:20px 12px}")),"header padding contract missing");
+expectFault("search basis widened",()=>validateTouchCss(css.replace("flex:1 1 84px","flex:1 1 140px")),"search basis contract missing");
 
 for(const lang of locales){const relative=lang==="en"?"index.html":`${lang}/index.html`;const row=rows.find(item=>item.relative===relative);assert(row.html.includes(`<div class="commercial-label">${adLabels[lang]}</div>`),`advertisement label fallback ${lang}`);}
 console.log(JSON.stringify({status:"pass",htmlPages:rows.length,eligiblePages:252,excludedPages:43,wrappers:252,footerWrappers:0,providerRequestsBeforeConsent:0,adsenseUnits:0,amazonLinks:0,localizedLabels:14,negativeFaults:22,proximityGatePx:1200,noFillTimeoutMs:2500,homeShells:{documents:14,shellPerDocument:1},habitatLocales:14,contactLocales:14,touchContract:{headerMaxPx:150,targetMinPx:44,media:"max-width:480px"}},null,2));
@@ -250,17 +252,49 @@ if(process.argv.includes("--browser")){
       const geometry=await page.locator('[data-commercial-slot="primary-display"]').evaluate(el=>{const r=el.getBoundingClientRect(),p=el.parentElement.getBoundingClientRect();return {midDelta:Math.abs((r.left+r.width/2)-(p.left+p.width/2)),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth,width:r.width};});
       assert(geometry.midDelta<=1,`off-center at ${width}`);assert(geometry.overflow<=0,`horizontal overflow at ${width}`);assert(geometry.width<=760,`slot wider than 760 at ${width}`);assert.equal(providerRequests,1,`provider request count at ${width}`);results.push({viewportWidth:width,...geometry,providerRequests});await page.close();
     }
-    // 320px 触控契约：法文 header ≤150px，可见交互目标 ≥44×44，无横向溢出
-    for(const locale of ["fr","en"]){
-      const narrow=await browser.newPage({viewport:{width:320,height:568}});
-      await narrow.goto(origin+(locale==="en"?"/index.html":`/${locale}/index.html`),{waitUntil:"domcontentloaded"});
-      const header=await narrow.locator(".site-header").evaluate(el=>el.getBoundingClientRect().height);
-      assert(header<=150,`${locale} header ${header}px above 150 at 320`);
-      const targets=await narrow.evaluate(()=>Array.from(document.querySelectorAll(".header-inner a,.header-inner summary,.header-inner input,.site-footer a,.site-footer button")).filter(el=>{const r=el.getBoundingClientRect();return r.width>0&&r.height>0;}).map(el=>{const r=el.getBoundingClientRect();return {sel:el.tagName+"."+String(el.className).split(" ")[0],w:Math.round(r.width),h:Math.round(r.height)};}).filter(t=>t.w<44||t.h<44));
-      assert.equal(targets.length,0,`${locale} touch targets below 44x44 at 320: ${JSON.stringify(targets.slice(0,6))}`);
-      const overflow=await narrow.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
-      assert(overflow<=0,`${locale} horizontal overflow at 320: ${overflow}px`);
-      await narrow.close();
+    // 320px 触控契约（P1 mobile-320-header-touch-contract 回归）：14 语 home+内容页 header ≤150px，可见交互目标 ≥44×44，无横向溢出
+    const touchPages=locale=>[locale==="en"?"/index.html":`/${locale}/index.html`,locale==="en"?"/how-to-play":`/${locale}/how-to-play`];
+    async function measureTouch320(page,path){
+      await page.goto(origin+path,{waitUntil:"domcontentloaded"});await page.waitForTimeout(150);
+      const headerHeight=await page.locator(".site-header").evaluate(el=>el.getBoundingClientRect().height);
+      const smallTargets=await page.evaluate(()=>Array.from(document.querySelectorAll(".header-inner a,.header-inner summary,.header-inner input,.site-footer a,.site-footer button")).filter(el=>{const r=el.getBoundingClientRect();return r.width>0&&r.height>0;}).map(el=>{const r=el.getBoundingClientRect();return {sel:el.tagName+"."+String(el.className).split(" ")[0],w:Math.round(r.width),h:Math.round(r.height)};}).filter(t=>t.w<44||t.h<44));
+      const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
+      return {headerHeight,smallTargets,overflow};
+    }
+    function assertTouch320(locale,path,m){
+      assert(m.headerHeight<=150,`${locale} ${path} header ${m.headerHeight}px above 150 at 320`);
+      assert.equal(m.smallTargets.length,0,`${locale} ${path} touch targets below 44x44 at 320: ${JSON.stringify(m.smallTargets.slice(0,6))}`);
+      assert(m.overflow<=0,`${locale} ${path} horizontal overflow at 320: ${m.overflow}px`);
+    }
+    const touch320={locales:[],headerMaxPx:150,targetMinPx:44,faults:[]};
+    for(const locale of locales){
+      for(const pagePath of touchPages(locale)){
+        const narrow=await browser.newPage({viewport:{width:320,height:568}});
+        const m=await measureTouch320(narrow,pagePath);
+        assertTouch320(locale,pagePath,m);
+        touch320.locales.push({locale,path:pagePath,headerHeight:Math.round(m.headerHeight),overflow:m.overflow});
+        await narrow.close();
+      }
+    }
+    // 负向故障：header 高度违例必须被检出（header-inner 垂直 padding 放大 → 高度超 150px）
+    {
+      const page=await browser.newPage({viewport:{width:320,height:568}});
+      await page.route("**/css/style.css*",route=>route.fulfill({contentType:"text/css",body:css.replace(".header-inner{flex-wrap:wrap;gap:6px 8px;padding:8px 12px}",".header-inner{flex-wrap:wrap;gap:6px 8px;padding:40px 12px}")}));
+      const m=await measureTouch320(page,"/index.html");let message="";
+      try{assertTouch320("fault-header-height","/index.html",m);}catch(error){message=String(error.message||error);}
+      assert(message.includes("above 150"),`header-height fault not detected: ${message||"no failure"}`);
+      touch320.faults.push({fault:"header-height-violation",detected:true,measured:Math.round(m.headerHeight)});
+      await page.close();
+    }
+    // 负向故障：触控目标违例必须被检出（min-height 44px → 40px）
+    {
+      const page=await browser.newPage({viewport:{width:320,height:568}});
+      await page.route("**/css/style.css*",route=>route.fulfill({contentType:"text/css",body:css.replaceAll("min-height:44px","min-height:40px")}));
+      const m=await measureTouch320(page,"/index.html");let message="";
+      try{assertTouch320("fault-touch-target","/index.html",m);}catch(error){message=String(error.message||error);}
+      assert(message.includes("below 44x44"),`touch-target fault not detected: ${message||"no failure"}`);
+      touch320.faults.push({fault:"touch-target-violation",detected:true});
+      await page.close();
     }
     const choice=await browser.newPage({viewport:{width:375,height:812}});let choiceRequests=0;await choice.route("**/*effectivecpmnetwork.com/**",route=>{choiceRequests++;return route.abort();});await choice.goto(origin+"/how-to-play",{waitUntil:"domcontentloaded"});await choice.waitForSelector("[data-consent-dialog][open]");assert.equal(choiceRequests,0,"provider requested before choice");
     const hiddenDisplay=await choice.locator("[data-consent-manage]").evaluate(el=>getComputedStyle(el).display);assert.equal(hiddenDisplay,"none","hidden consent controls displayed");
@@ -270,6 +304,6 @@ if(process.argv.includes("--browser")){
     const thrown=await browser.newPage({viewport:{width:375,height:812}});await thrown.route("**/*effectivecpmnetwork.com/**",route=>route.fulfill({contentType:"text/javascript",body:'throw new Error("deliberate provider failure")'}));await thrown.addInitScript(()=>localStorage.setItem("approximately-up-consent-v1",JSON.stringify({analytics:false,advertising:true})));await thrown.goto(origin+"/",{waitUntil:"domcontentloaded"});await thrown.waitForTimeout(300);assert.equal(await thrown.locator('[data-commercial-slot="primary-display"]').count(),0,"thrown provider error slot persisted");await thrown.close();
     const excluded=await browser.newPage({viewport:{width:375,height:812}});let excludedRequests=0;await excluded.route("**/*effectivecpmnetwork.com/**",route=>{excludedRequests++;return route.abort();});await excluded.addInitScript(()=>localStorage.setItem("approximately-up-consent-v1",JSON.stringify({analytics:false,advertising:true})));for(const url of ["/privacy","/about","/contact","/404.html"]){await excluded.goto(origin+url,{waitUntil:"domcontentloaded"});assert.equal(await excluded.locator('[data-commercial-slot="primary-display"]').count(),0,`excluded wrapper ${url}`);}assert.equal(excludedRequests,0,"excluded page requested provider");await excluded.close();
     const zoom=await browser.newPage({viewport:{width:720,height:450}});await zoom.addInitScript(()=>localStorage.setItem("approximately-up-consent-v1",JSON.stringify({analytics:false,advertising:false})));await zoom.goto(origin+"/",{waitUntil:"domcontentloaded"});const zoomResult=await zoom.evaluate(()=>({physicalViewportWidth:1440,effectiveCssViewportWidth:innerWidth,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth,settingsHeight:document.querySelector("[data-consent-settings]").getBoundingClientRect().height}));assert.equal(zoomResult.effectiveCssViewportWidth,720,"200 percent zoom reflow viewport");assert(zoomResult.overflow<=0,"200 percent zoom overflow");assert(zoomResult.settingsHeight>=44,"commercial/privacy target below 44px");await zoom.close();
-    console.log(JSON.stringify({status:"pass",browser:"chromium",viewports:results,zoom200:zoomResult,focusTrap:"pass",focusRestore:"pass",beforeChoiceRequests:0,rejectedReloadRequests:0,noFillFinalSlotCount:0,thrownErrorFinalSlotCount:0,excludedProviderRequests:0,touch320:{locales:["fr","en"],headerMaxPx:150,targetMinPx:44}},null,2));
+    console.log(JSON.stringify({status:"pass",browser:"chromium",viewports:results,zoom200:zoomResult,focusTrap:"pass",focusRestore:"pass",beforeChoiceRequests:0,rejectedReloadRequests:0,noFillFinalSlotCount:0,thrownErrorFinalSlotCount:0,excludedProviderRequests:0,touch320},null,2));
   }finally{await browser.close();await new Promise(resolve=>server.close(resolve));}
 }
