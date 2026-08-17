@@ -199,7 +199,7 @@ function head(title, desc, extraLd, slug, lang, ogImage, bodyClass){
 <meta name="description" content="${esc(desc)}" />
 <link rel="canonical" href="${urlOf(slug,lang)}" />
 ${hreflang(slug)}
-<meta name="theme-color" content="#16211A" />
+<meta name="theme-color" content="#0B1220" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -215,7 +215,7 @@ ${adsenseMeta}${awin}${impact}
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Chakra+Petch:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/css/style.css?v=${CSS_V}" />${slug === "index" ? "\n" + KIT.heroPreload({ srcset: HERO_SET, sizes: "100vw" }) : ""}
 	<script type="application/ld+json">${ld}</script>
 	</head>
